@@ -11,33 +11,33 @@ Next, the operating system manages the execution of the program and provides the
 
 Moreover, the operating system governs the competing access of multiple programs to memory ensuring that a program does not have access to a different programs memory.
 
-## Memory Regions
+## Working with Memory
 
-## Ease of use, Security, Performance
+Different types of variables, variable access
 
-## Strategies on Memory Allocation
+### Memory Access
 
-### Manual Memory Management
+address, size, contents / value
 
-### Automatic Memory Management
+#### Quiz
 
-### Hybrid Approach
+TODO
 
-Although the OS
+#### Practice
 
-To better manage a program's memory, the operating systems creates an address space for each process.
-The address space is compartmentalized in 6 different zones:
+TODO
 
-1. Stack
-1. Heap
-1. Data
-1. Bss
-1. Rodata
-1. Text
+### Memory Protection
 
-## Explain some stuff here
+address, size, contents / value
 
-## Practice
+#### Quiz
+
+TODO
+
+#### Practice
+
+TODO
 
 ### Memory Allocation Strategy
 
@@ -131,3 +131,141 @@ Inspect the source file `segfault.c`.
 What is the expected result in each case?
 Why?
 Run the programs and see what happens.
+
+## Process Memory
+
+### Memory Regions
+
+To better manage a program's memory, the operating systems creates an address space for each process.
+The address space is compartmentalized in 6 different zones:
+
+1. Stack
+1. Heap
+1. Data
+1. Bss
+1. Rodata
+1. Text
+
+#### Quiz
+
+TODO
+
+#### Practice
+
+TODO
+
+### Memory Mapping
+
+(??) Un program scris in C care citeste un fisier mic, mediu si mare cu 2 implementari: una cu read, cealalta cu mmap. De masurat performanta celor 2 implementari in cele 3 cazuri si de gasit explicatiile (folosire strace). => mai bine la calcul? (numarul de context switch-uri e mai mic la mmap)
+
+#### Quiz
+
+TODO
+
+#### Practice
+
+TODO
+
+## Investigate Memory Actions
+
+### GDB
+
+Investigat aplicații existente (din exterior):
+Folosit Valgrind + gdb pentru aplicatiile de mai sus.
+
+### Deluge (Python)
+
+Urmărit cod sursă pentru aplicații existente:
+Putem folosi tot deluge pentru a vedea portiunile de alocat memorie (python)
+
+### Servo (Rust)
+
+Rust: https://github.com/servo/servo 
+
+### Alocator (D)
+
+D: https://github.com/dlang/phobos/tree/master/std/experimental/allocator
+In C: https://github.com/redis/redis , https://github.com/vim/vim , https://github.com/git/git 
+
+## Implement Memory Support
+
+Dezvoltat peste cod existent (deja scris de noi):
+
+### Reference Counting
+
+Implementat in C++\D o structura simpluta in care se face reference counting
+Structura este scrisa in totalitate de noi, ei trebuie sa adauge constructor/destructor/ operator de asignare.
+
+### Passing Arguments: Pointer vs. Value vs. Reference
+
+Modificat cod sursă pentru aplicații existente:
+Trimis parametri prin valoare/pointer (C++\D) => de masurat performanta
+Putem folosi codul de la redis, vim, git etc.
+
+## Memory Security
+
+### Buffer Overflow Info Leak
+
+TODO
+
+#### Quiz
+
+TODO
+
+#### Practice
+
+TODO
+
+### Buffer Overflow Overwrite
+
+TODO
+
+#### Quiz
+
+TODO
+
+#### Practice
+
+TODO
+
+### Alter Control Flow
+
+TODO
+
+#### Quiz
+
+TODO
+
+#### Practice
+
+TODO
+
+### Code Reuse
+
+TODO
+
+#### Quiz
+
+TODO
+
+#### Practice
+
+TODO
+
+### Code Injection
+
+TODO
+
+#### Quiz
+
+TODO
+
+#### Practice
+
+TODO
+
+## Arena
+
+Challenge tasks
+
+### Use-After-Free
