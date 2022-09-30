@@ -27,7 +27,6 @@ videos:
 open: $(SITE)
 	$(OPEN) $</index.html
 
-
 clean:
 	-rm -f $(MEDIA_DIR)/*-generated.gif
 	-rm -f *~
