@@ -11,4 +11,41 @@ Next, the operating system manages the execution of the program and provides the
 
 Moreover, the operating system governs the competing access of multiple programs to memory ensuring that a program does not have access to a different programs memory.
 
+## Setup
+
+Clone the repository, if you haven't already:
+
+```
+git clone https://github.com/open-education-hub/operating-systems-oer
+```
+
+Enter the repository:
+
+```
+cd operating-sytems-oer
+```
+
+Download [this script](https://raw.githubusercontent.com/razvand/operating-systems-oer/script/util/update-repo.sh):
+
+```
+wget https://raw.githubusercontent.com/razvand/operating-systems-oer/script/util/update-repo.sh
+```
+
+Run the script:
+
+```
+bash update-repo.sh data
+```
+
+Navigate to the chapter lab folder:
+
+```
+cd content/chapters/data/lab/
+```
+
+Now go through the items below.
+
+## Contents
+
 1. [Working with Memory](content/working-memory.md)
+
