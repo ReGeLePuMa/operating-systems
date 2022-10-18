@@ -48,4 +48,7 @@ Now go through the items below.
 ## Contents
 
 1. [Working with Memory](content/working-memory.md)
-
+1. [Process Memory](content/process-memory.md)
+1. [Investigate Memory](content/investigate-memory.md)
+1. [Memory Support](content/memory-support.md)
+1. [Memory Security](content/memory-security.md)
