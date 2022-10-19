@@ -7,21 +7,135 @@ The address space is compartmentalized in multiple areas, each with its own role
 Memory addresses use different permissions to decide what actions are allowed.
 
 Let's investigate the memory areas of a given process.
-Run the command:
+We use `pmap` to see the memory layout of a running process.
+The command below shows the memory layour of the current shell process:
 
 ```
-pmap -p $$
+$ pmap -p $$
+1127:   /bin/bash
+000055fb4d77d000   1040K r-x-- /bin/bash
+000055fb4da80000     16K r---- /bin/bash
+000055fb4da84000     36K rw--- /bin/bash
+000055fb4da8d000     40K rw---   [ anon ]
+000055fb4e9bb000   1604K rw---   [ anon ]
+00007f8fcf670000   4480K r---- /usr/lib/locale/locale-archive
+00007f8fcfad0000     44K r-x-- /lib/x86_64-linux-gnu/libnss_files-2.27.so
+00007f8fcfadb000   2044K ----- /lib/x86_64-linux-gnu/libnss_files-2.27.so
+00007f8fcfcda000      4K r---- /lib/x86_64-linux-gnu/libnss_files-2.27.so
+00007f8fcfcdb000      4K rw--- /lib/x86_64-linux-gnu/libnss_files-2.27.so
+00007f8fcfcdc000     24K rw---   [ anon ]
+00007f8fcfce2000     92K r-x-- /lib/x86_64-linux-gnu/libnsl-2.27.so
+00007f8fcfcf9000   2044K ----- /lib/x86_64-linux-gnu/libnsl-2.27.so
+00007f8fcfef8000      4K r---- /lib/x86_64-linux-gnu/libnsl-2.27.so
+00007f8fcfef9000      4K rw--- /lib/x86_64-linux-gnu/libnsl-2.27.so
+00007f8fcfefa000      8K rw---   [ anon ]
+00007f8fcfefc000     44K r-x-- /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+00007f8fcff07000   2044K ----- /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+00007f8fd0106000      4K r---- /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+00007f8fd0107000      4K rw--- /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+00007f8fd0108000     32K r-x-- /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+00007f8fd0110000   2048K ----- /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+00007f8fd0310000      4K r---- /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+00007f8fd0311000      4K rw--- /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+00007f8fd0312000   1948K r-x-- /lib/x86_64-linux-gnu/libc-2.27.so
+00007f8fd04f9000   2048K ----- /lib/x86_64-linux-gnu/libc-2.27.so
+00007f8fd06f9000     16K r---- /lib/x86_64-linux-gnu/libc-2.27.so
+00007f8fd06fd000      8K rw--- /lib/x86_64-linux-gnu/libc-2.27.so
+00007f8fd06ff000     16K rw---   [ anon ]
+00007f8fd0703000     12K r-x-- /lib/x86_64-linux-gnu/libdl-2.27.so
+00007f8fd0706000   2044K ----- /lib/x86_64-linux-gnu/libdl-2.27.so
+00007f8fd0905000      4K r---- /lib/x86_64-linux-gnu/libdl-2.27.so
+00007f8fd0906000      4K rw--- /lib/x86_64-linux-gnu/libdl-2.27.so
+00007f8fd0907000    148K r-x-- /lib/x86_64-linux-gnu/libtinfo.so.5.9
+00007f8fd092c000   2048K ----- /lib/x86_64-linux-gnu/libtinfo.so.5.9
+00007f8fd0b2c000     16K r---- /lib/x86_64-linux-gnu/libtinfo.so.5.9
+00007f8fd0b30000      4K rw--- /lib/x86_64-linux-gnu/libtinfo.so.5.9
+00007f8fd0b31000    164K r-x-- /lib/x86_64-linux-gnu/ld-2.27.so
+00007f8fd0d24000     20K rw---   [ anon ]
+00007f8fd0d53000     28K r--s- /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+00007f8fd0d5a000      4K r---- /lib/x86_64-linux-gnu/ld-2.27.so
+00007f8fd0d5b000      4K rw--- /lib/x86_64-linux-gnu/ld-2.27.so
+00007f8fd0d5c000      4K rw---   [ anon ]
+00007ffff002f000    132K rw---   [ stack ]
+00007ffff00c5000     12K r----   [ anon ]
+00007ffff00c8000      4K r-x--   [ anon ]
+ffffffffff600000      4K --x--   [ anon ]
+ total            24364K
 ```
 
-see total size
+Information will differ among different systems.
 
-to show the memory areas of the current shell process.
+See the different regions:
 
-Demo: hello world + sleep to view the memory regions
+* the first region, with `r-x` permissions is the `.text` (code) area
+* the second region, with `r--` premissions is the `.rodata` area
+* the third region, with `rw-` permissions is the `.data` area, for initialized global variables
+* the fourth region, with `rw-` permissions is the `.bss` area
+* the fifth region, with the `rw-` permissions is the dynamic data memory area, also known as heap
+* there are multiple dynamic libraries mapped in the virtual address space of the process, each library with their own regions
+* there is a `[stack]` memory region, with `rw-` permissions
+
+`pmap` also shows the total amount of virtual memory available to the process (`24364K`), as a total of the sizes of the regions.
+Note that this is virtual memory, not actual physical memory used by the process.
+For the process investigated above (with the `1127` pid) we could use the command below to show the total virtual size and physical size (also called _resident set size_):
+
+```
+$ ps -o pid,rss,vsz -p $$
+  PID   RSS    VSZ
+ 1127  1968  24364
+```
+
+The resident size is `1968K`, much smaller than the virtual size.
 
 #### Practice
 
-Use another program (in another language) that does hello world + sleep
+Enter the `support/memory-areas/` directory.
+We investigate other programs.
+
+1. The `hello.c` program prints out a message and then sleeps.
+   Build it:
+
+   ```
+   $ make
+   ```
+
+   then run it (it will block):
+
+   ```
+   $ ./hello
+   Hello, world!
+   ```
+
+   In another terminal, use the command below to show the memory areas of the process:
+
+   ```
+   $ pmap $(pidof hello)
+   8220:   ./hello
+   000055c0bef4b000      8K r-x-- hello
+   000055c0bf14c000      4K r---- hello
+   000055c0bf14d000      4K rw--- hello
+   000055c0bf454000    132K rw---   [ anon ]
+   00007f2a9e4a5000   1948K r-x-- libc-2.27.so
+   00007f2a9e68c000   2048K ----- libc-2.27.so
+   00007f2a9e88c000     16K r---- libc-2.27.so
+   00007f2a9e890000      8K rw--- libc-2.27.so
+   00007f2a9e892000     16K rw---   [ anon ]
+   00007f2a9e896000    164K r-x-- ld-2.27.so
+   00007f2a9ea8c000      8K rw---   [ anon ]
+   00007f2a9eabf000      4K r---- ld-2.27.so
+   00007f2a9eac0000      4K rw--- ld-2.27.so
+   00007f2a9eac1000      4K rw---   [ anon ]
+   00007ffee6471000    132K rw---   [ stack ]
+   00007ffee6596000     12K r----   [ anon ]
+   00007ffee6599000      4K r-x--   [ anon ]
+   ffffffffff600000      4K --x--   [ anon ]
+    total             4520K
+   ```
+
+   The output is similar, but with fewer dynamic libraries than `bash`, since they are not used by the program.
+
+2. Make a program in another language of your choice that prints `Hello, world!` and sleeps and investigate it with `pmap`.
+   Note that in the case of interpreted languages (Python, Lua, Perl, Ruby, PHP, Javascript etc.) you have to investigate the interpretor process.
 
 #### Quiz
 
@@ -29,19 +143,131 @@ TODO
 
 ### Memory Layout of Statically-Linked and Dynamically-Linked Executables
 
-#### Practice
+We want to see the difference in memory layout between the statically-linked and dynamically-linked executables.
 
-TODO
+Enter the `support/static-dynamic/` directory and build the statically-linked and dynamically-linked executables `hello-static` and `hello-dynamic`:
+
+```
+$ make
+```
+
+Now, by running the two programs and inspecting them with `pmap` on another terminal, we get the output:
+
+```
+$ pmap $(pidof hello-static)
+9714:   ./hello-static
+0000000000400000    876K r-x-- hello-static
+00000000006db000     24K rw--- hello-static
+00000000006e1000      4K rw---   [ anon ]
+00000000017b5000    140K rw---   [ anon ]
+00007ffc6f1d6000    132K rw---   [ stack ]
+00007ffc6f1f9000     12K r----   [ anon ]
+00007ffc6f1fc000      4K r-x--   [ anon ]
+ffffffffff600000      4K --x--   [ anon ]
+ total             1196K
+
+$ pmap $(pidof hello-dynamic)
+9753:   ./hello-dynamic
+00005566e757f000      8K r-x-- hello-dynamic
+00005566e7780000      4K r---- hello-dynamic
+00005566e7781000      4K rw--- hello-dynamic
+00005566e8894000    132K rw---   [ anon ]
+00007fd434eb8000   1948K r-x-- libc-2.27.so
+00007fd43509f000   2048K ----- libc-2.27.so
+00007fd43529f000     16K r---- libc-2.27.so
+00007fd4352a3000      8K rw--- libc-2.27.so
+00007fd4352a5000     16K rw---   [ anon ]
+00007fd4352a9000    164K r-x-- ld-2.27.so
+00007fd43549f000      8K rw---   [ anon ]
+00007fd4354d2000      4K r---- ld-2.27.so
+00007fd4354d3000      4K rw--- ld-2.27.so
+00007fd4354d4000      4K rw---   [ anon ]
+00007ffe497ba000    132K rw---   [ stack ]
+00007ffe497e3000     12K r----   [ anon ]
+00007ffe497e6000      4K r-x--   [ anon ]
+ffffffffff600000      4K --x--   [ anon ]
+ total             4520K
+```
+
+For the static executable we can see there are not areas for dynamic libraries.
+And the `.rodata` section has been coallesced in the `.text` area.
+
+We can see the size of each section in the two executables by using the `size` command:
+
+```
+$ size hello-static
+text    data     bss     dec     hex filename
+893333   20996    7128  921457   e0f71 hello-static
+
+$ size hello-dynamic
+text    data     bss     dec     hex filename
+4598     736     824    6158    180e hello-dynamic
+```
 
 #### Quiz
 
-TODO
-
-### Memory Layout of Multi-threaded Programs
+Based on the information above, answer [this quiz](quiz/static-dynamic.md).
 
 #### Practice
 
-TODO
+1. Let's investigate another static executable / process.
+
+   If not already installed, install the `busybox-static` package on your system.
+   On Debian/Ubuntu systems use:
+
+   ```
+   $ sudo apt install busybox-static
+   ```
+
+   Start a process using:
+
+   ```
+   $ busybox sleep 1000
+   ```
+
+   Investigate the process using `pmap` and the executable using `size`.
+
+### Memory Layout of Multi-threaded Programs
+
+When a new thread is created, a new stack is allocated for a thread.
+The default stack size if `8 MB` / `8192 KB`:
+
+```
+$ ulimit -s
+8192
+```
+
+Enter the `support/multithreaded/` directory to observe the update of the memory layout when creating new threads.
+
+Build the `multithreaded` executable:
+
+```
+$ make
+```
+
+Start the program:
+
+```
+$ ./multithreaded
+Press key to start creating threads ...
+[...]
+```
+
+And investigate it with `pmap` on another console, while pressing a key to create new threads.
+
+As you can see, there is a new `8192 KB` area created for every thread, also increasing the total virtual size.
+
+**We will discuss more about threads in the future.
+For now, we want to point out how threads affect the process memory layout.**
+
+#### Practice
+
+1. Build the multithreaded program as a static executable.
+   Run it.
+   Notice the same effect of the thread creation on the process memory layout: the creation of a new stack of `8192 KB`.
+
+1. Make a program in another language of your choice that creates threads.
+   Investigate it with `pmap`.
 
 #### Quiz
 
