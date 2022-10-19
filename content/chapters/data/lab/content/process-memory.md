@@ -349,11 +349,190 @@ TODO
 
 ### Allocating and Deallocating Memory
 
-alocare explicită sau implicită
+Memory areas in a process address space are static or dynamic.
+Static memory areas are known at the beginning of process life time (i.e. at load-time), while dynamic memory areas are managed at runtime.
+
+`.text`, `.rodata`, `.data`, `.bss` are allocated at load-time and have a predefined size.
+The stack and the heap and memory mappings are allocated at runtime and have a variable size.
+For those, we say we use rutime allocation and deallocation.
+
+Memory allocation is implicit for the stack and explicit for the heap.
+That is, we don't make a particular call to allocate data on the stack;
+the compiler generates the code that the operating system uses to increase the stack when required.
+For the heap we use the `malloc()` and `free()` calls to explicitly allocate and deallocate memory.
+
+Omitting to deallocate memory results in memory leaks that hurt the resource use in the system.
+Because of this, some language runtimes employ a garbage collector that automatically frees unused memory areas.
+More than that, some languages (think of Python) provide no explicit means to allocate memory: you just define and use data.
+
+Let's enter the `support/alloc_size/` directory.
+Browse the `alloc_size.c` file.
+Build it:
+
+```
+$ make
+```
+
+Now see the update in the process layout, by running the program in one console:
+
+```
+$ ./alloc_size
+Press key to allocate ...
+[...]
+```
+
+And investigating it with `pmap` on another console:
+
+```
+$ pmap $(pidof alloc_size)
+21107:   ./alloc_size
+000055de9d173000      8K r-x-- alloc_size
+000055de9d374000      4K r---- alloc_size
+000055de9d375000      4K rw--- alloc_size
+000055de9deea000    132K rw---   [ anon ]
+00007f1ea4fd4000   1948K r-x-- libc-2.27.so
+00007f1ea51bb000   2048K ----- libc-2.27.so
+00007f1ea53bb000     16K r---- libc-2.27.so
+00007f1ea53bf000      8K rw--- libc-2.27.so
+00007f1ea53c1000     16K rw---   [ anon ]
+00007f1ea53c5000    164K r-x-- ld-2.27.so
+00007f1ea55bb000      8K rw---   [ anon ]
+00007f1ea55ee000      4K r---- ld-2.27.so
+00007f1ea55ef000      4K rw--- ld-2.27.so
+00007f1ea55f0000      4K rw---   [ anon ]
+00007ffcf28e9000    132K rw---   [ stack ]
+00007ffcf29be000     12K r----   [ anon ]
+00007ffcf29c1000      4K r-x--   [ anon ]
+ffffffffff600000      4K --x--   [ anon ]
+ total             4520K
+
+$ pmap $(pidof alloc_size)
+21107:   ./alloc_size
+000055de9d173000      8K r-x-- alloc_size
+000055de9d374000      4K r---- alloc_size
+000055de9d375000      4K rw--- alloc_size
+000055de9deea000    452K rw---   [ anon ]
+00007f1ea4fd4000   1948K r-x-- libc-2.27.so
+00007f1ea51bb000   2048K ----- libc-2.27.so
+00007f1ea53bb000     16K r---- libc-2.27.so
+00007f1ea53bf000      8K rw--- libc-2.27.so
+00007f1ea53c1000     16K rw---   [ anon ]
+00007f1ea53c5000    164K r-x-- ld-2.27.so
+00007f1ea55bb000      8K rw---   [ anon ]
+00007f1ea55ee000      4K r---- ld-2.27.so
+00007f1ea55ef000      4K rw--- ld-2.27.so
+00007f1ea55f0000      4K rw---   [ anon ]
+00007ffcf28e9000    132K rw---   [ stack ]
+00007ffcf29be000     12K r----   [ anon ]
+00007ffcf29c1000      4K r-x--   [ anon ]
+ffffffffff600000      4K --x--   [ anon ]
+ total             4840K
+
+$ pmap $(pidof alloc_size)
+21107:   ./alloc_size
+000055de9d173000      8K r-x-- alloc_size
+000055de9d374000      4K r---- alloc_size
+000055de9d375000      4K rw--- alloc_size
+000055de9deea000    420K rw---   [ anon ]
+00007f1ea4fd4000   1948K r-x-- libc-2.27.so
+00007f1ea51bb000   2048K ----- libc-2.27.so
+00007f1ea53bb000     16K r---- libc-2.27.so
+00007f1ea53bf000      8K rw--- libc-2.27.so
+00007f1ea53c1000     16K rw---   [ anon ]
+00007f1ea53c5000    164K r-x-- ld-2.27.so
+00007f1ea55bb000      8K rw---   [ anon ]
+00007f1ea55ee000      4K r---- ld-2.27.so
+00007f1ea55ef000      4K rw--- ld-2.27.so
+00007f1ea55f0000      4K rw---   [ anon ]
+00007ffcf28e9000    132K rw---   [ stack ]
+00007ffcf29be000     12K r----   [ anon ]
+00007ffcf29c1000      4K r-x--   [ anon ]
+ffffffffff600000      4K --x--   [ anon ]
+ total             4808K
+```
+
+The three runs above of the `pmap` command occur before the allocation, after allocation and before deallocation and after deallocation.
+Notice the update toe the 4th section, the heap.
+
+Now, let's see what happens behind the scenes.
+Run the executable under `ltrace` and `strace`:
+
+```
+$ ltrace ./alloc_size
+malloc(32768)                                                                                                    = 0x55e33f490b10
+printf("New allocation at %p\n", 0x55e33f490b10New allocation at 0x55e33f490b10
+)                                                                 = 33
+[...]
+free(0x55e33f490b10)                                                                                             = <void>
+[...]
+
+$ strace ./alloc_size
+[...]
+write(1, "New allocation at 0x55ab98acfaf0"..., 33New allocation at 0x55ab98acfaf0
+) = 33
+write(1, "New allocation at 0x55ab98ad7b00"..., 33New allocation at 0x55ab98ad7b00
+) = 33
+brk(0x55ab98b08000)                     = 0x55ab98b08000
+write(1, "New allocation at 0x55ab98adfb10"..., 33New allocation at 0x55ab98adfb10
+) = 33
+write(1, "Press key to deallocate ...", 27Press key to deallocate ...) = 27
+read(0, 
+"\n", 1024)                     = 1
+brk(0x55ab98b00000)                     = 0x55ab98b00000
+[...]
+```
+
+The resulting output above shows us the following:
+
+* `malloc()` and `free()` library calls both map to the [`brk` syscall](https://man7.org/linux/man-pages/man2/sbrk.2.html), a syscall that updates the end of the heap (called **program break**).
+* Multiple `malloc()` calls map to a single `brk` syscall for efficiency.
+  `brk` is called to preallocate a larger chunk of memory that `malloc` will then use.
+
+Update the `ALLOC_SIZE_KB` macro in the `alloc_size.c` file to `256`.
+Rebuild the program and rerun it under `ltrace` and `strace`:
+
+```
+$ ltrace ./alloc_size
+[...]
+malloc(262144)                                                                                                   = 0x7f4c016a9010
+[...]
+free(0x7f4c016a9010)                                                                                             = <void>
+[...]
+
+$ strace ./alloc_size
+[...]
+mmap(NULL, 266240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7feee19f2000
+write(1, "New allocation at 0x7feee19f2010"..., 33New allocation at 0x7feee19f2010
+) = 33
+mmap(NULL, 266240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7feee19b1000
+write(1, "New allocation at 0x7feee19b1010"..., 33New allocation at 0x7feee19b1010
+) = 33
+write(1, "Press key to deallocate ...", 27Press key to deallocate ...) = 27
+read(0, 
+"\n", 1024)                     = 1
+munmap(0x7feee19b1000, 266240)          = 0
+[...]
+```
+
+For the new allocation size, notice that the remarks above don't hold:
+
+* `malloc()` now invokes the `mmap` syscall, while `free()` invokes the `munmap` syscall.
+* Each `malloc()` calls results in a separate `mmap` syscall.
+
+This is a behavior of the `malloc()` in libc, documented in the [manual page]().
+A variable `MALLOC_THRESHOLD` holds the size after which `mmap` is used, instead of `brk`.
+This is based on a heuristic of using the heap or some other area in the process address space.
 
 #### Practice
 
-TODO
+1. Use `pmap` to analyze the process address space for `ALLOC_SIZE_KB` initialized to `256`.
+   Notice the new memory areas and the difference between the use of `mmap` syscall and `brk` syscall.
+
+1. Use `valgrind` on the resulting executable, and notice there are memory leaks.
+   They are quite obvious due to the lack of proper freeing.
+   Solve the leaks.
+
+1. Use `valgrind` on different executables in the system (in `/bin/`, `/usr/bin/`) and see if they have memory leaks.
 
 #### Quiz
 
