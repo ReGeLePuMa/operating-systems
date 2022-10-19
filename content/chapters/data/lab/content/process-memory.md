@@ -275,15 +275,73 @@ TODO
 
 ### Modifying Memory Region Size
 
-C program, with modifying different memory regions
+We want to observe the update in size of memory regions for different instructions used in a program.
 
-Python3 program that modifies memory region.
+Enter the `support/modify-memory/` directory.
+Browse the contents of the `hello.c` file;
+it is an update to the `hello.c` file in the `memory-areas/` directory.
+Build the executable:
 
-Use strace
+```
+$ make
+```
+
+Use `size` to view the difference between the new executable and the one in the `memory-areas/` directory:
+
+```
+$ size hello
+   text    data     bss     dec     hex filename
+  13131   17128   33592   63851    f96b hello
+
+$ size ../memory-areas/hello
+   text    data     bss     dec     hex filename
+   4598     736     824    6158    180e ../memory-areas/hello
+```
+
+Explain the differences.
+
+Then use the `pmap` to watch the memory areas of the resulting processes from the two different executables.
+We will see something like this for the new executable:
+
+```
+$ pmap $(pidof hello)
+18254:   ./hello
+000055beff4d0000     16K r-x-- hello
+000055beff6d3000      4K r---- hello
+000055beff6d4000     20K rw--- hello
+000055beff6d9000     32K rw---   [ anon ]
+000055beffb99000    324K rw---   [ anon ]
+00007f7b6c2e6000   1948K r-x-- libc-2.27.so
+00007f7b6c4cd000   2048K ----- libc-2.27.so
+00007f7b6c6cd000     16K r---- libc-2.27.so
+00007f7b6c6d1000      8K rw--- libc-2.27.so
+00007f7b6c6d3000     16K rw---   [ anon ]
+00007f7b6c6d7000    164K r-x-- ld-2.27.so
+00007f7b6c8cd000      8K rw---   [ anon ]
+00007f7b6c900000      4K r---- ld-2.27.so
+00007f7b6c901000      4K rw--- ld-2.27.so
+00007f7b6c902000      4K rw---   [ anon ]
+00007ffe2b196000    204K rw---   [ stack ]
+00007ffe2b1d8000     12K r----   [ anon ]
+00007ffe2b1db000      4K r-x--   [ anon ]
+ffffffffff600000      4K --x--   [ anon ]
+ total             4840K
+```
+
+We notice the size increase of text, data, bss, heap and stack sections.
 
 #### Practice
 
-TODO
+1. Comment out different parts of the `hello.c` program to notice differences in only specific areas (text, data, bss, heap, stack).
+
+1. Use a different argument (`order`) for the call to the `alloc_stack()` function.
+   See how it affects the stack size during runtime (investigate with `pmap`).
+
+1. Do a static build of `hello.c` and check the size of the memory areas both statically and dynamically.
+
+1. The `extend_mem_area.py` Python script allocates a new string at each step by merging the two previous versions.
+   Start the program and investigate the resulting process at each allocation step.
+   Notice which memory area is updated and explain why.
 
 #### Quiz
 
