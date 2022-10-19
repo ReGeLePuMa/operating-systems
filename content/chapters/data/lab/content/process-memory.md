@@ -540,7 +540,58 @@ TODO
 
 ### Memory Mapping
 
-(??) Un program scris in C care citeste un fisier mic, mediu si mare cu 2 implementari: una cu read, cealalta cu mmap. De masurat performanta celor 2 implementari in cele 3 cazuri si de gasit explicatiile (folosire strace). => mai bine la calcul? (numarul de context switch-uri e mai mic la mmap)
+The `mmap` syscall is used to allocate memory as _anonymous mapping_, that is reserving memory in the process address space.
+An alternate use is for mapping files in the memory address space.
+Mapping of files is done by the loader for executables and libraries.
+That is why, in the output of `pmap`, there is a column with a file name.
+
+Mapping of a file results in getting a pointer to its contents and then using that pointer.
+This way, reading and writing to a file is an exercise or pointer copying, instead of the use of `read` / `write`-like system calls.
+
+In the `support/copy/` folder there are two source code files and a script:
+
+* `read_write_copy.c` implements copying with `read` / `write` syscalls
+* `mmap_copy.c` implements copying using `mmap`
+* `generate.sh` script generates the input file `in.dat`
+
+Let's generate the input file:
+
+```
+$ ./generate.sh
+```
+
+and let's build the two executable files:
+
+```
+$ make
+```
+
+and run them:
+
+```
+$ ./mmap_copy
+time passed 22840 microseconds
+
+$ ./mmap_copy
+time passed 33942 microseconds
+
+$ ./mmap_copy
+time passed 25213 microseconds
+
+$ ./read_write_copy
+time passed 24824 microseconds
+
+$ ./read_write_copy
+time passed 24232 microseconds
+
+$ ./read_write_copy
+time passed 25131 microseconds
+```
+
+As you can see, there isn't a difference between the two approaches.
+Although we would have expected the use of multiple system calls to cause overhead, it's too little compared to the memory copying overhead.
+
+Browse the two source code files (`mmap_copy.c` and `read_write_copy.c`) for a glimpse on how the two types of copies are implemented.
 
 #### Quiz
 
@@ -548,4 +599,8 @@ TODO
 
 #### Practice
 
-TODO
+1. Use a diffent value for `BUFSIZ` and see if that affects the comparison between the two executables.
+
+1. Add a `sleep()` call to the `mmap_copy.c` file **after** the files were mapped.
+   Rebuild the program and run it.
+   On a different console use `pmap` to view the two new memory regions that were added to the process, by mapping the `in.dat` and `out.dat` files.
