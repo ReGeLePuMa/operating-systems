@@ -13,31 +13,33 @@ Moreover, the operating system governs the competing access of multiple programs
 
 ## Setup
 
-Clone the repository, if you haven't already:
+If you have already cloned the repository, make sure it is updated.
+Run this command inside the repository clone directory:
 
 ```
-git clone https://github.com/open-education-hub/operating-systems-oer
+git pull --rebase
 ```
 
-Enter the repository:
+The command may fail if you have uncommitted changes.
+If that is the case, commit changes and retry.
+
+If you haven't already cloned the repository, do it and enter the repository:
 
 ```
-cd operating-sytems-oer
+git clone https://github.com/open-education-hub/operating-systems
+cd operating-sytems
 ```
 
-Download [this script](https://raw.githubusercontent.com/razvand/operating-systems-oer/script/util/update-repo.sh):
+While inside the repository clone top directory, run the `update-repo.sh` script:
 
 ```
-wget https://raw.githubusercontent.com/razvand/operating-systems-oer/script/util/update-repo.sh
+bash util/update-repo.sh data
 ```
 
-Run the script:
+The script may fail if you have uncommitted changes and it will instruct you to commit them.
+If that is the case, commit changes and re-run the script.
 
-```
-bash update-repo.sh data
-```
-
-Navigate to the chapter lab folder:
+Navigate to the chapter lab directory:
 
 ```
 cd content/chapters/data/lab/
