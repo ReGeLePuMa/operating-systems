@@ -277,7 +277,7 @@ TODO
 
 We want to observe the update in size of memory regions for different instructions used in a program.
 
-Enter the `support/modify-memory/` directory.
+Enter the `support/modify-areas/` directory.
 Browse the contents of the `hello.c` file;
 it is an update to the `hello.c` file in the `memory-areas/` directory.
 Build the executable:
