@@ -368,11 +368,76 @@ This gives us an overview of when memory is allocated in Deluge / Python.
 
 1. Find out other classes and search for their instantiation in the source code.
 
-### Servo (Rust)
+### App Investigation: Servo
 
-Rust: https://github.com/servo/servo
+[Servo](https://servo.org/) is a browser engine written in Rust that provides reusable components to implement web standards.
 
-### Alocator (D)
+We do not clone the repository since it's a very large one.
+
+We find information about allocator used, by accessing the `components/allocator/` in [its source code](https://github.com/servo/servo/tree/master/components/allocator).
+In `Cargo.toml` we see that it requires `jemalloc` for non-Windows implementations and the standard Windows API (called `heapapi`) for Windows:
+
+```
+[...]
+[lib]
+path = "lib.rs"
+
+[target.'cfg(not(windows))'.dependencies]
+jemalloc-sys = { version = "0.3.2" }
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["heapapi"] }
+ust: https://github.com/servo/servo
+```
+
+In `lib.rs`, in [`GlobalAlloc:alloc()`](https://github.com/servo/servo/blob/master/components/allocator/lib.rs#L70) we see it is using [the `mallocx` custom function from `jemalloc()`](https://jemalloc.net/jemalloc.3.html).
+See [the initialization of `ffi`](https://github.com/servo/servo/blob/master/components/allocator/lib.rs#L17).
+
+See the use of the allocator in the [`Cargo.toml` file in the `net` component](https://github.com/servo/servo/blob/master/components/net/Cargo.toml).
+Search for the _alloc_ string.
+
+#### Practice
+
+1. Look for uses of the allocator in other components of Servo.
+
+### Investigation: Alocator in the D Programming Language
+
+[Phobos](https://github.com/dlang/phobos) is the standard library that comes with the D programming language compiler.
+
+Let's clone the source code:
+
+```
+student@os:~/.../std/experimental/allocator$ git clone https://github.com/dlang/phobos
+[...]
+
+student@os:~/.../data/lab/support$ cd phobos/
+
+student@os:~/.../lab/support/phobos$ ls
+azure-pipelines.yml  changelog  CODEOWNERS  CONTRIBUTING.md  dub.sdl  etc  index.dd  LICENSE_1_0.txt  posix.mak  project.ddoc  README.md  std  test  unittest.d  win32.mak  win64.mak
+```
+
+And enter `std/experimental/allocator/` to browse information about the allocator:
+
+```
+student@os:~/.../lab/support/phobos$ cd std/experimental/allocator/
+
+student@os:~/.../std/experimental/allocator$ ls
+building_blocks  common.d  gc_allocator.d  mallocator.d  mmap_allocator.d  package.d  showcase.d  typed.d
+```
+
+We then do a search of the `allocate(` string to find instances of allocation calls:
+
+```
+student@os:~/.../std/experimental/allocator$ grep -r 'allocate('
+[...]
+```
+
+We see that there are definitions of the function (as expected) as part of `...allocator` files: `mallocator.d`, `gc_allocator.d`, `mmap_allocator.d`.
+Browse the functions and look for implementations of the `allocate()` function.
+
+#### Practice
+
+1. Do a similar search and then source code browsing for the `deallocate()` function.
 
 D: https://github.com/dlang/phobos/tree/master/std/experimental/allocator
 In C: https://github.com/redis/redis , https://github.com/vim/vim , https://github.com/git/git
