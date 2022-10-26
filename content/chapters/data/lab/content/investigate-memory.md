@@ -302,7 +302,7 @@ student@os:~/.../lab/support/memory-leak$ LD_PRELOAD=/usr/lib/x86_64-linux-gnu/l
 ### malloc in Musl
 
 Each libc (or memory allocator such as `jemalloc`) uses their own implementation of `malloc()`, `free()` and other functions.
-[Musl libc](https://musl.libc.org/) is a lightweight standard C library provide compatibile features with the more heavyweights [GNU libc](https://www.gnu.org/software/libc/).
+[Musl libc](https://musl.libc.org/) is a lightweight standard C library provide compatible features with the more heavyweights [GNU libc](https://www.gnu.org/software/libc/).
 
 Take a look through implementation of `malloc()` and `free()` in [Musl libc](https://elixir.bootlin.com/musl/v1.2.3/source/src/malloc).
 See all three implementations for `malloc()`:
