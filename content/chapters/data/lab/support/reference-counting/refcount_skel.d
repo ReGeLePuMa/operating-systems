@@ -39,7 +39,6 @@ struct RefCountedIntArray
     this(ref RefCountedIntArray src)
     {
         // TODO - fill in the fields and correctly update the ref count
-
     }
 
     // assignment operator
