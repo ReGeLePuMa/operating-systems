@@ -42,6 +42,8 @@ struct RefCountedIntArray
         this.size = src.size;
         this.ptr = src.ptr;
         this.refcount = src.refcount;
+        this.instance_no = instance_generator;
+        instance_generator++;
 
         (*refcount)++;
     }
