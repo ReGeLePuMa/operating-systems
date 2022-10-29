@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 class Student {
 	public:
 		Student(std::string name, unsigned int age, std::string favorite_os);
@@ -28,10 +30,11 @@ int main(void)
 
 	s = new Student("Andrei Popescu", 22, "Linux");
 	s->Print();
-
+	delete s;
+	cout<<sizeof(Student)<<endl;
 	s = new Student("Ioana David", 23, "macOS");
 	s->Print();
-
+	cout<<sizeof(Student)<<endl;
 	delete s;
 
 	return 0;

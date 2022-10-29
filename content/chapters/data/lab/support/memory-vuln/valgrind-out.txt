@@ -1,0 +1,142 @@
+==13828== Memcheck, a memory error detector
+==13828== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==13828== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
+==13828== Command: ./c_memory_vuln
+==13828== Parent PID: 3889
+==13828== 
+--13828-- 
+--13828-- Valgrind options:
+--13828--    --leak-check=full
+--13828--    --show-leak-kinds=all
+--13828--    --track-origins=yes
+--13828--    --verbose
+--13828--    --log-file=valgrind-out.txt
+--13828-- Contents of /proc/version:
+--13828--   Linux version 5.4.0-131-generic (buildd@lcy02-amd64-108) (gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1)) #147-Ubuntu SMP Fri Oct 14 17:07:22 UTC 2022
+--13828-- 
+--13828-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-rdrand
+--13828-- Page sizes: currently 4096, max supported 4096
+--13828-- Valgrind library directory: /usr/lib/x86_64-linux-gnu/valgrind
+--13828-- Reading syms from /home/student/so/content/chapters/data/lab/support/memory-vuln/c_memory_vuln
+--13828-- Reading syms from /lib/x86_64-linux-gnu/ld-2.31.so
+--13828--   Considering /usr/lib/debug/.build-id/45/87364908de169dec62ffa538170118c1c3a078.debug ..
+--13828--   .. build-id is valid
+--13828-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux
+--13828--    object doesn't have a symbol table
+--13828--    object doesn't have a dynamic symbol table
+--13828-- Scheduler: using generic scheduler lock implementation.
+--13828-- Reading suppressions file: /usr/lib/x86_64-linux-gnu/valgrind/default.supp
+==13828== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-13828-by-student-on-???
+==13828== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-13828-by-student-on-???
+==13828== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-13828-by-student-on-???
+==13828== 
+==13828== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==13828== don't want to do, unless you know exactly what you're doing,
+==13828== or are doing some strange experiment):
+==13828==   /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=13828 ...command...
+==13828== 
+==13828== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==13828==   /path/to/gdb ./c_memory_vuln
+==13828== and then give GDB the following command
+==13828==   target remote | /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=13828
+==13828== --pid is optional if only one valgrind process is running
+==13828== 
+--13828-- REDIR: 0x4022e20 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c9ce2 (???)
+--13828-- REDIR: 0x4022bf0 (ld-linux-x86-64.so.2:index) redirected to 0x580c9cfc (???)
+--13828-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_core-amd64-linux.so
+--13828--    object doesn't have a symbol table
+--13828-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so
+--13828--    object doesn't have a symbol table
+==13828== WARNING: new redirection conflicts with existing -- ignoring it
+--13828--     old: 0x04022e20 (strlen              ) R-> (0000.0) 0x580c9ce2 ???
+--13828--     new: 0x04022e20 (strlen              ) R-> (2007.0) 0x0483f060 strlen
+--13828-- REDIR: 0x401f600 (ld-linux-x86-64.so.2:strcmp) redirected to 0x483ffd0 (strcmp)
+--13828-- REDIR: 0x4023380 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4843a20 (mempcpy)
+--13828-- Reading syms from /lib/x86_64-linux-gnu/libc-2.31.so
+--13828--   Considering /usr/lib/debug/.build-id/18/78e6b475720c7c51969e69ab2d276fae6d1dee.debug ..
+--13828--   .. build-id is valid
+--13828-- REDIR: 0x4905480 (libc.so.6:memmove) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4904780 (libc.so.6:strncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x49057b0 (libc.so.6:strcasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x49040a0 (libc.so.6:strcat) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x49047e0 (libc.so.6:rindex) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4906c50 (libc.so.6:rawmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4921ce0 (libc.so.6:wmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4921820 (libc.so.6:wcscmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x49055e0 (libc.so.6:mempcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4905410 (libc.so.6:bcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4904710 (libc.so.6:strncmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4904150 (libc.so.6:strcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4905540 (libc.so.6:memset) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x49217e0 (libc.so.6:wcschr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4904670 (libc.so.6:strnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4904230 (libc.so.6:strcspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4905800 (libc.so.6:strncasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x49041d0 (libc.so.6:strcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4905950 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4922f50 (libc.so.6:wcsnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4921860 (libc.so.6:wcscpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4904820 (libc.so.6:strpbrk) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4904100 (libc.so.6:index) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4904630 (libc.so.6:strlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x490dbb0 (libc.so.6:memrchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4905850 (libc.so.6:strcasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x49053d0 (libc.so.6:memchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4921930 (libc.so.6:wcslen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4904ae0 (libc.so.6:strspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4905750 (libc.so.6:stpncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x49056f0 (libc.so.6:stpcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x4906c90 (libc.so.6:strchrnul) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x49058a0 (libc.so.6:strncasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--13828-- REDIR: 0x49ed500 (libc.so.6:__strrchr_avx2) redirected to 0x483ea10 (rindex)
+--13828-- REDIR: 0x49ed310 (libc.so.6:__strchrnul_avx2) redirected to 0x4843540 (strchrnul)
+--13828-- REDIR: 0x48ff0e0 (libc.so.6:malloc) redirected to 0x483b780 (malloc)
+--13828-- REDIR: 0x49f06c0 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4843660 (mempcpy)
+==13828== Jump to the invalid address stated on the next line
+==13828==    at 0x0: ???
+==13828==    by 0x402D61F: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+==13828==    by 0x1FFEFFFA97: ???
+==13828==    by 0x100000004: ???
+==13828==    by 0x1091C1: bad (c_memory_vuln.c:16)
+==13828==    by 0x10926F: ??? (in /home/student/so/content/chapters/data/lab/support/memory-vuln/c_memory_vuln)
+==13828==    by 0x8B511F88D76C7012: ???
+==13828==    by 0x10907F: ??? (in /home/student/so/content/chapters/data/lab/support/memory-vuln/c_memory_vuln)
+==13828==    by 0x1FFEFFFA8F: ???
+==13828==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==13828== 
+==13828== 
+==13828== Process terminating with default action of signal 11 (SIGSEGV)
+==13828==  Bad permissions for mapped region at address 0x0
+==13828==    at 0x0: ???
+==13828==    by 0x402D61F: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+==13828==    by 0x1FFEFFFA97: ???
+==13828==    by 0x100000004: ???
+==13828==    by 0x1091C1: bad (c_memory_vuln.c:16)
+==13828==    by 0x10926F: ??? (in /home/student/so/content/chapters/data/lab/support/memory-vuln/c_memory_vuln)
+==13828==    by 0x8B511F88D76C7012: ???
+==13828==    by 0x10907F: ??? (in /home/student/so/content/chapters/data/lab/support/memory-vuln/c_memory_vuln)
+==13828==    by 0x1FFEFFFA8F: ???
+--13828-- REDIR: 0x48ff6d0 (libc.so.6:free) redirected to 0x483c9d0 (free)
+==13828== 
+==13828== HEAP SUMMARY:
+==13828==     in use at exit: 0 bytes in 0 blocks
+==13828==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==13828== 
+==13828== All heap blocks were freed -- no leaks are possible
+==13828== 
+==13828== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==13828== 
+==13828== 1 errors in context 1 of 1:
+==13828== Jump to the invalid address stated on the next line
+==13828==    at 0x0: ???
+==13828==    by 0x402D61F: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+==13828==    by 0x1FFEFFFA97: ???
+==13828==    by 0x100000004: ???
+==13828==    by 0x1091C1: bad (c_memory_vuln.c:16)
+==13828==    by 0x10926F: ??? (in /home/student/so/content/chapters/data/lab/support/memory-vuln/c_memory_vuln)
+==13828==    by 0x8B511F88D76C7012: ???
+==13828==    by 0x10907F: ??? (in /home/student/so/content/chapters/data/lab/support/memory-vuln/c_memory_vuln)
+==13828==    by 0x1FFEFFFA8F: ???
+==13828==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==13828== 
+==13828== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

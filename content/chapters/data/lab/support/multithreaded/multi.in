@@ -1,0 +1,40 @@
+26184:   ./multithreaded
+0000556a0e044000      4K r---- multithreaded
+0000556a0e045000      4K r-x-- multithreaded
+0000556a0e046000      4K r---- multithreaded
+0000556a0e047000      4K r---- multithreaded
+0000556a0e048000      4K rw--- multithreaded
+0000556a0ef03000    132K rw---   [ anon ]
+00007faf1491e000      4K -----   [ anon ]
+00007faf1491f000   8192K rw---   [ anon ]
+00007faf1511f000      4K -----   [ anon ]
+00007faf15120000   8192K rw---   [ anon ]
+00007faf15920000      4K -----   [ anon ]
+00007faf15921000   8192K rw---   [ anon ]
+00007faf16121000      4K -----   [ anon ]
+00007faf16122000   8192K rw---   [ anon ]
+00007faf16922000      4K -----   [ anon ]
+00007faf16923000   8204K rw---   [ anon ]
+00007faf17126000    136K r---- libc-2.31.so
+00007faf17148000   1504K r-x-- libc-2.31.so
+00007faf172c0000    312K r---- libc-2.31.so
+00007faf1730e000     16K r---- libc-2.31.so
+00007faf17312000      8K rw--- libc-2.31.so
+00007faf17314000     16K rw---   [ anon ]
+00007faf17318000     24K r---- libpthread-2.31.so
+00007faf1731e000     68K r-x-- libpthread-2.31.so
+00007faf1732f000     24K r---- libpthread-2.31.so
+00007faf17335000      4K r---- libpthread-2.31.so
+00007faf17336000      4K rw--- libpthread-2.31.so
+00007faf17337000     24K rw---   [ anon ]
+00007faf17358000     12K r----   [ anon ]
+00007faf1735b000      4K r-x--   [ anon ]
+00007faf1735c000      4K r---- ld-2.31.so
+00007faf1735d000    140K r-x-- ld-2.31.so
+00007faf17380000     32K r---- ld-2.31.so
+00007faf17389000      4K r---- ld-2.31.so
+00007faf1738a000      4K rw--- ld-2.31.so
+00007faf1738b000      4K rw---   [ anon ]
+00007ffe8bb46000    136K rw---   [ stack ]
+ffffffffff600000      4K --x--   [ anon ]
+ total            43628K

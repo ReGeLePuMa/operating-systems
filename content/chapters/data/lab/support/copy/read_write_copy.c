@@ -14,7 +14,7 @@
 	 ((ta).tv_nsec - (tb).tv_nsec) / 1000)
 
 #ifndef BUFSIZ
-#define BUFSIZ		8192
+#define BUFSIZ		10000
 #endif
 
 static unsigned char buffer[BUFSIZ];

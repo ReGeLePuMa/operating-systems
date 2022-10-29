@@ -2,17 +2,17 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-static const char boring[8192] = { 69, };
-static char dull[16384] = { 69, };
-static char nada[32768];
+//static const char boring[8192] = { 69, };
+//static char dull[16384] = { 69, };
+//static char nada[32768];
 
-static void alloc_heap(void)
-{
-	malloc(64 * 1024);
-	malloc(64 * 1024);
-	malloc(64 * 1024);
-	malloc(64 * 1024);
-}
+//static void alloc_heap(void)
+//{
+//	malloc(64 * 1024);
+//	malloc(64 * 1024);
+//	malloc(64 * 1024);
+//	malloc(64 * 1024);
+//}//
 
 static void alloc_stack(size_t order)
 {
@@ -30,7 +30,7 @@ static void alloc_stack(size_t order)
 int main(void)
 {
 	puts("Hello, world!");
-	alloc_heap();
+	//alloc_heap();
 	alloc_stack(5);
 	sleep(10000);
 
