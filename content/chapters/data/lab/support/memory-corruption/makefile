@@ -1,4 +1,4 @@
-DMD=gdc
+DMD=dmd
 DFLAGS=
 
 CC=gcc

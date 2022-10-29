@@ -2,6 +2,8 @@
 
 static int data[] = {10, 20, 30, 40};	/* stored in .data section (rw-) */
 
+const float pi=3.14;
+
 static void exec_do_nothing(void)	/* stored in .text section (r-x) */
 {
 }
@@ -37,6 +39,9 @@ int main(void)
 	do_read("reading from .text section", exec_do_nothing);
 	do_exec("executing .text section", exec_do_nothing);
 
+	do_read("reading",(void*)&pi);
+	do_write("writing",(void*)&pi,3.2);
+	do_exec("executing",(void*)&pi);
 	/* These won't work due to permission issues. */
 	//do_exec("executing .data section", &data[0]);
 	//do_write("writing to .text section", exec_do_nothing, 77);

@@ -4,7 +4,7 @@
 
 void printBitArray(unsigned int theBits[SIZE_INT])
 {
-    unsigned int i = SIZE_INT-1;
+    int i = SIZE_INT-1;
     while (i >= 0)
     {
         printf("%u\n", theBits[i]);
