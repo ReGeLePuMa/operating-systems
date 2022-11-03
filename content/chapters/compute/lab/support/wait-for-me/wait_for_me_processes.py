@@ -20,7 +20,7 @@ def main():
     # TODO: Fix the `FileNotFoundError` raised below.
 
     file_content = open(file_name).readline()
-    print(f"File content is: '{file_content}'")
+    print(f'File content is: {file_content}')
 
 
 if __name__ == "__main__":

@@ -55,8 +55,7 @@ void main(string[] args)
 
     for (size_t i = 0; i < numProcesses; ++i)
     {
-        size_t elemsPerThred = cast(size_t) ceil(
-            (cast(double) ARR_LEN) / numProcesses);
+        size_t elemsPerThred = cast(size_t) ceil((cast(double) ARR_LEN) / numProcesses);
         size_t start = i * elemsPerThred;
         size_t end = min(ARR_LEN, (i + 1) * elemsPerThred);
 
