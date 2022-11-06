@@ -18,7 +18,7 @@ def main():
     child.start()
 
     # TODO: Fix the `FileNotFoundError` raised below.
-
+    child.join();
     file_content = open(file_name).readline()
     print(f'File content is: {file_content}')
 
