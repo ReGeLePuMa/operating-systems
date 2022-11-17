@@ -1,0 +1,540 @@
+__libc_start_main@libc.so.6(0x55ebed7e5df0, 1, 0x7fff79477ac8, 0x55ebed7f84e0 <unfinished ...>
+__cxa_atexit@libc.so.6(0x7faae13d7d60, 0, 0, 0x55ebed7f84e0) = 0
+_setjmp@libc.so.6(0x7fff79477a00, 0, 0x7faae13f3620, 0x55ebed7f84e0 <unfinished ...>
+__sigsetjmp@libc.so.6(0x7fff79477a00, 0, 0x7faae13f3620, 0x55ebed7f84e0) = 0
+<... _setjmp resumed> )                          = 0
+setlocale@libc.so.6(LC_ALL, "" <unfinished ...>
+pthread_rwlock_wrlock@libpthread.so.0(0x7faae1379980, 0x55ebed7fa7fe, 0x7fff79477ad8, 4) = 0
+getenv@libc.so.6("LOCPATH")                      = nil
+getenv@libc.so.6("LC_ALL")                       = nil
+getenv@libc.so.6("LC_IDENTIFICATION")            = "ro_RO.UTF-8"
+memmem@libc.so.6(0x7fff79478c2c, 11, 0x7faae134020a, 4) = 0
+sysconf@libc.so.6(30, 0x7fff794778a0, 0, 20 <unfinished ...>
+getpagesize@libc.so.6()                          = 4096
+<... sysconf resumed> )                          = 4096
+malloc@libc.so.6(5)                              = 0x55ebef39f910
+free@libc.so.6(0x55ebef39f910)                   = <void>
+__open_nocancel@libc.so.6(0x7faae1347fd0, 0x80000, 0, 1) = 3
+__fxstat@libc.so.6(1, 3, 0x7faae13799e0)         = 0
+mmap@libc.so.6(0, 0x83b4c0, 1, 2)                = 0x7faae0894000
+__close_nocancel@libc.so.6(3, 0x83b4c0, 0x2bab, 513) = 0
+malloc@libc.so.6(120)                            = 0x55ebef39f480
+strdup@libc.so.6("ro_RO.UTF-8" <unfinished ...>
+malloc@libc.so.6(12)                             = 0x55ebef39f910
+<... strdup resumed> )                           = 0x55ebef39f910
+malloc@libc.so.6(776)                            = 0x55ebef39f930
+malloc@libc.so.6(112)                            = 0x55ebef39fc40
+malloc@libc.so.6(1336)                           = 0x55ebef39fcc0
+malloc@libc.so.6(216)                            = 0x55ebef3a0200
+malloc@libc.so.6(432)                            = 0x55ebef3a02e0
+malloc@libc.so.6(104)                            = 0x55ebef3a04a0
+malloc@libc.so.6(88)                             = 0x55ebef3a0510
+malloc@libc.so.6(120)                            = 0x55ebef3a0570
+malloc@libc.so.6(168)                            = 0x55ebef3a05f0
+malloc@libc.so.6(104)                            = 0x55ebef3a06a0
+malloc@libc.so.6(80)                             = 0x55ebef3a0710
+malloc@libc.so.6(192)                            = 0x55ebef3a0770
+strdup@libc.so.6("ro_RO.UTF-8" <unfinished ...>
+malloc@libc.so.6(12)                             = 0x55ebef3a0840
+<... strdup resumed> )                           = 0x55ebef3a0840
+getenv@libc.so.6("LC_ALL")                       = nil
+getenv@libc.so.6("LC_MEASUREMENT")               = "ro_RO.UTF-8"
+memmem@libc.so.6(0x7fff79478bda, 11, 0x7faae134020a, 4) = 0
+sysconf@libc.so.6(30, 0x7fff79477898, 0, 26 <unfinished ...>
+getpagesize@libc.so.6()                          = 4096
+<... sysconf resumed> )                          = 4096
+strdup@libc.so.6("ro_RO.UTF-8" <unfinished ...>
+malloc@libc.so.6(12)                             = 0x55ebef3a0860
+<... strdup resumed> )                           = 0x55ebef3a0860
+getenv@libc.so.6("LC_ALL")                       = nil
+getenv@libc.so.6("LC_TELEPHONE")                 = "ro_RO.UTF-8"
+memmem@libc.so.6(0x7fff794784b4, 11, 0x7faae134020a, 4) = 0
+sysconf@libc.so.6(30, 0x7fff79477890, 0, 12 <unfinished ...>
+getpagesize@libc.so.6()                          = 4096
+<... sysconf resumed> )                          = 4096
+strdup@libc.so.6("ro_RO.UTF-8" <unfinished ...>
+malloc@libc.so.6(12)                             = 0x55ebef3a0880
+<... strdup resumed> )                           = 0x55ebef3a0880
+getenv@libc.so.6("LC_ALL")                       = nil
+getenv@libc.so.6("LC_ADDRESS")                   = "ro_RO.UTF-8"
+memmem@libc.so.6(0x7fff794783f0, 11, 0x7faae134020a, 4) = 0
+sysconf@libc.so.6(30, 0x7fff79477888, 0, 16 <unfinished ...>
+getpagesize@libc.so.6()                          = 4096
+<... sysconf resumed> )                          = 4096
+strdup@libc.so.6("ro_RO.UTF-8" <unfinished ...>
+malloc@libc.so.6(12)                             = 0x55ebef3a08a0
+<... strdup resumed> )                           = 0x55ebef3a08a0
+getenv@libc.so.6("LC_ALL")                       = nil
+getenv@libc.so.6("LC_NAME")                      = "ro_RO.UTF-8"
+memmem@libc.so.6(0x7fff79478b9a, 11, 0x7faae134020a, 4) = 0
+sysconf@libc.so.6(30, 0x7fff79477880, 0, 26 <unfinished ...>
+getpagesize@libc.so.6()                          = 4096
+<... sysconf resumed> )                          = 4096
+strdup@libc.so.6("ro_RO.UTF-8" <unfinished ...>
+malloc@libc.so.6(12)                             = 0x55ebef3a08c0
+<... strdup resumed> )                           = 0x55ebef3a08c0
+getenv@libc.so.6("LC_ALL")                       = nil
+getenv@libc.so.6("LC_PAPER")                     = "ro_RO.UTF-8"
+memmem@libc.so.6(0x7fff79478d65, 11, 0x7faae134020a, 4) = 0
+sysconf@libc.so.6(30, 0x7fff79477878, 0, 27 <unfinished ...>
+getpagesize@libc.so.6()                          = 4096
+<... sysconf resumed> )                          = 4096
+strdup@libc.so.6("ro_RO.UTF-8" <unfinished ...>
+malloc@libc.so.6(12)                             = 0x55ebef3a08e0
+<... strdup resumed> )                           = 0x55ebef3a08e0
+getenv@libc.so.6("LC_ALL")                       = nil
+getenv@libc.so.6("LC_MESSAGES")                  = nil
+getenv@libc.so.6("LANG")                         = "en_US.UTF-8"
+memmem@libc.so.6(0x7fff79478481, 11, 0x7faae134020a, 4) = 0
+sysconf@libc.so.6(30, 0x7fff79477868, 0, 1 <unfinished ...>
+getpagesize@libc.so.6()                          = 4096
+<... sysconf resumed> )                          = 4096
+malloc@libc.so.6(5)                              = 0x55ebef3a0900
+free@libc.so.6(0x55ebef3a0900)                   = <void>
+malloc@libc.so.6(120)                            = 0x55ebef3a0920
+strdup@libc.so.6("en_US.UTF-8" <unfinished ...>
+malloc@libc.so.6(12)                             = 0x55ebef3a0900
+<... strdup resumed> )                           = 0x55ebef3a0900
+malloc@libc.so.6(776)                            = 0x55ebef3a09a0
+malloc@libc.so.6(112)                            = 0x55ebef3a0cb0
+malloc@libc.so.6(1336)                           = 0x55ebef3a0d30
+malloc@libc.so.6(216)                            = 0x55ebef3a1270
+malloc@libc.so.6(432)                            = 0x55ebef3a1350
+malloc@libc.so.6(104)                            = 0x55ebef3a1510
+malloc@libc.so.6(88)                             = 0x55ebef3a1580
+malloc@libc.so.6(120)                            = 0x55ebef3a15e0
+malloc@libc.so.6(168)                            = 0x55ebef3a1660
+malloc@libc.so.6(104)                            = 0x55ebef3a1710
+malloc@libc.so.6(80)                             = 0x55ebef3a1780
+malloc@libc.so.6(192)                            = 0x55ebef3a17e0
+strdup@libc.so.6("en_US.UTF-8" <unfinished ...>
+malloc@libc.so.6(12)                             = 0x55ebef3a18b0
+<... strdup resumed> )                           = 0x55ebef3a18b0
+getenv@libc.so.6("LC_ALL")                       = nil
+getenv@libc.so.6("LC_MONETARY")                  = "ro_RO.UTF-8"
+memmem@libc.so.6(0x7fff79478135, 11, 0x7faae134020a, 4) = 0
+sysconf@libc.so.6(30, 0x7fff79477860, 0, 11 <unfinished ...>
+getpagesize@libc.so.6()                          = 4096
+<... sysconf resumed> )                          = 4096
+strdup@libc.so.6("ro_RO.UTF-8" <unfinished ...>
+malloc@libc.so.6(12)                             = 0x55ebef3a18d0
+<... strdup resumed> )                           = 0x55ebef3a18d0
+getenv@libc.so.6("LC_ALL")                       = nil
+getenv@libc.so.6("LC_COLLATE")                   = "C"
+getenv@libc.so.6("LC_ALL")                       = nil
+getenv@libc.so.6("LC_TIME")                      = "ro_RO.UTF-8"
+memmem@libc.so.6(0x7fff79477fdc, 11, 0x7faae134020a, 4) = 0
+sysconf@libc.so.6(30, 0x7fff79477850, 0, 28 <unfinished ...>
+getpagesize@libc.so.6()                          = 4096
+<... sysconf resumed> )                          = 4096
+strdup@libc.so.6("ro_RO.UTF-8" <unfinished ...>
+malloc@libc.so.6(12)                             = 0x55ebef3a18f0
+<... strdup resumed> )                           = 0x55ebef3a18f0
+getenv@libc.so.6("LC_ALL")                       = nil
+getenv@libc.so.6("LC_NUMERIC")                   = "ro_RO.UTF-8"
+memmem@libc.so.6(0x7fff79478d1a, 11, 0x7faae134020a, 4) = 0
+sysconf@libc.so.6(30, 0x7fff79477848, 0, 26 <unfinished ...>
+getpagesize@libc.so.6()                          = 4096
+<... sysconf resumed> )                          = 4096
+strdup@libc.so.6("ro_RO.UTF-8" <unfinished ...>
+malloc@libc.so.6(12)                             = 0x55ebef3a1910
+<... strdup resumed> )                           = 0x55ebef3a1910
+getenv@libc.so.6("LC_ALL")                       = nil
+getenv@libc.so.6("LC_CTYPE")                     = nil
+getenv@libc.so.6("LANG")                         = "en_US.UTF-8"
+memmem@libc.so.6(0x7fff79478481, 11, 0x7faae134020a, 4) = 0
+sysconf@libc.so.6(30, 0x7fff79477840, 0, 1 <unfinished ...>
+getpagesize@libc.so.6()                          = 4096
+<... sysconf resumed> )                          = 4096
+strdup@libc.so.6("en_US.UTF-8" <unfinished ...>
+malloc@libc.so.6(12)                             = 0x55ebef3a1930
+<... strdup resumed> )                           = 0x55ebef3a1930
+malloc@libc.so.6(271)                            = 0x55ebef3a1950
+pthread_rwlock_unlock@libpthread.so.0(0x7faae1379980, 0x7faae08ada2c, 1, 0x7faae08b8294) = 0
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+<... setlocale resumed> )                        = "LC_CTYPE=en_US.UTF-8;LC_NUMERIC="...
+bindtextdomain@libc.so.6("coreutils", "/usr/share/locale" <unfinished ...>
+pthread_rwlock_wrlock@libpthread.so.0(0x7faae1379b00, 0x7fff79477948, 1, 0x7faae08b8294) = 0
+malloc@libc.so.6(34)                             = 0x55ebef3a1a70
+pthread_rwlock_unlock@libpthread.so.0(0x7faae1379b00, 0x7faae1348010, 0, 0xfffe0000) = 0
+<... bindtextdomain resumed> )                   = "/usr/share/locale"
+textdomain@libc.so.6("coreutils" <unfinished ...>
+pthread_rwlock_wrlock@libpthread.so.0(0x7faae1379b00, 129, 1, 0xfffe0000) = 0
+strdup@libc.so.6("coreutils" <unfinished ...>
+malloc@libc.so.6(10)                             = 0x55ebef3a1aa0
+<... strdup resumed> )                           = 0x55ebef3a1aa0
+pthread_rwlock_unlock@libpthread.so.0(0x7faae1379b00, 0x6c69747565726f63, 0x7faae137d250, 0x736c6974756572) = 0
+<... textdomain resumed> )                       = "coreutils"
+__cxa_atexit@libc.so.6(0x55ebed7eefe0, 0, 0x55ebed804008, 0x736c6974756572) = 0
+isatty@libc.so.6(1 <unfinished ...>
+tcgetattr@libc.so.6(1, 0x7fff79477900)           = -1
+<... isatty resumed> )                           = 0
+getenv@libc.so.6("QUOTING_STYLE")                = nil
+getenv@libc.so.6("COLUMNS")                      = nil
+ioctl@libc.so.6(1, 21523, 0x7fff79477980)        = -1
+getenv@libc.so.6("TABSIZE")                      = nil
+getopt_long@libc.so.6(1, 0x7fff79477ac8, "abcdfghiklmnopqrstuvw:xABCDFGHI:"..., 0x55ebed803300, -1 <unfinished ...>
+getenv@libc.so.6("POSIXLY_CORRECT")              = nil
+<... getopt_long resumed> )                      = -1
+getenv@libc.so.6("LS_BLOCK_SIZE")                = nil
+getenv@libc.so.6("BLOCK_SIZE")                   = nil
+getenv@libc.so.6("BLOCKSIZE")                    = nil
+getenv@libc.so.6("POSIXLY_CORRECT")              = nil
+getenv@libc.so.6("BLOCK_SIZE")                   = nil
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+malloc@libc.so.6(56)                             = 0x55ebef3a1ac0
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+malloc@libc.so.6(56)                             = 0x55ebef3a1b00
+getenv@libc.so.6("TZ")                           = nil
+malloc@libc.so.6(128)                            = 0x55ebef3a1b40
+malloc@libc.so.6(20000)                          = 0x55ebef3a1bd0
+malloc@libc.so.6(32)                             = 0x55ebef3a6a00
+malloc@libc.so.6(2)                              = 0x55ebef3a6a30
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+opendir@libc.so.6("." <unfinished ...>
+__open_nocancel@libc.so.6(0x55ebef3a6a30, 0x90800, 1, 46) = 3
+__fxstat@libc.so.6(1, 3, 0x7fff79477500)         = 0
+malloc@libc.so.6(32816)                          = 0x55ebef3a6a50
+<... opendir resumed> )                          = 0x55ebef3a6a50
+readdir@libc.so.6(0x55ebef3a6a50 <unfinished ...>
+getdents64@libc.so.6(3, 0x55ebef3a6a80, 0x8000, 0x55ebef3aea80) = 480
+<... readdir resumed> )                          = 0x55ebef3a6a80
+readdir@libc.so.6(0x55ebef3a6a50)                = 0x55ebef3a6a98
+malloc@libc.so.6(10)                             = 0x55ebef3aea90
+readdir@libc.so.6(0x55ebef3a6a50)                = 0x55ebef3a6ab8
+malloc@libc.so.6(17)                             = 0x55ebef3aeab0
+readdir@libc.so.6(0x55ebef3a6a50)                = 0x55ebef3a6ae0
+malloc@libc.so.6(9)                              = 0x55ebef3aead0
+readdir@libc.so.6(0x55ebef3a6a50)                = 0x55ebef3a6b00
+malloc@libc.so.6(19)                             = 0x55ebef3aeaf0
+readdir@libc.so.6(0x55ebef3a6a50)                = 0x55ebef3a6b28
+malloc@libc.so.6(21)                             = 0x55ebef3aeb10
+readdir@libc.so.6(0x55ebef3a6a50)                = 0x55ebef3a6b50
+malloc@libc.so.6(8)                              = 0x55ebef3aeb30
+readdir@libc.so.6(0x55ebef3a6a50)                = 0x55ebef3a6b70
+malloc@libc.so.6(14)                             = 0x55ebef3aeb50
+readdir@libc.so.6(0x55ebef3a6a50)                = 0x55ebef3a6b98
+malloc@libc.so.6(7)                              = 0x55ebef3aeb70
+readdir@libc.so.6(0x55ebef3a6a50)                = 0x55ebef3a6bb8
+readdir@libc.so.6(0x55ebef3a6a50)                = 0x55ebef3a6bd8
+readdir@libc.so.6(0x55ebef3a6a50)                = 0x55ebef3a6bf0
+malloc@libc.so.6(16)                             = 0x55ebef3aeb90
+readdir@libc.so.6(0x55ebef3a6a50)                = 0x55ebef3a6c18
+malloc@libc.so.6(12)                             = 0x55ebef3aebb0
+readdir@libc.so.6(0x55ebef3a6a50)                = 0x55ebef3a6c38
+malloc@libc.so.6(21)                             = 0x55ebef3aebd0
+readdir@libc.so.6(0x55ebef3a6a50 <unfinished ...>
+getdents64@libc.so.6(3, 0x55ebef3a6a80, 0x8000, 0x55ebef3aebe0) = 0
+<... readdir resumed> )                          = 0
+closedir@libc.so.6(0x55ebef3a6a50 <unfinished ...>
+free@libc.so.6(0x55ebef3a6a50)                   = <void>
+__close_nocancel@libc.so.6(3, 0, 0x7faae1378be0, -312) = 0
+<... closedir resumed> )                         = 0
+free@libc.so.6(0)                                = <void>
+malloc@libc.so.6(264)                            = 0x55ebef3a6a50
+_setjmp@libc.so.6(0x55ebed804300, 0x400000, 0x55ebef3a2468, 0x55ebef3a6aa8 <unfinished ...>
+__sigsetjmp@libc.so.6(0x55ebed804300, 0, 0x55ebef3a2468, 0x55ebef3a6aa8) = 0
+<... _setjmp resumed> )                          = 0
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("memory_leak", "memory_leak_malloc.c" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aebb0, 0x55ebef3aebd0, 0x7faae13794a0, 0x55ebed7e8340) = 0xffffffa1
+<... strcoll resumed> )                          = -95
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("memory_leak.cpp", "memory_leak" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeb90, 0x55ebef3aebb0, 0x7faae13794a0, 0xfefff800) = 46
+<... strcoll resumed> )                          = 46
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("memory_leak.cpp", "memory_leak_malloc.c" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeb90, 0x55ebef3aebd0, 0x7faae13794a0, 0xfefff800) = 0xffffffcf
+<... strcoll resumed> )                          = -49
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("memory_leak.o", "cv.txt" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeb50, 0x55ebef3aeb70, 0x7faae13794a0, 0x55ebed7e8340) = 10
+<... strcoll resumed> )                          = 10
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("cv2.txt", "cv.txt" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeb30, 0x55ebef3aeb70, 0x7faae13794a0, 0x55ebed7e8340) = 4
+<... strcoll resumed> )                          = 4
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("cv2.txt", "memory_leak.o" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeb30, 0x55ebef3aeb50, 0x7faae13794a0, 0xfefffffc) = 0xfffffff6
+<... strcoll resumed> )                          = -10
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("cv.txt", "memory_leak" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeb70, 0x55ebef3aebb0, 0x7faae13794a0, 0x55ebef3a2080) = 0xfffffff6
+<... strcoll resumed> )                          = -10
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("cv2.txt", "memory_leak" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeb30, 0x55ebef3aebb0, 0x7faae13794a0, 0xfeffffff) = 0xfffffff6
+<... strcoll resumed> )                          = -10
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("memory_leak.o", "memory_leak" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeb50, 0x55ebef3aebb0, 0x7faae13794a0, 0xfeffffff) = 46
+<... strcoll resumed> )                          = 46
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("memory_leak.o", "memory_leak.cpp" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeb50, 0x55ebef3aeb90, 0x7faae13794a0, 0xfefff800) = 12
+<... strcoll resumed> )                          = 12
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("memory_leak.o", "memory_leak_malloc.c" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeb50, 0x55ebef3aebd0, 0x7faae13794a0, 0xfefff000) = 0xffffffcf
+<... strcoll resumed> )                          = -49
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("memory_leak_malloc", "memory_leak_malloc.o" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeaf0, 0x55ebef3aeb10, 0x7faae13794a0, 0x55ebed7e8340) = 0xffffffd2
+<... strcoll resumed> )                          = -46
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("Makefile", "memory_leak_malloc" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aead0, 0x55ebef3aeaf0, 0x7faae13794a0, 0xfefc0000) = 0xffffffe0
+<... strcoll resumed> )                          = -32
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("mem.trace", "valgrind-out.txt" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aea90, 0x55ebef3aeab0, 0x7faae13794a0, 0x55ebed7e8340) = 0xfffffff7
+<... strcoll resumed> )                          = -9
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("mem.trace", "Makefile" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aea90, 0x55ebef3aead0, 0x7faae13794a0, 0xfeffffff) = 32
+<... strcoll resumed> )                          = 32
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("mem.trace", "memory_leak_malloc" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aea90, 0x55ebef3aeaf0, 0x7faae13794a0, 0xfeffffff) = 0xffffffbf
+<... strcoll resumed> )                          = -65
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("valgrind-out.txt", "memory_leak_malloc" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeab0, 0x55ebef3aeaf0, 0x7faae13794a0, 0xfefffef8) = 9
+<... strcoll resumed> )                          = 9
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("valgrind-out.txt", "memory_leak_malloc.o" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeab0, 0x55ebef3aeb10, 0x7faae13794a0, 0xfeffffef) = 9
+<... strcoll resumed> )                          = 9
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("Makefile", "cv.txt" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aead0, 0x55ebef3aeb70, 0x7faae13794a0, 0x55ebef3a1c98) = 0xffffffea
+<... strcoll resumed> )                          = -22
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("mem.trace", "cv.txt" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aea90, 0x55ebef3aeb70, 0x7faae13794a0, 0xfeffffff) = 10
+<... strcoll resumed> )                          = 10
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("mem.trace", "cv2.txt" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aea90, 0x55ebef3aeb30, 0x7faae13794a0, 0xfeffffff) = 10
+<... strcoll resumed> )                          = 10
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("mem.trace", "memory_leak" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aea90, 0x55ebef3aebb0, 0x7faae13794a0, 0xfeffffe7) = 0xffffffbf
+<... strcoll resumed> )                          = -65
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("memory_leak_malloc", "memory_leak" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeaf0, 0x55ebef3aebb0, 0x7faae13794a0, 0xfefffef8) = 95
+<... strcoll resumed> )                          = 95
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("memory_leak_malloc", "memory_leak.cpp" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeaf0, 0x55ebef3aeb90, 0x7faae13794a0, 0xfefff800) = 49
+<... strcoll resumed> )                          = 49
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("memory_leak_malloc", "memory_leak.o" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeaf0, 0x55ebef3aeb50, 0x7faae13794a0, 0xfefff800) = 49
+<... strcoll resumed> )                          = 49
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("memory_leak_malloc", "memory_leak_malloc.c" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeaf0, 0x55ebef3aebd0, 0x7faae13794a0, 0xfefff800) = 0xffffffd2
+<... strcoll resumed> )                          = -46
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+strcoll@libc.so.6("memory_leak_malloc.o", "memory_leak_malloc.c" <unfinished ...>
+strcoll_l@libc.so.6(0x55ebef3aeb10, 0x55ebef3aebd0, 0x7faae13794a0, 0xfefc0000) = 12
+<... strcoll resumed> )                          = 12
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+__ctype_get_mb_cur_max@libc.so.6()               = 6
+fwrite_unlocked@libc.so.6("Makefile", 1, 8, 0x7faae13796a0 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7faae13796a0, 0x7fff79475200, 8, 0x7faae13796a0 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7faae13796a0, 0xffffffff, 3072, 0x7faae13796a0 <unfinished ...>
+_IO_doallocbuf@libc.so.6(0x7faae13796a0, 0, 3072, 0x7faae13796a0 <unfinished ...>
+_IO_file_doallocate@libc.so.6(0x7faae13796a0, 0, 0x7faae13748a0, 3072 <unfinished ...>
+_IO_file_stat@libc.so.6(0x7faae13796a0, 0x7fff79475040, 0x7faae13748a0, 3072 <unfinished ...>
+__fxstat@libc.so.6(1, 1, 0x7fff79475040)         = 0
+<... _IO_file_stat resumed> )                    = 0
+malloc@libc.so.6(4096)                           = 0x55ebef3a6b60
+_IO_setb@libc.so.6(0x7faae13796a0, 0x55ebef3a6b60, 0x55ebef3a7b60, 1) = 0xfbad2084
+<... _IO_file_doallocate resumed> )              = 1
+<... _IO_doallocbuf resumed> )                   = 1
+_IO_do_write@libc.so.6(0x7faae13796a0, 0x55ebef3a6b60, 0, 0xffffffff) = 0
+<... _IO_file_overflow resumed> )                = 0
+_IO_default_xsputn@libc.so.6(0x7faae13796a0, 0x7fff79475200, 8, 4096) = 8
+<... _IO_file_xsputn resumed> )                  = 8
+<... fwrite_unlocked resumed> )                  = 8
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+__ctype_get_mb_cur_max@libc.so.6()               = 6
+fwrite_unlocked@libc.so.6("cv.txt", 1, 6, 0x7faae13796a0 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7faae13796a0, 0x7fff79475200, 6, 0x7faae13796a0) = 6
+<... fwrite_unlocked resumed> )                  = 6
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+__ctype_get_mb_cur_max@libc.so.6()               = 6
+fwrite_unlocked@libc.so.6("cv2.txt", 1, 7, 0x7faae13796a0 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7faae13796a0, 0x7fff79475200, 7, 0x7faae13796a0) = 7
+<... fwrite_unlocked resumed> )                  = 7
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+__ctype_get_mb_cur_max@libc.so.6()               = 6
+fwrite_unlocked@libc.so.6("mem.trace", 1, 9, 0x7faae13796a0 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7faae13796a0, 0x7fff79475200, 9, 0x7faae13796a0) = 9
+<... fwrite_unlocked resumed> )                  = 9
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+__ctype_get_mb_cur_max@libc.so.6()               = 6
+fwrite_unlocked@libc.so.6("memory_leak", 1, 11, 0x7faae13796a0 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7faae13796a0, 0x7fff79475200, 11, 0x7faae13796a0) = 11
+<... fwrite_unlocked resumed> )                  = 11
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+__ctype_get_mb_cur_max@libc.so.6()               = 6
+fwrite_unlocked@libc.so.6("memory_leak.cpp", 1, 15, 0x7faae13796a0 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7faae13796a0, 0x7fff79475200, 15, 0x7faae13796a0) = 15
+<... fwrite_unlocked resumed> )                  = 15
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+__ctype_get_mb_cur_max@libc.so.6()               = 6
+fwrite_unlocked@libc.so.6("memory_leak.o", 1, 13, 0x7faae13796a0 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7faae13796a0, 0x7fff79475200, 13, 0x7faae13796a0) = 13
+<... fwrite_unlocked resumed> )                  = 13
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+__ctype_get_mb_cur_max@libc.so.6()               = 6
+fwrite_unlocked@libc.so.6("memory_leak_malloc", 1, 18, 0x7faae13796a0 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7faae13796a0, 0x7fff79475200, 18, 0x7faae13796a0) = 18
+<... fwrite_unlocked resumed> )                  = 18
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+__ctype_get_mb_cur_max@libc.so.6()               = 6
+fwrite_unlocked@libc.so.6("memory_leak_malloc.c", 1, 20, 0x7faae13796a0 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7faae13796a0, 0x7fff79475200, 20, 0x7faae13796a0) = 20
+<... fwrite_unlocked resumed> )                  = 20
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+__ctype_get_mb_cur_max@libc.so.6()               = 6
+fwrite_unlocked@libc.so.6("memory_leak_malloc.o", 1, 20, 0x7faae13796a0 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7faae13796a0, 0x7fff79475200, 20, 0x7faae13796a0) = 20
+<... fwrite_unlocked resumed> )                  = 20
+__errno_location@libc.so.6()                     = 0x7faae10d1298
+__ctype_get_mb_cur_max@libc.so.6()               = 6
+fwrite_unlocked@libc.so.6("valgrind-out.txt", 1, 16, 0x7faae13796a0 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7faae13796a0, 0x7fff79475200, 16, 0x7faae13796a0) = 16
+<... fwrite_unlocked resumed> )                  = 16
+free@libc.so.6(0x55ebef3a6a30)                   = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0x55ebef3a6a00)                   = <void>
+exit@libc.so.6(0 <unfinished ...>
+__call_tls_dtors@libc.so.6(0, 0x7faae1378718, 1, 1) = 0
+__fpending@libc.so.6(0x7faae13796a0, 0, 0x55ebed7eefe0, 1) = 154
+fileno@libc.so.6(0x7faae13796a0)                 = 1
+__freading@libc.so.6(0x7faae13796a0, 0, 0x55ebed7eefe0, 1) = 0
+__freading@libc.so.6(0x7faae13796a0, 0, 0x55ebed7eefe0, 1) = 0
+fflush@libc.so.6(0x7faae13796a0 <unfinished ...>
+_IO_file_sync@libc.so.6(0x7faae13796a0, 3072, 0x7faae13748a0, 1 <unfinished ...>
+_IO_do_write@libc.so.6(0x7faae13796a0, 0x55ebef3a6b60, 154, 1 <unfinished ...>
+_IO_file_write@libc.so.6(0x7faae13796a0, 0x55ebef3a6b60, 154, 1 <unfinished ...>
+write@libc.so.6(1, "Makefile\ncv.txt\ncv2.txt\nmem.trac"..., 154Makefile
+cv.txt
+cv2.txt
+mem.trace
+memory_leak
+memory_leak.cpp
+memory_leak.o
+memory_leak_malloc
+memory_leak_malloc.c
+memory_leak_malloc.o
+valgrind-out.txt
+) = 154
+<... _IO_file_write resumed> )                   = 154
+<... _IO_do_write resumed> )                     = 0
+<... _IO_file_sync resumed> )                    = 0
+<... fflush resumed> )                           = 0
+fclose@libc.so.6(0x7faae13796a0 <unfinished ...>
+_IO_un_link@libc.so.6(0x7faae13796a0, 0, 0, 0x7faae129a077 <unfinished ...>
+_pthread_cleanup_push_defer@libpthread.so.0(0x7fff794778d0, 0x7faae121cfb0, 0, 0x7faae129a077) = 0
+_pthread_cleanup_pop_restore@libpthread.so.0(0x7fff794778d0, 0, 0, 0x7faae1379628) = 0
+<... _IO_un_link resumed> )                      = 0
+_IO_file_close_it@libc.so.6(0x7faae13796a0, 0, 0, 0 <unfinished ...>
+_IO_do_write@libc.so.6(0x7faae13796a0, 0x55ebef3a6b60, 0, 0) = 0
+_IO_unsave_markers@libc.so.6(0x7faae13796a0, 0x55ebef3a6b60, 0, 0) = 0
+_IO_file_close@libc.so.6(0x7faae13796a0, 0x55ebef3a6b60, 0x7faae13748a0, 3072 <unfinished ...>
+__close_nocancel@libc.so.6(1, 0x55ebef3a6b60, 0x7faae13748a0, 3072) = 0
+<... _IO_file_close resumed> )                   = 0
+_IO_setb@libc.so.6(0x7faae13796a0, 0, 0, 0 <unfinished ...>
+free@libc.so.6(0x55ebef3a6b60)                   = <void>
+<... _IO_setb resumed> )                         = 0xfbad2805
+_IO_un_link@libc.so.6(0x7faae13796a0, 0, 0xfbad2804, 0x6f21) = 0xfbad2805
+<... _IO_file_close_it resumed> )                = 0
+_IO_file_finish@libc.so.6(0x7faae13796a0, 0, 0x7faae13748a0, 3072 <unfinished ...>
+_IO_default_finish@libc.so.6(0x7faae13796a0, 0, 0x7faae13748a0, 3072) = 0
+<... _IO_file_finish resumed> )                  = 0
+<... fclose resumed> )                           = 0
+__fpending@libc.so.6(0x7faae13795c0, 0, 0x7faae1374801, 3072) = 0
+fileno@libc.so.6(0x7faae13795c0)                 = 2
+__freading@libc.so.6(0x7faae13795c0, 0, 0x7faae1374801, 3072) = 0
+__freading@libc.so.6(0x7faae13795c0, 0, 0x7faae1374801, 3072) = 0
+fflush@libc.so.6(0x7faae13795c0 <unfinished ...>
+_IO_file_sync@libc.so.6(0x7faae13795c0, 3072, 0x7faae13748a0, 3072) = 0
+<... fflush resumed> )                           = 0
+fclose@libc.so.6(0x7faae13795c0 <unfinished ...>
+_IO_un_link@libc.so.6(0x7faae13795c0, 0, 0, 3072 <unfinished ...>
+_pthread_cleanup_push_defer@libpthread.so.0(0x7fff794778d0, 0x7faae121cfb0, 0, 3072) = 0
+_pthread_cleanup_pop_restore@libpthread.so.0(0x7fff794778d0, 0, 0, 0x7faae13795c0) = 0
+<... _IO_un_link resumed> )                      = 0
+_IO_file_close_it@libc.so.6(0x7faae13795c0, 0, 0, 0 <unfinished ...>
+_IO_unsave_markers@libc.so.6(0x7faae13795c0, 0, 0, 0) = 0
+_IO_file_close@libc.so.6(0x7faae13795c0, 0, 0x7faae13748a0, 3072 <unfinished ...>
+__close_nocancel@libc.so.6(2, 0, 0x7faae13748a0, 3072) = 0
+<... _IO_file_close resumed> )                   = 0
+_IO_setb@libc.so.6(0x7faae13795c0, 0, 0, 0)      = 0xfbad2007
+_IO_un_link@libc.so.6(0x7faae13795c0, 0, 0xfbad2006, 0) = 0xfbad2007
+<... _IO_file_close_it resumed> )                = 0
+_IO_file_finish@libc.so.6(0x7faae13795c0, 0, 0x7faae13748a0, 3072 <unfinished ...>
+_IO_default_finish@libc.so.6(0x7faae13795c0, 0, 0x7faae13748a0, 3072) = 0
+<... _IO_file_finish resumed> )                  = 0
+<... fclose resumed> )                           = 0
+pthread_mutex_lock@libpthread.so.0(0x7faae13f4968, 0, 0x7faae13d7d60, 3072) = 0
+pthread_mutex_unlock@libpthread.so.0(0x7faae13f4968, 0, 2, 0) = 0
+__cxa_finalize@libc.so.6(0x55ebed804008, 0x55ebed803018, 1, 0) = 0
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+free@libc.so.6(0)                                = <void>
+__cxa_finalize@libc.so.6(0x7faae13a6400, 0x7faae13a5cf0, 0x7faae13a5cf8, 0) = 0
+__cxa_finalize@libc.so.6(0x7faae118b0c0, 0x7faae118ad18, 1, 0) = 0
+__cxa_finalize@libc.so.6(0x7faae10fa080, 0, 0x7faae10f9d88, 0) = 0
+__do_global_dtors_aux@libpthread.so.0(0x7faae10fa088, 0x7faae10efc18, 1, 0 <unfinished ...>
+__cxa_finalize@libc.so.6(0x7faae10f02c0, 0x7faae10efc18, 1, 0) = 0
+deregister_tm_clones@libpthread.so.0(0x7faae137a838, 1, 1, 0x7faae137a838) = 0x7faae10f0310
+<... __do_global_dtors_aux resumed> )            = 0x7faae10f0310
+_fini@libpthread.so.0(0x7faae10f0310, 1, 0x7faae10efc18, 0x7faae137a838) = 0x7faae10e8538
+_pthread_cleanup_push_defer@libpthread.so.0(0x7fff79477890, 0x7faae121cfb0, 0, 0) = 0
+_pthread_cleanup_pop_restore@libpthread.so.0(0x7fff79477890, 0, 0, 0) = 0
+_pthread_cleanup_push_defer@libpthread.so.0(0x7fff79477910, 0x7faae121cfb0, 0, 0) = 0
+_pthread_cleanup_pop_restore@libpthread.so.0(0x7fff79477910, 0, 0, 0) = 0
+_exit@libc.so.6(0 <no return ...>
++++ exited (status 0) +++

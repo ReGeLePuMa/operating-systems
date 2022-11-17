@@ -1,0 +1,2289 @@
+execve("/usr/bin/python3", ["python3", "make_conn.py", "localhost", "8080"], 0x7ffd77d141e8 /* 85 vars */) = 0
+brk(NULL)                               = 0x1f0c000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7fffeff71cb0) = -1 EINVAL (Invalid argument)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/student/dlang/dmd-2.100.2/linux/lib64/tls/x86_64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/home/student/dlang/dmd-2.100.2/linux/lib64/tls/x86_64/x86_64", 0x7fffeff70f00) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/student/dlang/dmd-2.100.2/linux/lib64/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/home/student/dlang/dmd-2.100.2/linux/lib64/tls/x86_64", 0x7fffeff70f00) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/student/dlang/dmd-2.100.2/linux/lib64/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/home/student/dlang/dmd-2.100.2/linux/lib64/tls/x86_64", 0x7fffeff70f00) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/student/dlang/dmd-2.100.2/linux/lib64/tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/home/student/dlang/dmd-2.100.2/linux/lib64/tls", 0x7fffeff70f00) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/student/dlang/dmd-2.100.2/linux/lib64/x86_64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/home/student/dlang/dmd-2.100.2/linux/lib64/x86_64/x86_64", 0x7fffeff70f00) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/student/dlang/dmd-2.100.2/linux/lib64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/home/student/dlang/dmd-2.100.2/linux/lib64/x86_64", 0x7fffeff70f00) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/student/dlang/dmd-2.100.2/linux/lib64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/home/student/dlang/dmd-2.100.2/linux/lib64/x86_64", 0x7fffeff70f00) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/student/dlang/dmd-2.100.2/linux/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/home/student/dlang/dmd-2.100.2/linux/lib64", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=109663, ...}) = 0
+mmap(NULL, 109663, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f52fa477000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300A\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\30x\346\264ur\f|Q\226\236i\253-'o"..., 68, 880) = 68
+fstat(3, {st_mode=S_IFREG|0755, st_size=2029592, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f52fa475000
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\30x\346\264ur\f|Q\226\236i\253-'o"..., 68, 880) = 68
+mmap(NULL, 2037344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f52fa283000
+mmap(0x7f52fa2a5000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7f52fa2a5000
+mmap(0x7f52fa41d000, 319488, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19a000) = 0x7f52fa41d000
+mmap(0x7f52fa46b000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f52fa46b000
+mmap(0x7f52fa471000, 13920, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f52fa471000
+close(3)                                = 0
+openat(AT_FDCWD, "/home/student/dlang/dmd-2.100.2/linux/lib64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220q\0\0\0\0\0\0"..., 832) = 832
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0{E6\364\34\332\245\210\204\10\350-\0106\343="..., 68, 824) = 68
+fstat(3, {st_mode=S_IFREG|0755, st_size=157224, ...}) = 0
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0{E6\364\34\332\245\210\204\10\350-\0106\343="..., 68, 824) = 68
+mmap(NULL, 140408, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f52fa260000
+mmap(0x7f52fa266000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7f52fa266000
+mmap(0x7f52fa277000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17000) = 0x7f52fa277000
+mmap(0x7f52fa27d000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c000) = 0x7f52fa27d000
+mmap(0x7f52fa27f000, 13432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f52fa27f000
+close(3)                                = 0
+openat(AT_FDCWD, "/home/student/dlang/dmd-2.100.2/linux/lib64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \22\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=18848, ...}) = 0
+mmap(NULL, 20752, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f52fa25a000
+mmap(0x7f52fa25b000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f52fa25b000
+mmap(0x7f52fa25d000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f52fa25d000
+mmap(0x7f52fa25e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f52fa25e000
+close(3)                                = 0
+openat(AT_FDCWD, "/home/student/dlang/dmd-2.100.2/linux/lib64/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libutil.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340\23\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=14880, ...}) = 0
+mmap(NULL, 16656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f52fa255000
+mmap(0x7f52fa256000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f52fa256000
+mmap(0x7f52fa257000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f52fa257000
+mmap(0x7f52fa258000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f52fa258000
+close(3)                                = 0
+openat(AT_FDCWD, "/home/student/dlang/dmd-2.100.2/linux/lib64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300\323\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=1369384, ...}) = 0
+mmap(NULL, 1368336, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f52fa106000
+mmap(0x7f52fa113000, 684032, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xd000) = 0x7f52fa113000
+mmap(0x7f52fa1ba000, 626688, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb4000) = 0x7f52fa1ba000
+mmap(0x7f52fa253000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14c000) = 0x7f52fa253000
+close(3)                                = 0
+openat(AT_FDCWD, "/home/student/dlang/dmd-2.100.2/linux/lib64/libexpat.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libexpat.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000B\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=182560, ...}) = 0
+mmap(NULL, 184480, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f52fa0d8000
+mprotect(0x7f52fa0dc000, 159744, PROT_NONE) = 0
+mmap(0x7f52fa0dc000, 114688, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f52fa0dc000
+mmap(0x7f52fa0f8000, 40960, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x20000) = 0x7f52fa0f8000
+mmap(0x7f52fa103000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2a000) = 0x7f52fa103000
+close(3)                                = 0
+openat(AT_FDCWD, "/home/student/dlang/dmd-2.100.2/linux/lib64/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200\"\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=108936, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f52fa0d6000
+mmap(NULL, 110776, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f52fa0ba000
+mprotect(0x7f52fa0bc000, 98304, PROT_NONE) = 0
+mmap(0x7f52fa0bc000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f52fa0bc000
+mmap(0x7f52fa0cd000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000) = 0x7f52fa0cd000
+mmap(0x7f52fa0d4000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000) = 0x7f52fa0d4000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f52fa0b7000
+arch_prctl(ARCH_SET_FS, 0x7f52fa0b7740) = 0
+mprotect(0x7f52fa46b000, 16384, PROT_READ) = 0
+mprotect(0x7f52fa0d4000, 4096, PROT_READ) = 0
+mprotect(0x7f52fa103000, 8192, PROT_READ) = 0
+mprotect(0x7f52fa253000, 4096, PROT_READ) = 0
+mprotect(0x7f52fa258000, 4096, PROT_READ) = 0
+mprotect(0x7f52fa25e000, 4096, PROT_READ) = 0
+mprotect(0x7f52fa27d000, 4096, PROT_READ) = 0
+mprotect(0x8f8000, 4096, PROT_READ)     = 0
+mprotect(0x7f52fa4bf000, 4096, PROT_READ) = 0
+munmap(0x7f52fa477000, 109663)          = 0
+set_tid_address(0x7f52fa0b7a10)         = 30011
+set_robust_list(0x7f52fa0b7a20, 24)     = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7f52fa266bf0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7f52fa274420}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7f52fa266c90, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f52fa274420}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+brk(NULL)                               = 0x1f0c000
+brk(0x1f2d000)                          = 0x1f2d000
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=8631488, ...}) = 0
+mmap(NULL, 8631488, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f52f987b000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=27002, ...}) = 0
+mmap(NULL, 27002, PROT_READ, MAP_SHARED, 3, 0) = 0x7f52fa48b000
+close(3)                                = 0
+futex(0x7f52fa470954, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+stat("/home/student/dlang/dmd-2.100.2/linux/bin64/python3", 0x7fffeff6d460) = -1 ENOENT (No such file or directory)
+stat("/home/student/.local/bin/python3", 0x7fffeff6d460) = -1 ENOENT (No such file or directory)
+stat("/usr/local/sbin/python3", 0x7fffeff6d460) = -1 ENOENT (No such file or directory)
+stat("/usr/local/bin/python3", 0x7fffeff6d460) = -1 ENOENT (No such file or directory)
+stat("/usr/sbin/python3", 0x7fffeff6d460) = -1 ENOENT (No such file or directory)
+stat("/usr/bin/python3", {st_mode=S_IFREG|0755, st_size=5502744, ...}) = 0
+readlink("/usr/bin/python3", "python3.8", 4096) = 9
+readlink("/usr/bin/python3.8", 0x7fffeff5b370, 4096) = -1 EINVAL (Invalid argument)
+openat(AT_FDCWD, "/usr/bin/pyvenv.cfg", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/pyvenv.cfg", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/bin/Modules/Setup.local", 0x7fffeff61430) = -1 ENOENT (No such file or directory)
+stat("/usr/bin/lib/python3.8/os.py", 0x7fffeff5c300) = -1 ENOENT (No such file or directory)
+stat("/usr/bin/lib/python3.8/os.pyc", 0x7fffeff5c300) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3.8/os.py", {st_mode=S_IFREG|0644, st_size=38995, ...}) = 0
+stat("/usr/bin/pybuilddir.txt", 0x7fffeff5c410) = -1 ENOENT (No such file or directory)
+stat("/usr/bin/lib/python3.8/lib-dynload", 0x7fffeff6d460) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3.8/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+getrandom("\x3d\x46\xe2\xf7\xb8\x74\xa0\x5e\xcd\x05\xaa\xa1\xe9\x69\x64\x98\xbb\xa1\x63\x8d\x2c\x31\x0d\xb0", 24, GRND_NONBLOCK) = 24
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f52f983b000
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f52f97fb000
+brk(0x1f51000)                          = 0x1f51000
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f52f97bb000
+sysinfo({uptime=2581, loads=[31744, 25888, 36608], totalram=2079510528, freeram=128016384, sharedram=104083456, bufferram=68575232, totalswap=795955200, freeswap=50958336, procs=893, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+brk(0x1f72000)                          = 0x1f72000
+brk(0x1f71000)                          = 0x1f71000
+openat(AT_FDCWD, "/etc/localtime", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=2212, ...}) = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=2212, ...}) = 0
+read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0\0\10\0\0\0\0"..., 4096) = 2212
+lseek(3, -1397, SEEK_CUR)               = 815
+read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0\0\10\0\0\0\0"..., 4096) = 1397
+close(3)                                = 0
+sigaltstack({ss_sp=0x1f53a50, ss_flags=0, ss_size=16384}, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+stat("/usr/lib/python38.zip", 0x7fffeff6fdc0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python38.zip", 0x7fffeff6fa30) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+getdents64(3, /* 207 entries */, 32768) = 6912
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f52f977b000
+getdents64(3, /* 0 entries */, 32768)   = 0
+close(3)                                = 0
+stat("/usr/lib/python3.8/encodings/__init__.cpython-38-x86_64-linux-gnu.so", 0x7fffeff6fdf0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3.8/encodings/__init__.abi3.so", 0x7fffeff6fdf0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3.8/encodings/__init__.so", 0x7fffeff6fdf0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3.8/encodings/__init__.py", {st_mode=S_IFREG|0644, st_size=5588, ...}) = 0
+stat("/usr/lib/python3.8/encodings/__init__.py", {st_mode=S_IFREG|0644, st_size=5588, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/encodings/__pycache__/__init__.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fcntl(3, F_GETFD)                       = 0x1 (flags FD_CLOEXEC)
+fstat(3, {st_mode=S_IFREG|0644, st_size=3903, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff70390)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=3903, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263b\324\25\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 3904) = 3903
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/codecs.py", {st_mode=S_IFREG|0644, st_size=36667, ...}) = 0
+stat("/usr/lib/python3.8/codecs.py", {st_mode=S_IFREG|0644, st_size=36667, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/codecs.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=33956, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6f570)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=33956, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263b;\217\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 33957) = 33956
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.8/encodings", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/encodings", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/encodings", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/encodings", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+getdents64(3, /* 126 entries */, 32768) = 4264
+getdents64(3, /* 0 entries */, 32768)   = 0
+close(3)                                = 0
+stat("/usr/lib/python3.8/encodings/aliases.py", {st_mode=S_IFREG|0644, st_size=15693, ...}) = 0
+stat("/usr/lib/python3.8/encodings/aliases.py", {st_mode=S_IFREG|0644, st_size=15693, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/encodings/__pycache__/aliases.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=6330, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6ed90)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=6330, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263bM=\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 6331) = 6330
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.8/encodings", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/encodings/utf_8.py", {st_mode=S_IFREG|0644, st_size=1005, ...}) = 0
+stat("/usr/lib/python3.8/encodings/utf_8.py", {st_mode=S_IFREG|0644, st_size=1005, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/encodings/__pycache__/utf_8.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1630, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff703a0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=1630, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263b\355\3\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1631) = 1630
+read(3, "", 1)                          = 0
+close(3)                                = 0
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f52fa2c6090}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGXFSZ, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f52fa2c6090}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGHUP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGQUIT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGILL, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTRAP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGABRT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGFPE, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGKILL, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGUSR1, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGUSR2, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPIPE, NULL, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f52fa2c6090}, 8) = 0
+rt_sigaction(SIGALRM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSTKFLT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGCHLD, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGCONT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSTOP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTSTP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTTIN, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTTOU, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGURG, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGXCPU, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGXFSZ, NULL, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f52fa2c6090}, 8) = 0
+rt_sigaction(SIGVTALRM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPROF, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGWINCH, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGIO, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPWR, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSYS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_2, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_3, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_4, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_5, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_6, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_7, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_8, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_9, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_10, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_11, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_12, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_13, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_14, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_15, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_16, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_17, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_18, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_19, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_20, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_21, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_22, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_23, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_24, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_25, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_26, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_27, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_28, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_29, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_30, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_31, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_32, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x62b020, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f52fa2c6090}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x2), ...}) = 0
+stat("/usr/lib/python3.8/encodings", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/encodings/latin_1.py", {st_mode=S_IFREG|0644, st_size=1264, ...}) = 0
+stat("/usr/lib/python3.8/encodings/latin_1.py", {st_mode=S_IFREG|0644, st_size=1264, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/encodings/__pycache__/latin_1.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1893, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff703c0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=1893, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263b\360\4\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1894) = 1893
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/io.py", {st_mode=S_IFREG|0644, st_size=3541, ...}) = 0
+stat("/usr/lib/python3.8/io.py", {st_mode=S_IFREG|0644, st_size=3541, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/io.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=3454, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff703c0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=3454, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263b\325\r\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 3455) = 3454
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/abc.py", {st_mode=S_IFREG|0644, st_size=4489, ...}) = 0
+stat("/usr/lib/python3.8/abc.py", {st_mode=S_IFREG|0644, st_size=4489, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/abc.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=5334, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6f5a0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=5334, ...}) = 0
+brk(0x1f92000)                          = 0x1f92000
+read(3, "U\r\r\n\0\0\0\0\ny\263b\211\21\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 5335) = 5334
+read(3, "", 1)                          = 0
+close(3)                                = 0
+brk(0x1f90000)                          = 0x1f90000
+dup(0)                                  = 3
+close(3)                                = 0
+fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x2), ...}) = 0
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+lseek(0, 0, SEEK_CUR)                   = -1 ESPIPE (Illegal seek)
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+dup(1)                                  = 3
+close(3)                                = 0
+fstat(1, {st_mode=S_IFREG|0664, st_size=27735, ...}) = 0
+ioctl(1, TCGETS, 0x7fffeff711c0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(1, 0, SEEK_CUR)                   = 27888
+ioctl(1, TCGETS, 0x7fffeff71440)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(1, 0, SEEK_CUR)                   = 28021
+dup(2)                                  = 3
+close(3)                                = 0
+fstat(2, {st_mode=S_IFREG|0664, st_size=28146, ...}) = 0
+ioctl(2, TCGETS, 0x7fffeff711c0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(2, 0, SEEK_CUR)                   = 28299
+ioctl(2, TCGETS, 0x7fffeff71440)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(2, 0, SEEK_CUR)                   = 28432
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/site.py", {st_mode=S_IFREG|0644, st_size=22336, ...}) = 0
+stat("/usr/lib/python3.8/site.py", {st_mode=S_IFREG|0644, st_size=22336, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/site.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=17168, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff70490)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=17168, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263b@W\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 17169) = 17168
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/os.py", {st_mode=S_IFREG|0644, st_size=38995, ...}) = 0
+stat("/usr/lib/python3.8/os.py", {st_mode=S_IFREG|0644, st_size=38995, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/os.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=31397, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6f670)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=31397, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263bS\230\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 31398) = 31397
+read(3, "", 1)                          = 0
+close(3)                                = 0
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f52f973b000
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/stat.py", {st_mode=S_IFREG|0644, st_size=5485, ...}) = 0
+stat("/usr/lib/python3.8/stat.py", {st_mode=S_IFREG|0644, st_size=5485, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/stat.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=4372, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6e850)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=4372, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263bm\25\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4373) = 4372
+read(3, "", 1)                          = 0
+close(3)                                = 0
+mmap(NULL, 151552, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f52f9716000
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/_collections_abc.py", {st_mode=S_IFREG|0644, st_size=26100, ...}) = 0
+stat("/usr/lib/python3.8/_collections_abc.py", {st_mode=S_IFREG|0644, st_size=26100, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/_collections_abc.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=28741, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6e850)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=28741, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263b\364e\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 28742) = 28741
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/posixpath.py", {st_mode=S_IFREG|0644, st_size=15627, ...}) = 0
+stat("/usr/lib/python3.8/posixpath.py", {st_mode=S_IFREG|0644, st_size=15627, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/posixpath.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=10428, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6e850)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=10428, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263b\v=\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 10429) = 10428
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/genericpath.py", {st_mode=S_IFREG|0644, st_size=4975, ...}) = 0
+stat("/usr/lib/python3.8/genericpath.py", {st_mode=S_IFREG|0644, st_size=4975, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/genericpath.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=4001, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6da30)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=4001, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263bo\23\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4002) = 4001
+read(3, "", 1)                          = 0
+close(3)                                = 0
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f52f96d6000
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/_sitebuiltins.py", {st_mode=S_IFREG|0644, st_size=3115, ...}) = 0
+stat("/usr/lib/python3.8/_sitebuiltins.py", {st_mode=S_IFREG|0644, st_size=3115, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/_sitebuiltins.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=3481, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6f670)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=3481, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263b+\f\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 3482) = 3481
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/bin/pyvenv.cfg", 0x7fffeff6fea0) = -1 ENOENT (No such file or directory)
+stat("/usr/pyvenv.cfg", 0x7fffeff6fea0) = -1 ENOENT (No such file or directory)
+geteuid()                               = 1000
+getuid()                                = 1000
+getegid()                               = 1000
+getgid()                                = 1000
+stat("/home/student/.local/lib/python3.8/site-packages", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/home/student/.local/lib/python3.8/site-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+getdents64(3, /* 74 entries */, 32768)  = 2960
+getdents64(3, /* 0 entries */, 32768)   = 0
+close(3)                                = 0
+stat("/usr/local/lib/python3.8/dist-packages", {st_mode=S_IFDIR|S_ISGID|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/local/lib/python3.8/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|S_ISGID|0775, st_size=4096, ...}) = 0
+getdents64(3, /* 55 entries */, 32768)  = 2056
+getdents64(3, /* 0 entries */, 32768)   = 0
+close(3)                                = 0
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=16384, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0755, st_size=16384, ...}) = 0
+getdents64(3, /* 287 entries */, 32768) = 11808
+getdents64(3, /* 0 entries */, 32768)   = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/python3/dist-packages/matplotlib-3.1.2-nspkg.pth", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=569, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6f9a0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+ioctl(3, TCGETS, 0x7fffeff6fcf0)        = -1 ENOTTY (Inappropriate ioctl for device)
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/_bootlocale.py", {st_mode=S_IFREG|0644, st_size=1801, ...}) = 0
+stat("/usr/lib/python3.8/_bootlocale.py", {st_mode=S_IFREG|0644, st_size=1801, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/_bootlocale.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1243, ...}) = 0
+ioctl(4, TCGETS, 0x7fffeff6ea80)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=1243, ...}) = 0
+read(4, "U\r\r\n\0\0\0\0\ny\263b\t\7\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1244) = 1243
+read(4, "", 1)                          = 0
+close(4)                                = 0
+read(3, "import sys, types, os;has_mfs = "..., 8192) = 569
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/types.py", {st_mode=S_IFREG|0644, st_size=9713, ...}) = 0
+stat("/usr/lib/python3.8/types.py", {st_mode=S_IFREG|0644, st_size=9713, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/types.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=9177, ...}) = 0
+ioctl(4, TCGETS, 0x7fffeff6eac0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=9177, ...}) = 0
+read(4, "U\r\r\n\0\0\0\0\ny\263b\361%\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 9178) = 9177
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/importlib/__init__.cpython-38-x86_64-linux-gnu.so", 0x7fffeff6dc00) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3.8/importlib/__init__.abi3.so", 0x7fffeff6dc00) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3.8/importlib/__init__.so", 0x7fffeff6dc00) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3.8/importlib/__init__.py", {st_mode=S_IFREG|0644, st_size=6061, ...}) = 0
+stat("/usr/lib/python3.8/importlib/__init__.py", {st_mode=S_IFREG|0644, st_size=6061, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/importlib/__pycache__/__init__.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=3758, ...}) = 0
+ioctl(4, TCGETS, 0x7fffeff6e1a0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=3758, ...}) = 0
+read(4, "U\r\r\n\0\0\0\0\ny\263b\255\27\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 3759) = 3758
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/warnings.py", {st_mode=S_IFREG|0644, st_size=19688, ...}) = 0
+stat("/usr/lib/python3.8/warnings.py", {st_mode=S_IFREG|0644, st_size=19688, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/warnings.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=13652, ...}) = 0
+ioctl(4, TCGETS, 0x7fffeff6d380)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=13652, ...}) = 0
+read(4, "U\r\r\n\0\0\0\0\ny\263b\350L\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 13653) = 13652
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.8/importlib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.8/importlib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.8/importlib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/importlib", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+fstat(4, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+getdents64(4, /* 11 entries */, 32768)  = 360
+getdents64(4, /* 0 entries */, 32768)   = 0
+close(4)                                = 0
+stat("/usr/lib/python3.8/importlib/util.py", {st_mode=S_IFREG|0644, st_size=11319, ...}) = 0
+stat("/usr/lib/python3.8/importlib/util.py", {st_mode=S_IFREG|0644, st_size=11319, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/importlib/__pycache__/util.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=9292, ...}) = 0
+ioctl(4, TCGETS, 0x7fffeff6ea00)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=9292, ...}) = 0
+read(4, "U\r\r\n\0\0\0\0\ny\263b7,\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 9293) = 9292
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.8/importlib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.8/importlib/abc.py", {st_mode=S_IFREG|0644, st_size=12873, ...}) = 0
+stat("/usr/lib/python3.8/importlib/abc.py", {st_mode=S_IFREG|0644, st_size=12873, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/importlib/__pycache__/abc.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=13573, ...}) = 0
+ioctl(4, TCGETS, 0x7fffeff6d400)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=13573, ...}) = 0
+read(4, "U\r\r\n\0\0\0\0\ny\263bI2\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 13574) = 13573
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.8/importlib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.8/importlib/machinery.py", {st_mode=S_IFREG|0644, st_size=844, ...}) = 0
+stat("/usr/lib/python3.8/importlib/machinery.py", {st_mode=S_IFREG|0644, st_size=844, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/importlib/__pycache__/machinery.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=962, ...}) = 0
+ioctl(4, TCGETS, 0x7fffeff6be00)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=962, ...}) = 0
+read(4, "U\r\r\n\0\0\0\0\ny\263bL\3\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 963) = 962
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/contextlib.py", {st_mode=S_IFREG|0644, st_size=24995, ...}) = 0
+stat("/usr/lib/python3.8/contextlib.py", {st_mode=S_IFREG|0644, st_size=24995, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/contextlib.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=20229, ...}) = 0
+ioctl(4, TCGETS, 0x7fffeff6dbe0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=20229, ...}) = 0
+brk(0x1fb1000)                          = 0x1fb1000
+read(4, "U\r\r\n\0\0\0\0\ny\263b\243a\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 20230) = 20229
+read(4, "", 1)                          = 0
+close(4)                                = 0
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f52f9696000
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/collections/__init__.cpython-38-x86_64-linux-gnu.so", 0x7fffeff6c820) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3.8/collections/__init__.abi3.so", 0x7fffeff6c820) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3.8/collections/__init__.so", 0x7fffeff6c820) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3.8/collections/__init__.py", {st_mode=S_IFREG|0644, st_size=47939, ...}) = 0
+stat("/usr/lib/python3.8/collections/__init__.py", {st_mode=S_IFREG|0644, st_size=47939, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/collections/__pycache__/__init__.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=46436, ...}) = 0
+ioctl(4, TCGETS, 0x7fffeff6cdc0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=46436, ...}) = 0
+read(4, "U\r\r\n\0\0\0\0\ny\263bC\273\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 46437) = 46436
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/operator.py", {st_mode=S_IFREG|0644, st_size=10711, ...}) = 0
+stat("/usr/lib/python3.8/operator.py", {st_mode=S_IFREG|0644, st_size=10711, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/operator.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=13691, ...}) = 0
+ioctl(4, TCGETS, 0x7fffeff6bfa0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=13691, ...}) = 0
+read(4, "U\r\r\n\0\0\0\0\ny\263b\327)\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 13692) = 13691
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/keyword.py", {st_mode=S_IFREG|0644, st_size=945, ...}) = 0
+stat("/usr/lib/python3.8/keyword.py", {st_mode=S_IFREG|0644, st_size=945, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/keyword.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=998, ...}) = 0
+ioctl(4, TCGETS, 0x7fffeff6bfa0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=998, ...}) = 0
+read(4, "U\r\r\n\0\0\0\0\ny\263b\261\3\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 999) = 998
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/heapq.py", {st_mode=S_IFREG|0644, st_size=22877, ...}) = 0
+stat("/usr/lib/python3.8/heapq.py", {st_mode=S_IFREG|0644, st_size=22877, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/heapq.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=14070, ...}) = 0
+ioctl(4, TCGETS, 0x7fffeff6bfa0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=14070, ...}) = 0
+read(4, "U\r\r\n\0\0\0\0\ny\263b]Y\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 14071) = 14070
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/reprlib.py", {st_mode=S_IFREG|0644, st_size=5267, ...}) = 0
+stat("/usr/lib/python3.8/reprlib.py", {st_mode=S_IFREG|0644, st_size=5267, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/reprlib.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=5303, ...}) = 0
+ioctl(4, TCGETS, 0x7fffeff6bfa0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=5303, ...}) = 0
+read(4, "U\r\r\n\0\0\0\0\ny\263b\223\24\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 5304) = 5303
+read(4, "", 1)                          = 0
+close(4)                                = 0
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f52f9656000
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/functools.py", {st_mode=S_IFREG|0644, st_size=37406, ...}) = 0
+stat("/usr/lib/python3.8/functools.py", {st_mode=S_IFREG|0644, st_size=37406, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/functools.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=27901, ...}) = 0
+ioctl(4, TCGETS, 0x7fffeff6cdc0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=27901, ...}) = 0
+read(4, "U\r\r\n\0\0\0\0\ny\263b\36\222\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 27902) = 27901
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=16384, ...}) = 0
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=16384, ...}) = 0
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=16384, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+fstat(4, {st_mode=S_IFDIR|0755, st_size=16384, ...}) = 0
+getdents64(4, /* 287 entries */, 32768) = 11808
+getdents64(4, /* 0 entries */, 32768)   = 0
+close(4)                                = 0
+stat("/usr/lib/python3/dist-packages/mpl_toolkits/__init__.cpython-38-x86_64-linux-gnu.so", 0x7fffeff6ed10) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3/dist-packages/mpl_toolkits/__init__.abi3.so", 0x7fffeff6ed10) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3/dist-packages/mpl_toolkits/__init__.so", 0x7fffeff6ed10) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3/dist-packages/mpl_toolkits/__init__.py", {st_mode=S_IFREG|0644, st_size=122, ...}) = 0
+read(3, "", 8192)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/python3/dist-packages/zope.interface-4.7.1-nspkg.pth", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=529, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6f9a0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+ioctl(3, TCGETS, 0x7fffeff6fcf0)        = -1 ENOTTY (Inappropriate ioctl for device)
+read(3, "import sys, types, os;has_mfs = "..., 8192) = 529
+brk(0x1fd5000)                          = 0x1fd5000
+brk(0x1fcb000)                          = 0x1fcb000
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=16384, ...}) = 0
+stat("/usr/lib/python3/dist-packages/zope/__init__.cpython-38-x86_64-linux-gnu.so", 0x7fffeff6ed10) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3/dist-packages/zope/__init__.abi3.so", 0x7fffeff6ed10) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3/dist-packages/zope/__init__.so", 0x7fffeff6ed10) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3/dist-packages/zope/__init__.py", {st_mode=S_IFREG|0644, st_size=56, ...}) = 0
+brk(0x1fc9000)                          = 0x1fc9000
+read(3, "", 8192)                       = 0
+close(3)                                = 0
+stat("/usr/lib/python3.8/dist-packages", 0x7fffeff70030) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/sitecustomize.py", {st_mode=S_IFREG|0644, st_size=155, ...}) = 0
+stat("/usr/lib/python3.8/sitecustomize.py", {st_mode=S_IFREG|0644, st_size=155, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/sitecustomize.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=220, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6f350)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=220, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\202>Sa\233\0\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 221) = 220
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.8/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.8/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/lib-dynload", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+getdents64(3, /* 48 entries */, 32768)  = 2976
+getdents64(3, /* 0 entries */, 32768)   = 0
+close(3)                                = 0
+stat("/home/student/.local/lib/python3.8/site-packages", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+stat("/home/student/.local/lib/python3.8/site-packages", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+stat("/home/student/.local/lib/python3.8/site-packages", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/home/student/.local/lib/python3.8/site-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+getdents64(3, /* 74 entries */, 32768)  = 2960
+getdents64(3, /* 0 entries */, 32768)   = 0
+close(3)                                = 0
+stat("/usr/local/lib/python3.8/dist-packages", {st_mode=S_IFDIR|S_ISGID|0775, st_size=4096, ...}) = 0
+stat("/usr/local/lib/python3.8/dist-packages", {st_mode=S_IFDIR|S_ISGID|0775, st_size=4096, ...}) = 0
+stat("/usr/local/lib/python3.8/dist-packages", {st_mode=S_IFDIR|S_ISGID|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/local/lib/python3.8/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|S_ISGID|0775, st_size=4096, ...}) = 0
+getdents64(3, /* 55 entries */, 32768)  = 2056
+getdents64(3, /* 0 entries */, 32768)   = 0
+close(3)                                = 0
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=16384, ...}) = 0
+stat("/usr/lib/python3/dist-packages/apport_python_hook.py", {st_mode=S_IFREG|0644, st_size=8063, ...}) = 0
+stat("/usr/lib/python3/dist-packages/apport_python_hook.py", {st_mode=S_IFREG|0644, st_size=8063, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3/dist-packages/__pycache__/apport_python_hook.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=4339, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6e530)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=4339, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\f0\325^\177\37\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4340) = 4339
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/home/student/.local/lib/python3.8/site-packages", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+stat("/usr/local/lib/python3.8/dist-packages", {st_mode=S_IFDIR|S_ISGID|0775, st_size=4096, ...}) = 0
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=16384, ...}) = 0
+stat("make_conn.py", {st_mode=S_IFREG|0664, st_size=360, ...}) = 0
+openat(AT_FDCWD, "make_conn.py", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=360, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff71140)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, -22, SEEK_END)                 = 338
+lseek(3, 0, SEEK_CUR)                   = 338
+read(3, "Press ENTER to exit\")\n", 4096) = 22
+lseek(3, 0, SEEK_END)                   = 360
+lseek(3, 0, SEEK_CUR)                   = 360
+lseek(3, 0, SEEK_SET)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=360, ...}) = 0
+read(3, "import socket\nimport sys\n\nNUM_CO"..., 361) = 360
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("make_conn.py", {st_mode=S_IFREG|0664, st_size=360, ...}) = 0
+readlink("make_conn.py", 0x7fffeff60b30, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/home/student/so/content/chapters/compute/lab/support/apache2", 4096) = 62
+lstat("/home/student/so/content/chapters/compute/lab/support/apache2/make_conn.py", {st_mode=S_IFREG|0664, st_size=360, ...}) = 0
+openat(AT_FDCWD, "make_conn.py", O_RDONLY) = 3
+fcntl(3, F_GETFD)                       = 0
+fcntl(3, F_SETFD, FD_CLOEXEC)           = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=360, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff71ac0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=360, ...}) = 0
+read(3, "import socket\nimport sys\n\nNUM_CO"..., 4096) = 360
+lseek(3, 0, SEEK_SET)                   = 0
+read(3, "import socket\nimport sys\n\nNUM_CO"..., 4096) = 360
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+stat("/home/student/so/content/chapters/compute/lab/support/apache2", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/student/so/content/chapters/compute/lab/support/apache2", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/home/student/so/content/chapters/compute/lab/support/apache2", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/home/student/so/content/chapters/compute/lab/support/apache2", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+getdents64(3, /* 9 entries */, 32768)   = 280
+getdents64(3, /* 0 entries */, 32768)   = 0
+close(3)                                = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/socket.py", {st_mode=S_IFREG|0644, st_size=35243, ...}) = 0
+stat("/usr/lib/python3.8/socket.py", {st_mode=S_IFREG|0644, st_size=35243, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/socket.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=27787, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff707c0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=27787, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263b\253\211\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 27788) = 27787
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/home/student/so/content/chapters/compute/lab/support/apache2", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/selectors.py", {st_mode=S_IFREG|0644, st_size=18561, ...}) = 0
+stat("/usr/lib/python3.8/selectors.py", {st_mode=S_IFREG|0644, st_size=18561, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/selectors.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=16935, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6f9a0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=16935, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263b\201H\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 16936) = 16935
+read(3, "", 1)                          = 0
+close(3)                                = 0
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f52f9616000
+stat("/usr/lib/python3.8/collections", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.8/collections", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.8/collections", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/collections", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+getdents64(3, /* 5 entries */, 32768)   = 144
+getdents64(3, /* 0 entries */, 32768)   = 0
+close(3)                                = 0
+stat("/usr/lib/python3.8/collections/abc.py", {st_mode=S_IFREG|0644, st_size=68, ...}) = 0
+stat("/usr/lib/python3.8/collections/abc.py", {st_mode=S_IFREG|0644, st_size=68, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/collections/__pycache__/abc.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=191, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6eb80)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=191, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263bD\0\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 192) = 191
+read(3, "", 1)                          = 0
+close(3)                                = 0
+brk(0x1fea000)                          = 0x1fea000
+brk(0x1fe0000)                          = 0x1fe0000
+stat("/home/student/so/content/chapters/compute/lab/support/apache2", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.8", {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
+stat("/usr/lib/python3.8/enum.py", {st_mode=S_IFREG|0644, st_size=38136, ...}) = 0
+stat("/usr/lib/python3.8/enum.py", {st_mode=S_IFREG|0644, st_size=38136, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.8/__pycache__/enum.cpython-38.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=25962, ...}) = 0
+ioctl(3, TCGETS, 0x7fffeff6f9a0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=25962, ...}) = 0
+read(3, "U\r\r\n\0\0\0\0\ny\263b\370\224\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 25963) = 25962
+read(3, "", 1)                          = 0
+close(3)                                = 0
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/host.conf", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=92, ...}) = 0
+read(4, "# The \"order\" line is only used "..., 4096) = 92
+read(4, "", 4096)                       = 0
+close(4)                                = 0
+futex(0x7f52fa4737c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+openat(AT_FDCWD, "/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+read(4, "# This file is managed by man:sy"..., 4096) = 739
+read(4, "", 4096)                       = 0
+close(4)                                = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=556, ...}) = 0
+read(4, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 556
+read(4, "", 4096)                       = 0
+close(4)                                = 0
+openat(AT_FDCWD, "/home/student/dlang/dmd-2.100.2/linux/lib64/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=109663, ...}) = 0
+mmap(NULL, 109663, PROT_READ, MAP_PRIVATE, 4, 0) = 0x7f52f95fb000
+close(4)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = 4
+read(4, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\3005\0\0\0\0\0\0"..., 832) = 832
+fstat(4, {st_mode=S_IFREG|0644, st_size=51856, ...}) = 0
+mmap(NULL, 79672, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x7f52fa477000
+mmap(0x7f52fa47a000, 28672, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x3000) = 0x7f52fa47a000
+mmap(0x7f52fa481000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0xa000) = 0x7f52fa481000
+mmap(0x7f52fa483000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0xb000) = 0x7f52fa483000
+mmap(0x7f52fa485000, 22328, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f52fa485000
+close(4)                                = 0
+mprotect(0x7f52fa483000, 4096, PROT_READ) = 0
+munmap(0x7f52f95fb000, 109663)          = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 4
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(4, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(4, 0, SEEK_CUR)                   = 218
+read(4, "", 4096)                       = 0
+close(4)                                = 0
+connect(3, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(3, "A", 1, 0, NULL, 0)           = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 4
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 5
+lseek(5, 0, SEEK_CUR)                   = 0
+fstat(5, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(5, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(5, 0, SEEK_CUR)                   = 218
+read(5, "", 4096)                       = 0
+close(5)                                = 0
+connect(4, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(4, "A", 1, 0, NULL, 0)           = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 5
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 6
+lseek(6, 0, SEEK_CUR)                   = 0
+fstat(6, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(6, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(6, 0, SEEK_CUR)                   = 218
+read(6, "", 4096)                       = 0
+close(6)                                = 0
+connect(5, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(5, "A", 1, 0, NULL, 0)           = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 6
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 7
+lseek(7, 0, SEEK_CUR)                   = 0
+fstat(7, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(7, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(7, 0, SEEK_CUR)                   = 218
+read(7, "", 4096)                       = 0
+close(7)                                = 0
+connect(6, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(6, "A", 1, 0, NULL, 0)           = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 7
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 8
+lseek(8, 0, SEEK_CUR)                   = 0
+fstat(8, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(8, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(8, 0, SEEK_CUR)                   = 218
+read(8, "", 4096)                       = 0
+close(8)                                = 0
+connect(7, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(7, "A", 1, 0, NULL, 0)           = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 8
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 9
+lseek(9, 0, SEEK_CUR)                   = 0
+fstat(9, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(9, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(9, 0, SEEK_CUR)                   = 218
+read(9, "", 4096)                       = 0
+close(9)                                = 0
+connect(8, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(8, "A", 1, 0, NULL, 0)           = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 9
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 10
+lseek(10, 0, SEEK_CUR)                  = 0
+fstat(10, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(10, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(10, 0, SEEK_CUR)                  = 218
+read(10, "", 4096)                      = 0
+close(10)                               = 0
+connect(9, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(9, "A", 1, 0, NULL, 0)           = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 10
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 11
+lseek(11, 0, SEEK_CUR)                  = 0
+fstat(11, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(11, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(11, 0, SEEK_CUR)                  = 218
+read(11, "", 4096)                      = 0
+close(11)                               = 0
+connect(10, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(10, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 11
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 12
+lseek(12, 0, SEEK_CUR)                  = 0
+fstat(12, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(12, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(12, 0, SEEK_CUR)                  = 218
+read(12, "", 4096)                      = 0
+close(12)                               = 0
+connect(11, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(11, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 12
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 13
+lseek(13, 0, SEEK_CUR)                  = 0
+fstat(13, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(13, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(13, 0, SEEK_CUR)                  = 218
+read(13, "", 4096)                      = 0
+close(13)                               = 0
+connect(12, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(12, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 13
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 14
+lseek(14, 0, SEEK_CUR)                  = 0
+fstat(14, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(14, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(14, 0, SEEK_CUR)                  = 218
+read(14, "", 4096)                      = 0
+close(14)                               = 0
+connect(13, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(13, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 14
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 15
+lseek(15, 0, SEEK_CUR)                  = 0
+fstat(15, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(15, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(15, 0, SEEK_CUR)                  = 218
+read(15, "", 4096)                      = 0
+close(15)                               = 0
+connect(14, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(14, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 15
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 16
+lseek(16, 0, SEEK_CUR)                  = 0
+fstat(16, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(16, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(16, 0, SEEK_CUR)                  = 218
+read(16, "", 4096)                      = 0
+close(16)                               = 0
+connect(15, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(15, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 16
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 17
+lseek(17, 0, SEEK_CUR)                  = 0
+fstat(17, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(17, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(17, 0, SEEK_CUR)                  = 218
+read(17, "", 4096)                      = 0
+close(17)                               = 0
+connect(16, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(16, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 17
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 18
+lseek(18, 0, SEEK_CUR)                  = 0
+fstat(18, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(18, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(18, 0, SEEK_CUR)                  = 218
+read(18, "", 4096)                      = 0
+close(18)                               = 0
+connect(17, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(17, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 18
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 19
+lseek(19, 0, SEEK_CUR)                  = 0
+fstat(19, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(19, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(19, 0, SEEK_CUR)                  = 218
+read(19, "", 4096)                      = 0
+close(19)                               = 0
+connect(18, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(18, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 19
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 20
+lseek(20, 0, SEEK_CUR)                  = 0
+fstat(20, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(20, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(20, 0, SEEK_CUR)                  = 218
+read(20, "", 4096)                      = 0
+close(20)                               = 0
+connect(19, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(19, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 20
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 21
+lseek(21, 0, SEEK_CUR)                  = 0
+fstat(21, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(21, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(21, 0, SEEK_CUR)                  = 218
+read(21, "", 4096)                      = 0
+close(21)                               = 0
+connect(20, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(20, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 21
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 23
+lseek(23, 0, SEEK_CUR)                  = 0
+fstat(23, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(23, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(23, 0, SEEK_CUR)                  = 218
+read(23, "", 4096)                      = 0
+close(23)                               = 0
+connect(21, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(21, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 23
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 24
+lseek(24, 0, SEEK_CUR)                  = 0
+fstat(24, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(24, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(24, 0, SEEK_CUR)                  = 218
+read(24, "", 4096)                      = 0
+close(24)                               = 0
+connect(23, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(23, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 24
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 25
+lseek(25, 0, SEEK_CUR)                  = 0
+fstat(25, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(25, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(25, 0, SEEK_CUR)                  = 218
+read(25, "", 4096)                      = 0
+close(25)                               = 0
+connect(24, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(24, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 25
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 28
+lseek(28, 0, SEEK_CUR)                  = 0
+fstat(28, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(28, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(28, 0, SEEK_CUR)                  = 218
+read(28, "", 4096)                      = 0
+close(28)                               = 0
+connect(25, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(25, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 28
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 29
+lseek(29, 0, SEEK_CUR)                  = 0
+fstat(29, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(29, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(29, 0, SEEK_CUR)                  = 218
+read(29, "", 4096)                      = 0
+close(29)                               = 0
+connect(28, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(28, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 29
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 30
+lseek(30, 0, SEEK_CUR)                  = 0
+fstat(30, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(30, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(30, 0, SEEK_CUR)                  = 218
+read(30, "", 4096)                      = 0
+close(30)                               = 0
+connect(29, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(29, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 30
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 31
+lseek(31, 0, SEEK_CUR)                  = 0
+fstat(31, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(31, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(31, 0, SEEK_CUR)                  = 218
+read(31, "", 4096)                      = 0
+close(31)                               = 0
+connect(30, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(30, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 31
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 32
+lseek(32, 0, SEEK_CUR)                  = 0
+fstat(32, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(32, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(32, 0, SEEK_CUR)                  = 218
+read(32, "", 4096)                      = 0
+close(32)                               = 0
+connect(31, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(31, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 32
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 33
+lseek(33, 0, SEEK_CUR)                  = 0
+fstat(33, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(33, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(33, 0, SEEK_CUR)                  = 218
+read(33, "", 4096)                      = 0
+close(33)                               = 0
+connect(32, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(32, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 33
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 37
+lseek(37, 0, SEEK_CUR)                  = 0
+fstat(37, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(37, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(37, 0, SEEK_CUR)                  = 218
+read(37, "", 4096)                      = 0
+close(37)                               = 0
+connect(33, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(33, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 37
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 38
+lseek(38, 0, SEEK_CUR)                  = 0
+fstat(38, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(38, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(38, 0, SEEK_CUR)                  = 218
+read(38, "", 4096)                      = 0
+close(38)                               = 0
+connect(37, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(37, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 38
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 39
+lseek(39, 0, SEEK_CUR)                  = 0
+fstat(39, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(39, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(39, 0, SEEK_CUR)                  = 218
+read(39, "", 4096)                      = 0
+close(39)                               = 0
+connect(38, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(38, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 39
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 41
+lseek(41, 0, SEEK_CUR)                  = 0
+fstat(41, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(41, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(41, 0, SEEK_CUR)                  = 218
+read(41, "", 4096)                      = 0
+close(41)                               = 0
+connect(39, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(39, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 41
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 44
+lseek(44, 0, SEEK_CUR)                  = 0
+fstat(44, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(44, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(44, 0, SEEK_CUR)                  = 218
+read(44, "", 4096)                      = 0
+close(44)                               = 0
+connect(41, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(41, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 44
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 46
+lseek(46, 0, SEEK_CUR)                  = 0
+fstat(46, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(46, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(46, 0, SEEK_CUR)                  = 218
+read(46, "", 4096)                      = 0
+close(46)                               = 0
+connect(44, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(44, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 46
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 48
+lseek(48, 0, SEEK_CUR)                  = 0
+fstat(48, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(48, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(48, 0, SEEK_CUR)                  = 218
+read(48, "", 4096)                      = 0
+close(48)                               = 0
+connect(46, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(46, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 48
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 49
+lseek(49, 0, SEEK_CUR)                  = 0
+fstat(49, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(49, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(49, 0, SEEK_CUR)                  = 218
+read(49, "", 4096)                      = 0
+close(49)                               = 0
+connect(48, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(48, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 49
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 50
+lseek(50, 0, SEEK_CUR)                  = 0
+fstat(50, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(50, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(50, 0, SEEK_CUR)                  = 218
+read(50, "", 4096)                      = 0
+close(50)                               = 0
+connect(49, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(49, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 50
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 51
+lseek(51, 0, SEEK_CUR)                  = 0
+fstat(51, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(51, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(51, 0, SEEK_CUR)                  = 218
+read(51, "", 4096)                      = 0
+close(51)                               = 0
+connect(50, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(50, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 51
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 52
+lseek(52, 0, SEEK_CUR)                  = 0
+fstat(52, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(52, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(52, 0, SEEK_CUR)                  = 218
+read(52, "", 4096)                      = 0
+close(52)                               = 0
+connect(51, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(51, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 52
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 53
+lseek(53, 0, SEEK_CUR)                  = 0
+fstat(53, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(53, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(53, 0, SEEK_CUR)                  = 218
+read(53, "", 4096)                      = 0
+close(53)                               = 0
+connect(52, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(52, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 53
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 54
+lseek(54, 0, SEEK_CUR)                  = 0
+fstat(54, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(54, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(54, 0, SEEK_CUR)                  = 218
+read(54, "", 4096)                      = 0
+close(54)                               = 0
+connect(53, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(53, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 54
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 55
+lseek(55, 0, SEEK_CUR)                  = 0
+fstat(55, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(55, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(55, 0, SEEK_CUR)                  = 218
+read(55, "", 4096)                      = 0
+close(55)                               = 0
+connect(54, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(54, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 55
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 56
+lseek(56, 0, SEEK_CUR)                  = 0
+fstat(56, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(56, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(56, 0, SEEK_CUR)                  = 218
+read(56, "", 4096)                      = 0
+close(56)                               = 0
+connect(55, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(55, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 56
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 57
+lseek(57, 0, SEEK_CUR)                  = 0
+fstat(57, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(57, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(57, 0, SEEK_CUR)                  = 218
+read(57, "", 4096)                      = 0
+close(57)                               = 0
+connect(56, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(56, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 57
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 58
+lseek(58, 0, SEEK_CUR)                  = 0
+fstat(58, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(58, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(58, 0, SEEK_CUR)                  = 218
+read(58, "", 4096)                      = 0
+close(58)                               = 0
+connect(57, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(57, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 58
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 59
+lseek(59, 0, SEEK_CUR)                  = 0
+fstat(59, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(59, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(59, 0, SEEK_CUR)                  = 218
+read(59, "", 4096)                      = 0
+close(59)                               = 0
+connect(58, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(58, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 59
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 60
+lseek(60, 0, SEEK_CUR)                  = 0
+fstat(60, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(60, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(60, 0, SEEK_CUR)                  = 218
+read(60, "", 4096)                      = 0
+close(60)                               = 0
+connect(59, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(59, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 60
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 61
+lseek(61, 0, SEEK_CUR)                  = 0
+fstat(61, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(61, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(61, 0, SEEK_CUR)                  = 218
+read(61, "", 4096)                      = 0
+close(61)                               = 0
+connect(60, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(60, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 61
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 62
+lseek(62, 0, SEEK_CUR)                  = 0
+fstat(62, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(62, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(62, 0, SEEK_CUR)                  = 218
+read(62, "", 4096)                      = 0
+close(62)                               = 0
+connect(61, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(61, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 62
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 63
+lseek(63, 0, SEEK_CUR)                  = 0
+fstat(63, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(63, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(63, 0, SEEK_CUR)                  = 218
+read(63, "", 4096)                      = 0
+close(63)                               = 0
+connect(62, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(62, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 63
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 64
+lseek(64, 0, SEEK_CUR)                  = 0
+fstat(64, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(64, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(64, 0, SEEK_CUR)                  = 218
+read(64, "", 4096)                      = 0
+close(64)                               = 0
+connect(63, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(63, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 64
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 65
+lseek(65, 0, SEEK_CUR)                  = 0
+fstat(65, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(65, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(65, 0, SEEK_CUR)                  = 218
+read(65, "", 4096)                      = 0
+close(65)                               = 0
+connect(64, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(64, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 65
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 66
+lseek(66, 0, SEEK_CUR)                  = 0
+fstat(66, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(66, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(66, 0, SEEK_CUR)                  = 218
+read(66, "", 4096)                      = 0
+close(66)                               = 0
+connect(65, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(65, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 66
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 67
+lseek(67, 0, SEEK_CUR)                  = 0
+fstat(67, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(67, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(67, 0, SEEK_CUR)                  = 218
+read(67, "", 4096)                      = 0
+close(67)                               = 0
+connect(66, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(66, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 67
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 68
+lseek(68, 0, SEEK_CUR)                  = 0
+fstat(68, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(68, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(68, 0, SEEK_CUR)                  = 218
+read(68, "", 4096)                      = 0
+close(68)                               = 0
+connect(67, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(67, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 68
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 69
+lseek(69, 0, SEEK_CUR)                  = 0
+fstat(69, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(69, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(69, 0, SEEK_CUR)                  = 218
+read(69, "", 4096)                      = 0
+close(69)                               = 0
+connect(68, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(68, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 69
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 70
+lseek(70, 0, SEEK_CUR)                  = 0
+fstat(70, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(70, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(70, 0, SEEK_CUR)                  = 218
+read(70, "", 4096)                      = 0
+close(70)                               = 0
+connect(69, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(69, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 70
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 71
+lseek(71, 0, SEEK_CUR)                  = 0
+fstat(71, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(71, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(71, 0, SEEK_CUR)                  = 218
+read(71, "", 4096)                      = 0
+close(71)                               = 0
+connect(70, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(70, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 71
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 72
+lseek(72, 0, SEEK_CUR)                  = 0
+fstat(72, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(72, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(72, 0, SEEK_CUR)                  = 218
+read(72, "", 4096)                      = 0
+close(72)                               = 0
+connect(71, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(71, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 72
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 73
+lseek(73, 0, SEEK_CUR)                  = 0
+fstat(73, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(73, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(73, 0, SEEK_CUR)                  = 218
+read(73, "", 4096)                      = 0
+close(73)                               = 0
+connect(72, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(72, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 73
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 74
+lseek(74, 0, SEEK_CUR)                  = 0
+fstat(74, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(74, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(74, 0, SEEK_CUR)                  = 218
+read(74, "", 4096)                      = 0
+close(74)                               = 0
+connect(73, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(73, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 74
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 75
+lseek(75, 0, SEEK_CUR)                  = 0
+fstat(75, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(75, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(75, 0, SEEK_CUR)                  = 218
+read(75, "", 4096)                      = 0
+close(75)                               = 0
+connect(74, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(74, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 75
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 76
+lseek(76, 0, SEEK_CUR)                  = 0
+fstat(76, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(76, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(76, 0, SEEK_CUR)                  = 218
+read(76, "", 4096)                      = 0
+close(76)                               = 0
+connect(75, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(75, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 76
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 77
+lseek(77, 0, SEEK_CUR)                  = 0
+fstat(77, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(77, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(77, 0, SEEK_CUR)                  = 218
+read(77, "", 4096)                      = 0
+close(77)                               = 0
+connect(76, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(76, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 77
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 78
+lseek(78, 0, SEEK_CUR)                  = 0
+fstat(78, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(78, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(78, 0, SEEK_CUR)                  = 218
+read(78, "", 4096)                      = 0
+close(78)                               = 0
+connect(77, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(77, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 78
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 79
+lseek(79, 0, SEEK_CUR)                  = 0
+fstat(79, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(79, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(79, 0, SEEK_CUR)                  = 218
+read(79, "", 4096)                      = 0
+close(79)                               = 0
+connect(78, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(78, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 79
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 80
+lseek(80, 0, SEEK_CUR)                  = 0
+fstat(80, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(80, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(80, 0, SEEK_CUR)                  = 218
+read(80, "", 4096)                      = 0
+close(80)                               = 0
+connect(79, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(79, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 80
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 81
+lseek(81, 0, SEEK_CUR)                  = 0
+fstat(81, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(81, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(81, 0, SEEK_CUR)                  = 218
+read(81, "", 4096)                      = 0
+close(81)                               = 0
+connect(80, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(80, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 81
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 82
+lseek(82, 0, SEEK_CUR)                  = 0
+fstat(82, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(82, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(82, 0, SEEK_CUR)                  = 218
+read(82, "", 4096)                      = 0
+close(82)                               = 0
+connect(81, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(81, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 82
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 83
+lseek(83, 0, SEEK_CUR)                  = 0
+fstat(83, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(83, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(83, 0, SEEK_CUR)                  = 218
+read(83, "", 4096)                      = 0
+close(83)                               = 0
+connect(82, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(82, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 83
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 84
+lseek(84, 0, SEEK_CUR)                  = 0
+fstat(84, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(84, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(84, 0, SEEK_CUR)                  = 218
+read(84, "", 4096)                      = 0
+close(84)                               = 0
+connect(83, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(83, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 84
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 85
+lseek(85, 0, SEEK_CUR)                  = 0
+fstat(85, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(85, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(85, 0, SEEK_CUR)                  = 218
+read(85, "", 4096)                      = 0
+close(85)                               = 0
+connect(84, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(84, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 85
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 86
+lseek(86, 0, SEEK_CUR)                  = 0
+fstat(86, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(86, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(86, 0, SEEK_CUR)                  = 218
+read(86, "", 4096)                      = 0
+close(86)                               = 0
+connect(85, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(85, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 86
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 87
+lseek(87, 0, SEEK_CUR)                  = 0
+fstat(87, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(87, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(87, 0, SEEK_CUR)                  = 218
+read(87, "", 4096)                      = 0
+close(87)                               = 0
+connect(86, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(86, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 87
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 88
+lseek(88, 0, SEEK_CUR)                  = 0
+fstat(88, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(88, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(88, 0, SEEK_CUR)                  = 218
+read(88, "", 4096)                      = 0
+close(88)                               = 0
+connect(87, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(87, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 88
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 89
+lseek(89, 0, SEEK_CUR)                  = 0
+fstat(89, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(89, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(89, 0, SEEK_CUR)                  = 218
+read(89, "", 4096)                      = 0
+close(89)                               = 0
+connect(88, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(88, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 89
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 90
+lseek(90, 0, SEEK_CUR)                  = 0
+fstat(90, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(90, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(90, 0, SEEK_CUR)                  = 218
+read(90, "", 4096)                      = 0
+close(90)                               = 0
+connect(89, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(89, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 90
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 91
+lseek(91, 0, SEEK_CUR)                  = 0
+fstat(91, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(91, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(91, 0, SEEK_CUR)                  = 218
+read(91, "", 4096)                      = 0
+close(91)                               = 0
+connect(90, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(90, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 91
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 92
+lseek(92, 0, SEEK_CUR)                  = 0
+fstat(92, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(92, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(92, 0, SEEK_CUR)                  = 218
+read(92, "", 4096)                      = 0
+close(92)                               = 0
+connect(91, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(91, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 92
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 93
+lseek(93, 0, SEEK_CUR)                  = 0
+fstat(93, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(93, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(93, 0, SEEK_CUR)                  = 218
+read(93, "", 4096)                      = 0
+close(93)                               = 0
+connect(92, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(92, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 93
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 94
+lseek(94, 0, SEEK_CUR)                  = 0
+fstat(94, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(94, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(94, 0, SEEK_CUR)                  = 218
+read(94, "", 4096)                      = 0
+close(94)                               = 0
+connect(93, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(93, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 94
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 95
+lseek(95, 0, SEEK_CUR)                  = 0
+fstat(95, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(95, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(95, 0, SEEK_CUR)                  = 218
+read(95, "", 4096)                      = 0
+close(95)                               = 0
+connect(94, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(94, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 95
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 96
+lseek(96, 0, SEEK_CUR)                  = 0
+fstat(96, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(96, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(96, 0, SEEK_CUR)                  = 218
+read(96, "", 4096)                      = 0
+close(96)                               = 0
+connect(95, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(95, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 96
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 97
+lseek(97, 0, SEEK_CUR)                  = 0
+fstat(97, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(97, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(97, 0, SEEK_CUR)                  = 218
+read(97, "", 4096)                      = 0
+close(97)                               = 0
+connect(96, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(96, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 97
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 98
+lseek(98, 0, SEEK_CUR)                  = 0
+fstat(98, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(98, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(98, 0, SEEK_CUR)                  = 218
+read(98, "", 4096)                      = 0
+close(98)                               = 0
+connect(97, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(97, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 98
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 99
+lseek(99, 0, SEEK_CUR)                  = 0
+fstat(99, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(99, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(99, 0, SEEK_CUR)                  = 218
+read(99, "", 4096)                      = 0
+close(99)                               = 0
+connect(98, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(98, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 99
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 100
+lseek(100, 0, SEEK_CUR)                 = 0
+fstat(100, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(100, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(100, 0, SEEK_CUR)                 = 218
+read(100, "", 4096)                     = 0
+close(100)                              = 0
+connect(99, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(99, "A", 1, 0, NULL, 0)          = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 100
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 101
+lseek(101, 0, SEEK_CUR)                 = 0
+fstat(101, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(101, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(101, 0, SEEK_CUR)                 = 218
+read(101, "", 4096)                     = 0
+close(101)                              = 0
+connect(100, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(100, "A", 1, 0, NULL, 0)         = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 101
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 102
+lseek(102, 0, SEEK_CUR)                 = 0
+fstat(102, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(102, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(102, 0, SEEK_CUR)                 = 218
+read(102, "", 4096)                     = 0
+close(102)                              = 0
+connect(101, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(101, "A", 1, 0, NULL, 0)         = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 102
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 104
+lseek(104, 0, SEEK_CUR)                 = 0
+fstat(104, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(104, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(104, 0, SEEK_CUR)                 = 218
+read(104, "", 4096)                     = 0
+close(104)                              = 0
+connect(102, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(102, "A", 1, 0, NULL, 0)         = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 104
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 105
+lseek(105, 0, SEEK_CUR)                 = 0
+fstat(105, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(105, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(105, 0, SEEK_CUR)                 = 218
+read(105, "", 4096)                     = 0
+close(105)                              = 0
+connect(104, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(104, "A", 1, 0, NULL, 0)         = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 105
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 106
+lseek(106, 0, SEEK_CUR)                 = 0
+fstat(106, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(106, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(106, 0, SEEK_CUR)                 = 218
+read(106, "", 4096)                     = 0
+close(106)                              = 0
+connect(105, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(105, "A", 1, 0, NULL, 0)         = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 106
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 107
+lseek(107, 0, SEEK_CUR)                 = 0
+fstat(107, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(107, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(107, 0, SEEK_CUR)                 = 218
+read(107, "", 4096)                     = 0
+close(107)                              = 0
+connect(106, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(106, "A", 1, 0, NULL, 0)         = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 107
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 108
+lseek(108, 0, SEEK_CUR)                 = 0
+fstat(108, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(108, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(108, 0, SEEK_CUR)                 = 218
+read(108, "", 4096)                     = 0
+close(108)                              = 0
+connect(107, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(107, "A", 1, 0, NULL, 0)         = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 108
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 109
+lseek(109, 0, SEEK_CUR)                 = 0
+fstat(109, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(109, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(109, 0, SEEK_CUR)                 = 218
+read(109, "", 4096)                     = 0
+close(109)                              = 0
+connect(108, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(108, "A", 1, 0, NULL, 0)         = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 109
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 110
+lseek(110, 0, SEEK_CUR)                 = 0
+fstat(110, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(110, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(110, 0, SEEK_CUR)                 = 218
+read(110, "", 4096)                     = 0
+close(110)                              = 0
+connect(109, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(109, "A", 1, 0, NULL, 0)         = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 110
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 111
+lseek(111, 0, SEEK_CUR)                 = 0
+fstat(111, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(111, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(111, 0, SEEK_CUR)                 = 218
+read(111, "", 4096)                     = 0
+close(111)                              = 0
+connect(110, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(110, "A", 1, 0, NULL, 0)         = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 111
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 112
+lseek(112, 0, SEEK_CUR)                 = 0
+fstat(112, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(112, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(112, 0, SEEK_CUR)                 = 218
+read(112, "", 4096)                     = 0
+close(112)                              = 0
+connect(111, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(111, "A", 1, 0, NULL, 0)         = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 112
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 113
+lseek(113, 0, SEEK_CUR)                 = 0
+fstat(113, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(113, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(113, 0, SEEK_CUR)                 = 218
+read(113, "", 4096)                     = 0
+close(113)                              = 0
+connect(112, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(112, "A", 1, 0, NULL, 0)         = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 113
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 114
+lseek(114, 0, SEEK_CUR)                 = 0
+fstat(114, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(114, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(114, 0, SEEK_CUR)                 = 218
+read(114, "", 4096)                     = 0
+close(114)                              = 0
+connect(113, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(113, "A", 1, 0, NULL, 0)         = 1
+socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 114
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=739, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 115
+lseek(115, 0, SEEK_CUR)                 = 0
+fstat(115, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(115, "127.0.0.1\tlocalhost\n127.0.1.1\tus"..., 4096) = 218
+lseek(115, 0, SEEK_CUR)                 = 218
+read(115, "", 4096)                     = 0
+close(115)                              = 0
+connect(114, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+sendto(114, "A", 1, 0, NULL, 0)         = 1
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(1, TCGETS, 0x7fffeff71710)        = -1 ENOTTY (Inappropriate ioctl for device)
+write(1, "Press ENTER to exit", 19Press ENTER to exit)     = 19
+read(0, "ls\n", 8192)                   = 3
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f52fa2c6090}, {sa_handler=0x62b020, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f52fa2c6090}, 8) = 0
+getsockname(113, {sa_family=AF_INET, sin_port=htons(45232), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(113, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(113)                              = 0
+getsockname(112, {sa_family=AF_INET, sin_port=htons(45230), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(112, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(112)                              = 0
+getsockname(111, {sa_family=AF_INET, sin_port=htons(45218), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(111, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(111)                              = 0
+getsockname(110, {sa_family=AF_INET, sin_port=htons(45206), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(110, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(110)                              = 0
+getsockname(109, {sa_family=AF_INET, sin_port=htons(45194), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(109, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(109)                              = 0
+getsockname(108, {sa_family=AF_INET, sin_port=htons(45186), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(108, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(108)                              = 0
+getsockname(107, {sa_family=AF_INET, sin_port=htons(45172), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(107, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(107)                              = 0
+getsockname(106, {sa_family=AF_INET, sin_port=htons(45158), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(106, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(106)                              = 0
+getsockname(105, {sa_family=AF_INET, sin_port=htons(45146), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(105, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(105)                              = 0
+getsockname(104, {sa_family=AF_INET, sin_port=htons(45136), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(104, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(104)                              = 0
+getsockname(102, {sa_family=AF_INET, sin_port=htons(45120), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(102, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(102)                              = 0
+getsockname(101, {sa_family=AF_INET, sin_port=htons(45118), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(101, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(101)                              = 0
+getsockname(100, {sa_family=AF_INET, sin_port=htons(45114), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(100, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(100)                              = 0
+getsockname(99, {sa_family=AF_INET, sin_port=htons(45100), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(99, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(99)                               = 0
+getsockname(98, {sa_family=AF_INET, sin_port=htons(45084), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(98, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(98)                               = 0
+getsockname(97, {sa_family=AF_INET, sin_port=htons(45074), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(97, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(97)                               = 0
+getsockname(96, {sa_family=AF_INET, sin_port=htons(45070), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(96, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(96)                               = 0
+getsockname(95, {sa_family=AF_INET, sin_port=htons(45066), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(95, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(95)                               = 0
+getsockname(94, {sa_family=AF_INET, sin_port=htons(45060), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(94, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(94)                               = 0
+getsockname(93, {sa_family=AF_INET, sin_port=htons(45046), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(93, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(93)                               = 0
+getsockname(92, {sa_family=AF_INET, sin_port=htons(45034), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(92, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(92)                               = 0
+getsockname(91, {sa_family=AF_INET, sin_port=htons(45026), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(91, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(91)                               = 0
+getsockname(90, {sa_family=AF_INET, sin_port=htons(45016), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(90, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(90)                               = 0
+getsockname(89, {sa_family=AF_INET, sin_port=htons(45008), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(89, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(89)                               = 0
+getsockname(88, {sa_family=AF_INET, sin_port=htons(45004), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(88, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(88)                               = 0
+getsockname(87, {sa_family=AF_INET, sin_port=htons(45002), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(87, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(87)                               = 0
+getsockname(86, {sa_family=AF_INET, sin_port=htons(44988), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(86, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(86)                               = 0
+getsockname(85, {sa_family=AF_INET, sin_port=htons(44984), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(85, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(85)                               = 0
+getsockname(84, {sa_family=AF_INET, sin_port=htons(44974), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(84, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(84)                               = 0
+getsockname(83, {sa_family=AF_INET, sin_port=htons(44964), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(83, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(83)                               = 0
+getsockname(82, {sa_family=AF_INET, sin_port=htons(44962), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(82, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(82)                               = 0
+getsockname(81, {sa_family=AF_INET, sin_port=htons(44960), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(81, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(81)                               = 0
+getsockname(80, {sa_family=AF_INET, sin_port=htons(44952), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(80, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(80)                               = 0
+getsockname(79, {sa_family=AF_INET, sin_port=htons(44936), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(79, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(79)                               = 0
+getsockname(78, {sa_family=AF_INET, sin_port=htons(44922), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(78, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(78)                               = 0
+getsockname(77, {sa_family=AF_INET, sin_port=htons(44914), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(77, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(77)                               = 0
+getsockname(76, {sa_family=AF_INET, sin_port=htons(44898), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(76, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(76)                               = 0
+getsockname(75, {sa_family=AF_INET, sin_port=htons(44884), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(75, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(75)                               = 0
+getsockname(74, {sa_family=AF_INET, sin_port=htons(44872), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(74, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(74)                               = 0
+getsockname(73, {sa_family=AF_INET, sin_port=htons(44856), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(73, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(73)                               = 0
+getsockname(72, {sa_family=AF_INET, sin_port=htons(44854), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(72, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(72)                               = 0
+getsockname(71, {sa_family=AF_INET, sin_port=htons(44850), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(71, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(71)                               = 0
+getsockname(70, {sa_family=AF_INET, sin_port=htons(44842), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(70, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(70)                               = 0
+getsockname(69, {sa_family=AF_INET, sin_port=htons(44838), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(69, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(69)                               = 0
+getsockname(68, {sa_family=AF_INET, sin_port=htons(44822), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(68, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(68)                               = 0
+getsockname(67, {sa_family=AF_INET, sin_port=htons(44820), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(67, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(67)                               = 0
+getsockname(66, {sa_family=AF_INET, sin_port=htons(44818), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(66, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(66)                               = 0
+getsockname(65, {sa_family=AF_INET, sin_port=htons(44808), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(65, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(65)                               = 0
+getsockname(64, {sa_family=AF_INET, sin_port=htons(44802), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(64, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(64)                               = 0
+getsockname(63, {sa_family=AF_INET, sin_port=htons(44796), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(63, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(63)                               = 0
+getsockname(62, {sa_family=AF_INET, sin_port=htons(44786), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(62, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(62)                               = 0
+getsockname(61, {sa_family=AF_INET, sin_port=htons(44780), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(61, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(61)                               = 0
+getsockname(60, {sa_family=AF_INET, sin_port=htons(44774), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(60, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(60)                               = 0
+getsockname(59, {sa_family=AF_INET, sin_port=htons(44770), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(59, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(59)                               = 0
+getsockname(58, {sa_family=AF_INET, sin_port=htons(44760), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(58, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(58)                               = 0
+getsockname(57, {sa_family=AF_INET, sin_port=htons(44750), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(57, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(57)                               = 0
+getsockname(56, {sa_family=AF_INET, sin_port=htons(44736), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(56, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(56)                               = 0
+getsockname(55, {sa_family=AF_INET, sin_port=htons(44728), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(55, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(55)                               = 0
+getsockname(54, {sa_family=AF_INET, sin_port=htons(44726), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(54, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(54)                               = 0
+getsockname(53, {sa_family=AF_INET, sin_port=htons(44722), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(53, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(53)                               = 0
+getsockname(52, {sa_family=AF_INET, sin_port=htons(44720), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(52, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(52)                               = 0
+getsockname(51, {sa_family=AF_INET, sin_port=htons(44716), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(51, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(51)                               = 0
+getsockname(50, {sa_family=AF_INET, sin_port=htons(44712), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(50, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(50)                               = 0
+getsockname(49, {sa_family=AF_INET, sin_port=htons(44708), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(49, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(49)                               = 0
+getsockname(48, {sa_family=AF_INET, sin_port=htons(44704), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(48, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(48)                               = 0
+getsockname(46, {sa_family=AF_INET, sin_port=htons(44692), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(46, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(46)                               = 0
+getsockname(44, {sa_family=AF_INET, sin_port=htons(44684), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(44, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(44)                               = 0
+getsockname(41, {sa_family=AF_INET, sin_port=htons(44670), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(41, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(41)                               = 0
+getsockname(39, {sa_family=AF_INET, sin_port=htons(44660), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(39, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(39)                               = 0
+getsockname(38, {sa_family=AF_INET, sin_port=htons(44658), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(38, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(38)                               = 0
+getsockname(37, {sa_family=AF_INET, sin_port=htons(44650), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(37, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(37)                               = 0
+getsockname(33, {sa_family=AF_INET, sin_port=htons(44648), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(33, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(33)                               = 0
+getsockname(32, {sa_family=AF_INET, sin_port=htons(44646), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(32, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(32)                               = 0
+getsockname(31, {sa_family=AF_INET, sin_port=htons(44632), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(31, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(31)                               = 0
+getsockname(30, {sa_family=AF_INET, sin_port=htons(44630), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(30, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(30)                               = 0
+getsockname(29, {sa_family=AF_INET, sin_port=htons(44618), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(29, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(29)                               = 0
+getsockname(28, {sa_family=AF_INET, sin_port=htons(44602), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(28, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(28)                               = 0
+getsockname(25, {sa_family=AF_INET, sin_port=htons(44590), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(25, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(25)                               = 0
+getsockname(24, {sa_family=AF_INET, sin_port=htons(44582), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(24, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(24)                               = 0
+getsockname(23, {sa_family=AF_INET, sin_port=htons(44570), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(23, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(23)                               = 0
+getsockname(21, {sa_family=AF_INET, sin_port=htons(44560), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(21, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(21)                               = 0
+getsockname(20, {sa_family=AF_INET, sin_port=htons(44546), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(20, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(20)                               = 0
+getsockname(19, {sa_family=AF_INET, sin_port=htons(44536), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(19, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(19)                               = 0
+getsockname(18, {sa_family=AF_INET, sin_port=htons(44534), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(18, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(18)                               = 0
+getsockname(17, {sa_family=AF_INET, sin_port=htons(44518), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(17, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(17)                               = 0
+getsockname(16, {sa_family=AF_INET, sin_port=htons(44510), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(16, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(16)                               = 0
+getsockname(15, {sa_family=AF_INET, sin_port=htons(44498), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(15, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(15)                               = 0
+getsockname(14, {sa_family=AF_INET, sin_port=htons(44484), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(14, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(14)                               = 0
+getsockname(13, {sa_family=AF_INET, sin_port=htons(44474), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(13, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(13)                               = 0
+getsockname(12, {sa_family=AF_INET, sin_port=htons(44460), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(12, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(12)                               = 0
+getsockname(11, {sa_family=AF_INET, sin_port=htons(44458), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(11, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(11)                               = 0
+getsockname(10, {sa_family=AF_INET, sin_port=htons(44444), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(10, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(10)                               = 0
+getsockname(9, {sa_family=AF_INET, sin_port=htons(44434), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(9, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(9)                                = 0
+getsockname(8, {sa_family=AF_INET, sin_port=htons(44418), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(8, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(8)                                = 0
+getsockname(7, {sa_family=AF_INET, sin_port=htons(44408), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(7, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(7)                                = 0
+getsockname(6, {sa_family=AF_INET, sin_port=htons(44402), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(6, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(6)                                = 0
+getsockname(5, {sa_family=AF_INET, sin_port=htons(44394), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(5, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(5)                                = 0
+getsockname(4, {sa_family=AF_INET, sin_port=htons(44384), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(4, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(4)                                = 0
+getsockname(3, {sa_family=AF_INET, sin_port=htons(44376), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(3, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(3)                                = 0
+getsockname(114, {sa_family=AF_INET, sin_port=htons(45234), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+getpeername(114, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, [16]) = 0
+close(114)                              = 0
+sigaltstack(NULL, {ss_sp=0x1f53a50, ss_flags=0, ss_size=16384}) = 0
+sigaltstack({ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}, NULL) = 0
+exit_group(0)                           = ?
++++ exited with 0 +++

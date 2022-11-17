@@ -101,7 +101,6 @@ You'll learn more about this in the [Application Interaction chapter](../../../a
 
 Note that this usage of `Popen()` is not entirely correct.
 You'll discover why in the next exercise, but for now focus on simply understanding how to use `Popen()` on its own.
-
 Now change the command to anything you want.
 Also give it some arguments.
 From the outside, it's as if you were running these commands from the terminal.

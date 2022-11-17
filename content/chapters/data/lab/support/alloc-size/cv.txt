@@ -1,0 +1,411 @@
+__libc_start_main@libc.so.6(0x56255825837b, 1, 0x7ffcdc188ad8, 0x562558258b00 <unfinished ...>
+__cxa_atexit@libc.so.6(0x7f3fd5d2bd60, 0, 0, 0x562558258b00)                                                    = 0
+__libc_csu_init(1, 0x7ffcdc188ad8, 0x7ffcdc188ae8, 0x562558258b00 <unfinished ...>
+_init(1, 0x7ffcdc188ad8, 0x7ffcdc188ae8, 0x562558258b00)                                                        = 0
+frame_dummy(1, 0x7ffcdc188ad8, 0x7ffcdc188ae8, 0x562558258b00 <unfinished ...>
+register_tm_clones(1, 0x7ffcdc188ad8, 0x7ffcdc188ae8, 0x562558258b00)                                           = 0
+<... frame_dummy resumed> )                                                                                     = 0
+<... __libc_csu_init resumed> )                                                                                 = 0
+_setjmp@libc.so.6(0x7ffcdc188a10, 0, 0x7f3fd5d47620, 0x562558258b00 <unfinished ...>
+__sigsetjmp@libc.so.6(0x7ffcdc188a10, 0, 0x7f3fd5d47620, 0x562558258b00)                                        = 0
+<... _setjmp resumed> )                                                                                         = 0
+main(1, 0x7ffcdc188ad8, 0x7ffcdc188ae8, 0x562558258b00 <unfinished ...>
+wait_for_input(0x56255825900f, 0x7ffcdc188ad8, 0x7ffcdc188ae8, 0x562558258b00 <unfinished ...>
+printf@libc.so.6("%s ...", "Press key to allocate" <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259008, 0, 3072)                                              = 0
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x56255825900f, 21, 0x7f3fd5cf44a0 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 0xffffffff, 3072, 0x7f3fd5cf44a0 <unfinished ...>
+_IO_doallocbuf@libc.so.6(0x7f3fd5cf86a0, 0, 3072, 0x7f3fd5cf44a0 <unfinished ...>
+_IO_file_doallocate@libc.so.6(0x7f3fd5cf86a0, 0, 0x7f3fd5cf38a0, 3072 <unfinished ...>
+_IO_file_stat@libc.so.6(0x7f3fd5cf86a0, 0x7ffcdc188170, 0x7f3fd5cf38a0, 3072 <unfinished ...>
+__fxstat@libc.so.6(1, 1, 0x7ffcdc188170)                                                                        = 0
+<... _IO_file_stat resumed> )                                                                                   = 0
+malloc@libc.so.6(1024 <unfinished ...>
+_dl_addr@libc.so.6(0x7f3fd5ba4250, 0x7ffcdc188110, 0x7ffcdc188100, 0 <unfinished ...>
+_dl_find_dso_for_object@ld-linux-x86-64.so.2(0x7f3fd5ba4250, 0x7ffcdc188110, 0x7ffcdc188100, 0)                 = 0x7f3fd5cfd000
+<... _dl_addr resumed> )                                                                                        = 1
+__tunable_get_val@ld-linux-x86-64.so.2(25, 0x7ffcdc188108, 0x7f3fd5ba1180, 0x7f3fd5cf83d0)                      = 175
+__tunable_get_val@ld-linux-x86-64.so.2(8, 0x7ffcdc188108, 0x7f3fd5ba01d0, 0x7f3fd5d478a0)                       = 56
+__tunable_get_val@ld-linux-x86-64.so.2(2, 0x7ffcdc188108, 0x7f3fd5ba0240, 0x7f3fd5d478a0)                       = 14
+__tunable_get_val@ld-linux-x86-64.so.2(19, 0x7ffcdc188108, 0x7f3fd5ba01f0, 0x7f3fd5d478a0)                      = 133
+__tunable_get_val@ld-linux-x86-64.so.2(1, 0x7ffcdc188108, 0x7f3fd5ba01b0, 0x7f3fd5d478a0)                       = 7
+__tunable_get_val@ld-linux-x86-64.so.2(12, 0x7ffcdc188108, 0x7f3fd5ba0220, 0x7f3fd5d478a0)                      = 84
+__tunable_get_val@ld-linux-x86-64.so.2(18, 0x7ffcdc188108, 0x7f3fd5b9fe20, 0x7f3fd5d478a0)                      = 126
+__tunable_get_val@ld-linux-x86-64.so.2(22, 0x7ffcdc188108, 0x7f3fd5b9fe30, 0x7f3fd5d478a0)                      = 154
+__tunable_get_val@ld-linux-x86-64.so.2(24, 0x7ffcdc188108, 0x7f3fd5b9fe40, 0x7f3fd5d478a0)                      = 168
+__tunable_get_val@ld-linux-x86-64.so.2(21, 0x7ffcdc188108, 0x7f3fd5b9fe80, 0x7f3fd5d478a0)                      = 147
+__tunable_get_val@ld-linux-x86-64.so.2(14, 0x7ffcdc188108, 0x7f3fd5b9fea0, 0x7f3fd5d478a0)                      = 98
+__tunable_get_val@ld-linux-x86-64.so.2(6, 0x7ffcdc188108, 0x7f3fd5ba0250, 0x7f3fd5d478a0)                       = 42
+__default_morecore@libc.so.6(0x21000, 0x21000, 688, 42 <unfinished ...>
+sbrk@libc.so.6(135168 <unfinished ...>
+brk@libc.so.6(0, 0x21000, 688, 42)                                                                              = 0
+brk@libc.so.6(0x562558f9c000, 0x21000, 0x7f3fd5cfa620, 0x7f3fd5c1f28b)                                          = 0
+<... sbrk resumed> )                                                                                            = 0x562558f7b000
+<... __default_morecore resumed> )                                                                              = 0x562558f7b000
+__default_morecore@libc.so.6(0, 0x21000, 0x562558f9c000, 0 <unfinished ...>
+sbrk@libc.so.6(0)                                                                                               = 0x562558f9c000
+<... __default_morecore resumed> )                                                                              = 0x562558f9c000
+<... malloc resumed> )                                                                                          = 0x562558f7b2a0
+_IO_setb@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 0x562558f7b6a0, 1)                                           = 0xfbad2284
+<... _IO_file_doallocate resumed> )                                                                             = 1
+<... _IO_doallocbuf resumed> )                                                                                  = 1
+_IO_do_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 0, 0xffffffff)                                           = 0
+<... _IO_file_overflow resumed> )                                                                               = 0
+_IO_default_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x56255825900f, 21, 1024 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 80, 3072, 1024)                                                     = 80
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 114, 3072, 1024)                                                    = 114
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 101, 3072, 1024)                                                    = 101
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 115, 3072, 1024)                                                    = 115
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 115, 3072, 1024)                                                    = 115
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 32, 3072, 1024)                                                     = 32
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 107, 3072, 1024)                                                    = 107
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 101, 3072, 1024)                                                    = 101
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 121, 3072, 1024)                                                    = 121
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 32, 3072, 1024)                                                     = 32
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 116, 3072, 1024)                                                    = 116
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 111, 3072, 1024)                                                    = 111
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 32, 3072, 1024)                                                     = 32
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 97, 3072, 1024)                                                     = 97
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 108, 3072, 1024)                                                    = 108
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 108, 3072, 1024)                                                    = 108
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 111, 3072, 1024)                                                    = 111
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 99, 3072, 1024)                                                     = 99
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 97, 3072, 1024)                                                     = 97
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 116, 3072, 1024)                                                    = 116
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 101, 3072, 1024)                                                    = 101
+<... _IO_default_xsputn resumed> )                                                                              = 21
+<... _IO_file_xsputn resumed> )                                                                                 = 21
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x56255825900a, 4, 10)                                                = 4
+<... printf resumed> )                                                                                          = 25
+fgets@libc.so.6( <unfinished ...>
+_IO_getline@libc.so.6(0x7f3fd5cf7980, 0x7ffcdc188930, 127, 10 <unfinished ...>
+_IO_getline_info@libc.so.6(0x7f3fd5cf7980, 0x7ffcdc188930, 127, 10 <unfinished ...>
+__uflow@libc.so.6(0x7f3fd5cf7980, 0x7ffcdc188930, 0, 10 <unfinished ...>
+_IO_default_uflow@libc.so.6(0x7f3fd5cf7980, 0, 0x7f3fd5cf38a0, 3072 <unfinished ...>
+_IO_file_underflow@libc.so.6(0x7f3fd5cf7980, 0, 0x7f3fd5cf38a0, 3072 <unfinished ...>
+_IO_doallocbuf@libc.so.6(0x7f3fd5cf7980, 0, 0, 3072 <unfinished ...>
+_IO_file_doallocate@libc.so.6(0x7f3fd5cf7980, 0, 0x7f3fd5cf38a0, 3072 <unfinished ...>
+_IO_file_stat@libc.so.6(0x7f3fd5cf7980, 0x7ffcdc188740, 0x7f3fd5cf38a0, 3072 <unfinished ...>
+__fxstat@libc.so.6(1, 0, 0x7ffcdc188740)                                                                        = 0
+<... _IO_file_stat resumed> )                                                                                   = 0
+malloc@libc.so.6(1024)                                                                                          = 0x562558f7b6b0
+_IO_setb@libc.so.6(0x7f3fd5cf7980, 0x562558f7b6b0, 0x562558f7bab0, 1)                                           = 0xfbad2288
+<... _IO_file_doallocate resumed> )                                                                             = 1
+<... _IO_doallocbuf resumed> )                                                                                  = 1
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 0xffffffff, 640, 0 <unfinished ...>
+_IO_do_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 25, 0 <unfinished ...>
+_IO_file_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 25, 0 <unfinished ...>
+write@libc.so.6(1, "Press key to allocate ...", 25)                                                             = 25
+<... _IO_file_write resumed> )                                                                                  = 25
+<... _IO_do_write resumed> )                                                                                    = 0
+<... _IO_file_overflow resumed> )                                                                               = 0
+_IO_switch_to_get_mode@libc.so.6(0x7f3fd5cf7980, 0x562558f7b2a0, 0, 0x7f3fd5c19077)                             = 0
+_IO_file_read@libc.so.6(0x7f3fd5cf7980, 0x562558f7b6b0, 1024, 0x562558f7b6b0 <unfinished ...>
+read@libc.so.6(0, "\n", 1024)                                                                                   = 1
+<... _IO_file_read resumed> )                                                                                   = 1
+<... _IO_file_underflow resumed> )                                                                              = 10
+<... _IO_default_uflow resumed> )                                                                               = 10
+<... __uflow resumed> )                                                                                         = 10
+<... _IO_getline_info resumed> )                                                                                = 1
+<... _IO_getline resumed> )                                                                                     = 1
+<... fgets resumed> "\n", 128, 0x7f3fd5cf7980)                                                                  = 0x7ffcdc188930
+<... wait_for_input resumed> )                                                                                  = 0
+malloc@libc.so.6(262144 <unfinished ...>
+mmap@libc.so.6(0, 0x41000, 3, 34)                                                                               = 0x7f3fd5aca000
+<... malloc resumed> )                                                                                          = 0x7f3fd5aca010
+printf@libc.so.6("New allocation at %p\n", 0x7f3fd5aca010 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259040, 18, 3072)                                             = 18
+__overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0xfffffff2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0x7f3fd5cf38a0, 3072)                                           = 48
+<... __overflow resumed> )                                                                                      = 48
+__overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x562558f7b2b2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x7f3fd5cf38a0, 3072)                                          = 120
+<... __overflow resumed> )                                                                                      = 120
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x7ffcdc18889c, 12, 12)                                               = 12
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259054, 1, 20 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 0xffffffff, 3072, 10 <unfinished ...>
+_IO_do_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+_IO_file_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+write@libc.so.6(1, "New allocation at 0x7f3fd5aca010"..., 33)                                                   = 33
+<... _IO_file_write resumed> )                                                                                  = 33
+<... _IO_do_write resumed> )                                                                                    = 0
+<... _IO_file_overflow resumed> )                                                                               = 0
+<... _IO_file_xsputn resumed> )                                                                                 = 1
+<... printf resumed> )                                                                                          = 33
+malloc@libc.so.6(262144 <unfinished ...>
+mmap@libc.so.6(0, 0x41000, 3, 34)                                                                               = 0x7f3fd5a89000
+<... malloc resumed> )                                                                                          = 0x7f3fd5a89010
+printf@libc.so.6("New allocation at %p\n", 0x7f3fd5a89010 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259040, 18, 3072)                                             = 18
+__overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0xfffffff2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0x7f3fd5cf38a0, 3072)                                           = 48
+<... __overflow resumed> )                                                                                      = 48
+__overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x562558f7b2b2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x7f3fd5cf38a0, 3072)                                          = 120
+<... __overflow resumed> )                                                                                      = 120
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x7ffcdc18889c, 12, 12)                                               = 12
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259054, 1, 20 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 0xffffffff, 3072, 10 <unfinished ...>
+_IO_do_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+_IO_file_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+write@libc.so.6(1, "New allocation at 0x7f3fd5a89010"..., 33)                                                   = 33
+<... _IO_file_write resumed> )                                                                                  = 33
+<... _IO_do_write resumed> )                                                                                    = 0
+<... _IO_file_overflow resumed> )                                                                               = 0
+<... _IO_file_xsputn resumed> )                                                                                 = 1
+<... printf resumed> )                                                                                          = 33
+malloc@libc.so.6(262144 <unfinished ...>
+mmap@libc.so.6(0, 0x41000, 3, 34)                                                                               = 0x7f3fd5a48000
+<... malloc resumed> )                                                                                          = 0x7f3fd5a48010
+printf@libc.so.6("New allocation at %p\n", 0x7f3fd5a48010 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259040, 18, 3072)                                             = 18
+__overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0xfffffff2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0x7f3fd5cf38a0, 3072)                                           = 48
+<... __overflow resumed> )                                                                                      = 48
+__overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x562558f7b2b2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x7f3fd5cf38a0, 3072)                                          = 120
+<... __overflow resumed> )                                                                                      = 120
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x7ffcdc18889c, 12, 12)                                               = 12
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259054, 1, 20 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 0xffffffff, 3072, 10 <unfinished ...>
+_IO_do_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+_IO_file_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+write@libc.so.6(1, "New allocation at 0x7f3fd5a48010"..., 33)                                                   = 33
+<... _IO_file_write resumed> )                                                                                  = 33
+<... _IO_do_write resumed> )                                                                                    = 0
+<... _IO_file_overflow resumed> )                                                                               = 0
+<... _IO_file_xsputn resumed> )                                                                                 = 1
+<... printf resumed> )                                                                                          = 33
+malloc@libc.so.6(262144 <unfinished ...>
+mmap@libc.so.6(0, 0x41000, 3, 34)                                                                               = 0x7f3fd5a07000
+<... malloc resumed> )                                                                                          = 0x7f3fd5a07010
+printf@libc.so.6("New allocation at %p\n", 0x7f3fd5a07010 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259040, 18, 3072)                                             = 18
+__overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0xfffffff2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0x7f3fd5cf38a0, 3072)                                           = 48
+<... __overflow resumed> )                                                                                      = 48
+__overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x562558f7b2b2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x7f3fd5cf38a0, 3072)                                          = 120
+<... __overflow resumed> )                                                                                      = 120
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x7ffcdc18889c, 12, 12)                                               = 12
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259054, 1, 20 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 0xffffffff, 3072, 10 <unfinished ...>
+_IO_do_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+_IO_file_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+write@libc.so.6(1, "New allocation at 0x7f3fd5a07010"..., 33)                                                   = 33
+<... _IO_file_write resumed> )                                                                                  = 33
+<... _IO_do_write resumed> )                                                                                    = 0
+<... _IO_file_overflow resumed> )                                                                               = 0
+<... _IO_file_xsputn resumed> )                                                                                 = 1
+<... printf resumed> )                                                                                          = 33
+malloc@libc.so.6(262144 <unfinished ...>
+mmap@libc.so.6(0, 0x41000, 3, 34)                                                                               = 0x7f3fd59c6000
+<... malloc resumed> )                                                                                          = 0x7f3fd59c6010
+printf@libc.so.6("New allocation at %p\n", 0x7f3fd59c6010 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259040, 18, 3072)                                             = 18
+__overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0xfffffff2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0x7f3fd5cf38a0, 3072)                                           = 48
+<... __overflow resumed> )                                                                                      = 48
+__overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x562558f7b2b2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x7f3fd5cf38a0, 3072)                                          = 120
+<... __overflow resumed> )                                                                                      = 120
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x7ffcdc18889c, 12, 12)                                               = 12
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259054, 1, 20 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 0xffffffff, 3072, 10 <unfinished ...>
+_IO_do_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+_IO_file_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+write@libc.so.6(1, "New allocation at 0x7f3fd59c6010"..., 33)                                                   = 33
+<... _IO_file_write resumed> )                                                                                  = 33
+<... _IO_do_write resumed> )                                                                                    = 0
+<... _IO_file_overflow resumed> )                                                                               = 0
+<... _IO_file_xsputn resumed> )                                                                                 = 1
+<... printf resumed> )                                                                                          = 33
+malloc@libc.so.6(262144 <unfinished ...>
+mmap@libc.so.6(0, 0x41000, 3, 34)                                                                               = 0x7f3fd5985000
+<... malloc resumed> )                                                                                          = 0x7f3fd5985010
+printf@libc.so.6("New allocation at %p\n", 0x7f3fd5985010 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259040, 18, 3072)                                             = 18
+__overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0xfffffff2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0x7f3fd5cf38a0, 3072)                                           = 48
+<... __overflow resumed> )                                                                                      = 48
+__overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x562558f7b2b2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x7f3fd5cf38a0, 3072)                                          = 120
+<... __overflow resumed> )                                                                                      = 120
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x7ffcdc18889c, 12, 12)                                               = 12
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259054, 1, 20 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 0xffffffff, 3072, 10 <unfinished ...>
+_IO_do_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+_IO_file_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+write@libc.so.6(1, "New allocation at 0x7f3fd5985010"..., 33)                                                   = 33
+<... _IO_file_write resumed> )                                                                                  = 33
+<... _IO_do_write resumed> )                                                                                    = 0
+<... _IO_file_overflow resumed> )                                                                               = 0
+<... _IO_file_xsputn resumed> )                                                                                 = 1
+<... printf resumed> )                                                                                          = 33
+malloc@libc.so.6(262144 <unfinished ...>
+mmap@libc.so.6(0, 0x41000, 3, 34)                                                                               = 0x7f3fd5944000
+<... malloc resumed> )                                                                                          = 0x7f3fd5944010
+printf@libc.so.6("New allocation at %p\n", 0x7f3fd5944010 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259040, 18, 3072)                                             = 18
+__overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0xfffffff2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0x7f3fd5cf38a0, 3072)                                           = 48
+<... __overflow resumed> )                                                                                      = 48
+__overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x562558f7b2b2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x7f3fd5cf38a0, 3072)                                          = 120
+<... __overflow resumed> )                                                                                      = 120
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x7ffcdc18889c, 12, 12)                                               = 12
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259054, 1, 20 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 0xffffffff, 3072, 10 <unfinished ...>
+_IO_do_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+_IO_file_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+write@libc.so.6(1, "New allocation at 0x7f3fd5944010"..., 33)                                                   = 33
+<... _IO_file_write resumed> )                                                                                  = 33
+<... _IO_do_write resumed> )                                                                                    = 0
+<... _IO_file_overflow resumed> )                                                                               = 0
+<... _IO_file_xsputn resumed> )                                                                                 = 1
+<... printf resumed> )                                                                                          = 33
+malloc@libc.so.6(262144 <unfinished ...>
+mmap@libc.so.6(0, 0x41000, 3, 34)                                                                               = 0x7f3fd5903000
+<... malloc resumed> )                                                                                          = 0x7f3fd5903010
+printf@libc.so.6("New allocation at %p\n", 0x7f3fd5903010 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259040, 18, 3072)                                             = 18
+__overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0xfffffff2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0x7f3fd5cf38a0, 3072)                                           = 48
+<... __overflow resumed> )                                                                                      = 48
+__overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x562558f7b2b2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x7f3fd5cf38a0, 3072)                                          = 120
+<... __overflow resumed> )                                                                                      = 120
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x7ffcdc18889c, 12, 12)                                               = 12
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259054, 1, 20 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 0xffffffff, 3072, 10 <unfinished ...>
+_IO_do_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+_IO_file_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+write@libc.so.6(1, "New allocation at 0x7f3fd5903010"..., 33)                                                   = 33
+<... _IO_file_write resumed> )                                                                                  = 33
+<... _IO_do_write resumed> )                                                                                    = 0
+<... _IO_file_overflow resumed> )                                                                               = 0
+<... _IO_file_xsputn resumed> )                                                                                 = 1
+<... printf resumed> )                                                                                          = 33
+malloc@libc.so.6(262144 <unfinished ...>
+mmap@libc.so.6(0, 0x41000, 3, 34)                                                                               = 0x7f3fd58c2000
+<... malloc resumed> )                                                                                          = 0x7f3fd58c2010
+printf@libc.so.6("New allocation at %p\n", 0x7f3fd58c2010 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259040, 18, 3072)                                             = 18
+__overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0xfffffff2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0x7f3fd5cf38a0, 3072)                                           = 48
+<... __overflow resumed> )                                                                                      = 48
+__overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x562558f7b2b2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x7f3fd5cf38a0, 3072)                                          = 120
+<... __overflow resumed> )                                                                                      = 120
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x7ffcdc18889c, 12, 12)                                               = 12
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259054, 1, 20 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 0xffffffff, 3072, 10 <unfinished ...>
+_IO_do_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+_IO_file_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+write@libc.so.6(1, "New allocation at 0x7f3fd58c2010"..., 33)                                                   = 33
+<... _IO_file_write resumed> )                                                                                  = 33
+<... _IO_do_write resumed> )                                                                                    = 0
+<... _IO_file_overflow resumed> )                                                                               = 0
+<... _IO_file_xsputn resumed> )                                                                                 = 1
+<... printf resumed> )                                                                                          = 33
+malloc@libc.so.6(262144 <unfinished ...>
+mmap@libc.so.6(0, 0x41000, 3, 34)                                                                               = 0x7f3fd5881000
+<... malloc resumed> )                                                                                          = 0x7f3fd5881010
+printf@libc.so.6("New allocation at %p\n", 0x7f3fd5881010 <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259040, 18, 3072)                                             = 18
+__overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0xfffffff2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 48, 0x7f3fd5cf38a0, 3072)                                           = 48
+<... __overflow resumed> )                                                                                      = 48
+__overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x562558f7b2b2, 12 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 120, 0x7f3fd5cf38a0, 3072)                                          = 120
+<... __overflow resumed> )                                                                                      = 120
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x7ffcdc18889c, 12, 12)                                               = 12
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259054, 1, 20 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 0xffffffff, 3072, 10 <unfinished ...>
+_IO_do_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+_IO_file_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 33, 10 <unfinished ...>
+write@libc.so.6(1, "New allocation at 0x7f3fd5881010"..., 33)                                                   = 33
+<... _IO_file_write resumed> )                                                                                  = 33
+<... _IO_do_write resumed> )                                                                                    = 0
+<... _IO_file_overflow resumed> )                                                                               = 0
+<... _IO_file_xsputn resumed> )                                                                                 = 1
+<... printf resumed> )                                                                                          = 33
+wait_for_input(0x562558259056, 0x562558f7b2a0, 0, 0 <unfinished ...>
+printf@libc.so.6("%s ...", "Press key to deallocate" <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259008, 0, 3072)                                              = 0
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259056, 23, 0x7f3fd5cf44a0)                                   = 23
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x56255825900a, 4, 10)                                                = 4
+<... printf resumed> )                                                                                          = 27
+fgets@libc.so.6( <unfinished ...>
+_IO_getline@libc.so.6(0x7f3fd5cf7980, 0x7ffcdc188930, 127, 10 <unfinished ...>
+_IO_getline_info@libc.so.6(0x7f3fd5cf7980, 0x7ffcdc188930, 127, 10 <unfinished ...>
+__uflow@libc.so.6(0x7f3fd5cf7980, 0x7ffcdc188930, 0xffffffff, 10 <unfinished ...>
+_IO_default_uflow@libc.so.6(0x7f3fd5cf7980, 0x562558f7b6b1, 0x7f3fd5cf38a0, 3072 <unfinished ...>
+_IO_file_underflow@libc.so.6(0x7f3fd5cf7980, 0x562558f7b6b1, 0x7f3fd5cf38a0, 3072 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 0xffffffff, 640, 0 <unfinished ...>
+_IO_do_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 27, 0 <unfinished ...>
+_IO_file_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 27, 0 <unfinished ...>
+write@libc.so.6(1, "Press key to deallocate ...", 27)                                                           = 27
+<... _IO_file_write resumed> )                                                                                  = 27
+<... _IO_do_write resumed> )                                                                                    = 0
+<... _IO_file_overflow resumed> )                                                                               = 0
+_IO_switch_to_get_mode@libc.so.6(0x7f3fd5cf7980, 0x562558f7b2a0, 0, 0x7f3fd5c19077)                             = 0
+_IO_file_read@libc.so.6(0x7f3fd5cf7980, 0x562558f7b6b0, 1024, 0x562558f7b6b0 <unfinished ...>
+read@libc.so.6(0, "\n", 1024)                                                                                   = 1
+<... _IO_file_read resumed> )                                                                                   = 1
+<... _IO_file_underflow resumed> )                                                                              = 10
+<... _IO_default_uflow resumed> )                                                                               = 10
+<... __uflow resumed> )                                                                                         = 10
+<... _IO_getline_info resumed> )                                                                                = 1
+<... _IO_getline resumed> )                                                                                     = 1
+<... fgets resumed> "\n", 128, 0x7f3fd5cf7980)                                                                  = 0x7ffcdc188930
+<... wait_for_input resumed> )                                                                                  = 0
+free@libc.so.6(0x7f3fd5881010 <unfinished ...>
+munmap@libc.so.6(0x7f3fd5881000, 0x41000, 15, 0x41000)                                                          = 0
+<... free resumed> )                                                                                            = <void>
+wait_for_input(0x562558259070, 0x41000, 15, 0x7f3fd5c2397b <unfinished ...>
+printf@libc.so.6("%s ...", "Press key to close the program" <unfinished ...>
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259008, 0, 3072)                                              = 0
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x562558259070, 30, 0x7f3fd5cf44a0)                                   = 30
+_IO_file_xsputn@libc.so.6(0x7f3fd5cf86a0, 0x56255825900a, 4, 10)                                                = 4
+<... printf resumed> )                                                                                          = 34
+fgets@libc.so.6( <unfinished ...>
+_IO_getline@libc.so.6(0x7f3fd5cf7980, 0x7ffcdc188930, 127, 10 <unfinished ...>
+_IO_getline_info@libc.so.6(0x7f3fd5cf7980, 0x7ffcdc188930, 127, 10 <unfinished ...>
+__uflow@libc.so.6(0x7f3fd5cf7980, 0x7ffcdc188930, 0xffffffff, 10 <unfinished ...>
+_IO_default_uflow@libc.so.6(0x7f3fd5cf7980, 0x562558f7b6b1, 0x7f3fd5cf38a0, 3072 <unfinished ...>
+_IO_file_underflow@libc.so.6(0x7f3fd5cf7980, 0x562558f7b6b1, 0x7f3fd5cf38a0, 3072 <unfinished ...>
+_IO_file_overflow@libc.so.6(0x7f3fd5cf86a0, 0xffffffff, 640, 0 <unfinished ...>
+_IO_do_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 34, 0 <unfinished ...>
+_IO_file_write@libc.so.6(0x7f3fd5cf86a0, 0x562558f7b2a0, 34, 0 <unfinished ...>
+write@libc.so.6(1, "Press key to close the program ."..., 34)                                                   = 34
+<... _IO_file_write resumed> )                                                                                  = 34
+<... _IO_do_write resumed> )                                                                                    = 0
+<... _IO_file_overflow resumed> )                                                                               = 0
+_IO_switch_to_get_mode@libc.so.6(0x7f3fd5cf7980, 0x562558f7b2a0, 0, 0x7f3fd5c19077)                             = 0
+_IO_file_read@libc.so.6(0x7f3fd5cf7980, 0x562558f7b6b0, 1024, 0x562558f7b6b0 <unfinished ...>
+read@libc.so.6(0, "\n", 1024)                                                                                   = 1
+<... _IO_file_read resumed> )                                                                                   = 1
+<... _IO_file_underflow resumed> )                                                                              = 10
+<... _IO_default_uflow resumed> )                                                                               = 10
+<... __uflow resumed> )                                                                                         = 10
+<... _IO_getline_info resumed> )                                                                                = 1
+<... _IO_getline resumed> )                                                                                     = 1
+<... fgets resumed> "\n", 128, 0x7f3fd5cf7980)                                                                  = 0x7ffcdc188930
+<... wait_for_input resumed> )                                                                                  = 0
+<... main resumed> )                                                                                            = 0
+exit@libc.so.6(0 <unfinished ...>
+__call_tls_dtors@libc.so.6(0, 0x7f3fd5cf7718, 1, 1)                                                             = 0
+__do_global_dtors_aux(0x7f3fd5d48968, 0x56255825ad50, 1, 0 <unfinished ...>
+__cxa_finalize@libc.so.6(0x56255825b008, 0x56255825ad50, 1, 0)                                                  = 0
+deregister_tm_clones(0x56255825b008, 0, 1, 0)                                                                   = 0x56255825b050
+<... __do_global_dtors_aux resumed> )                                                                           = 0x56255825b050
+_fini(0x56255825b050, 0, 0x56255825ad50, 0)                                                                     = 0x562558258b78
+_IO_file_setbuf@libc.so.6(0x7f3fd5cf86a0, 0, 0, 1 <unfinished ...>
+_IO_file_sync@libc.so.6(0x7f3fd5cf86a0, 0, 0x7f3fd5cf38a0, 3072)                                                = 0
+<... _IO_file_setbuf resumed> )                                                                                 = 0x7f3fd5cf86a0
+_IO_file_setbuf@libc.so.6(0x7f3fd5cf7980, 0, 0, 1 <unfinished ...>
+_IO_file_sync@libc.so.6(0x7f3fd5cf7980, 0, 0x7f3fd5cf38a0, 3072)                                                = 0
+<... _IO_file_setbuf resumed> )                                                                                 = 0x7f3fd5cf7980
+_exit@libc.so.6(0 <no return ...>
++++ exited (status 0) +++
