@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "threads.h"
-#include "utils.h"
+#include "./threads.h"
+#include "utils/utils.h"
 
 #define NUM_ITER		10000000000
 #define NUM_THREADS		2

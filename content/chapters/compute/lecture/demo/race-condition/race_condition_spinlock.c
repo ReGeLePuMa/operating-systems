@@ -4,8 +4,8 @@
 #include <pthread.h>
 #include <sys/time.h>
 
-#include "utils.h"
-#include "get_time.h"
+#include "utils/utils.h"
+#include "utils/get_time.h"
 
 #define NUM_STEPS	1000000
 #define NUM_THREADS	2
