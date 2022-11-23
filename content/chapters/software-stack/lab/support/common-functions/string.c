@@ -21,3 +21,15 @@ char *strcpy(char *dest, const char *src)
 
 	return dest;
 }
+
+char *strcat(char* dest, const char *src)
+{
+	char *d;
+	for(d = dest; *dest!='\0'; dest++);
+	for(; *src!='\0'; src++,d++)
+	{
+		*d=*src;
+	}
+	*d=*src;
+	return dest;
+}

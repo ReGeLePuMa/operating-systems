@@ -11,24 +11,24 @@ void incrementVar()
 {
     // TODO: wrap the whole `for` statement in the critical section and measure
     // the running times.
+    mutex.lock();
     for (size_t i = 0; i < NUM_ITER; i++)
     {
-        mutex.lock();
         var++;
-        mutex.unlock();
     }
+    mutex.unlock();
 }
 
 void decrementVar()
 {
     // TODO: wrap the whole `for` statement in the critical section and measure
     // the running times.
+    mutex.lock();
     for (size_t i = 0; i < NUM_ITER; i++)
     {
-        mutex.lock();
         var--;
-        mutex.unlock();
     }
+    mutex.unlock();
 }
 
 void main()

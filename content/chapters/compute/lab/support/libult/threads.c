@@ -210,7 +210,7 @@ static bool init_profiling_timer(void)
 	}
 
 	const struct itimerval timer = {
-		{ 0, 10000 },
+		{ 2, 0 },
 		{ 0, 1 }  // arms the timer as soon as possible
 	};
 
@@ -251,7 +251,7 @@ static void handle_sigprof(int signum, siginfo_t *nfo, void *context)
 	stored->uc_sigmask = updated->uc_sigmask;
 
 	// Round robin
-
+	printf("[scheduler] Preempting running thread with id %d\n", running->id);
 	if (queue_enqueue(ready, running) != 0) {
 		abort();
 	}
@@ -261,7 +261,7 @@ static void handle_sigprof(int signum, siginfo_t *nfo, void *context)
 	}
 
 	// Manually leave the signal handler
-
+	printf("[scheduler] Running new thread with id %d\n", running->id);
 	errno = old_errno;
 	if (setcontext(&running->context) == -1) {
 		abort();
