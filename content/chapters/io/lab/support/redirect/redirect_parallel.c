@@ -37,7 +37,7 @@ static void do_stdout_redirect()
 	pthread_barrier_wait(&barrier);
 
 	/* TODO: Use `dup2()` instead of `close()` and `dup()`. */
-	rc = close(STDOUT_FILENO);
+	rc = dup2(fd, STDERR_FILENO);
 	DIE(rc < 0, "close");
 
 	sleep(3);
@@ -64,7 +64,7 @@ static void do_stderr_redirect()
 	sleep(1);
 
 	/* TODO: Use `dup2()` instead of `close()` and `dup()`. */
-	rc = close(STDERR_FILENO);
+	rc = dup2(fd, STDOUT_FILENO);
 	DIE(rc < 0, "close");
 
 	rc = dup(fd);
