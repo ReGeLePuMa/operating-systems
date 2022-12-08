@@ -29,6 +29,7 @@ def main():
         print(f"Received from server: {response}")
 
         # TODO: close the socket.
+        sock.close()
 
 
 if __name__ == "__main__":
