@@ -31,7 +31,11 @@ int main(void)
 	DIE(listenfd < 0, "socket");
 
 	/* TODO: Bind socket to path. */
-
+	bzero(&addr,sizeof(addr));
+	addr.sun_family=AF_UNIX;
+	strcpy(addr.sun_path,socket_path);
+	rc=bind(listenfd,(struct sockaddr*)&addr,sizeof(addr));
+	DIE(rc < 0, "bind");
 
 	/* Put in listen mode. */
 	rc = listen(listenfd, 10);
@@ -42,7 +46,8 @@ int main(void)
 	DIE(connectfd < 0, "accept");
 
 	/* TODO: Read flag from socket. */
-
+	rc= read(connectfd,buffer,BUFSIZ);
+	DIE(rc<0,"read");
 
 	printf("Flag is: %s\n", buffer);
 
