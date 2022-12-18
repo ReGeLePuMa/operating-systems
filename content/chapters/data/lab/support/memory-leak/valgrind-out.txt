@@ -1,0 +1,262 @@
+==46375== Memcheck, a memory error detector
+==46375== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==46375== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
+==46375== Command: ps
+==46375== Parent PID: 3966
+==46375== 
+--46375-- 
+--46375-- Valgrind options:
+--46375--    --leak-check=full
+--46375--    --show-leak-kinds=all
+--46375--    --track-origins=yes
+--46375--    --verbose
+--46375--    --log-file=valgrind-out.txt
+--46375-- Contents of /proc/version:
+--46375--   Linux version 5.4.0-131-generic (buildd@lcy02-amd64-108) (gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1)) #147-Ubuntu SMP Fri Oct 14 17:07:22 UTC 2022
+--46375-- 
+--46375-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-rdrand
+--46375-- Page sizes: currently 4096, max supported 4096
+--46375-- Valgrind library directory: /usr/lib/x86_64-linux-gnu/valgrind
+--46375-- Reading syms from /bin/ps
+--46375--    object doesn't have a symbol table
+--46375-- Reading syms from /lib/x86_64-linux-gnu/ld-2.31.so
+--46375--   Considering /usr/lib/debug/.build-id/45/87364908de169dec62ffa538170118c1c3a078.debug ..
+--46375--   .. build-id is valid
+--46375-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux
+--46375--    object doesn't have a symbol table
+--46375--    object doesn't have a dynamic symbol table
+--46375-- Scheduler: using generic scheduler lock implementation.
+--46375-- Reading suppressions file: /usr/lib/x86_64-linux-gnu/valgrind/default.supp
+==46375== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-46375-by-student-on-???
+==46375== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-46375-by-student-on-???
+==46375== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-46375-by-student-on-???
+==46375== 
+==46375== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==46375== don't want to do, unless you know exactly what you're doing,
+==46375== or are doing some strange experiment):
+==46375==   /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=46375 ...command...
+==46375== 
+==46375== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==46375==   /path/to/gdb ps
+==46375== and then give GDB the following command
+==46375==   target remote | /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=46375
+==46375== --pid is optional if only one valgrind process is running
+==46375== 
+--46375-- REDIR: 0x4022e20 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c9ce2 (???)
+--46375-- REDIR: 0x4022bf0 (ld-linux-x86-64.so.2:index) redirected to 0x580c9cfc (???)
+--46375-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_core-amd64-linux.so
+--46375--    object doesn't have a symbol table
+--46375-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so
+--46375--    object doesn't have a symbol table
+==46375== WARNING: new redirection conflicts with existing -- ignoring it
+--46375--     old: 0x04022e20 (strlen              ) R-> (0000.0) 0x580c9ce2 ???
+--46375--     new: 0x04022e20 (strlen              ) R-> (2007.0) 0x0483f060 strlen
+--46375-- REDIR: 0x401f600 (ld-linux-x86-64.so.2:strcmp) redirected to 0x483ffd0 (strcmp)
+--46375-- REDIR: 0x4023380 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4843a20 (mempcpy)
+--46375-- Reading syms from /lib/x86_64-linux-gnu/libprocps.so.8.0.2
+--46375--    object doesn't have a symbol table
+--46375-- Reading syms from /lib/x86_64-linux-gnu/libdl-2.31.so
+--46375--   Considering /usr/lib/debug/.build-id/c0/f40155b3f8bf8c494fa800f9ab197ebe20ed6e.debug ..
+--46375--   .. build-id is valid
+--46375-- Reading syms from /lib/x86_64-linux-gnu/libc-2.31.so
+--46375--   Considering /usr/lib/debug/.build-id/18/78e6b475720c7c51969e69ab2d276fae6d1dee.debug ..
+--46375--   .. build-id is valid
+--46375-- Reading syms from /lib/x86_64-linux-gnu/libsystemd.so.0.28.0
+--46375--    object doesn't have a symbol table
+--46375-- Reading syms from /lib/x86_64-linux-gnu/librt-2.31.so
+--46375--   Considering /usr/lib/debug/.build-id/ce/016c975d94bc4770ed8c62d45dea6b71405a2c.debug ..
+--46375--   .. build-id is valid
+--46375-- Reading syms from /lib/x86_64-linux-gnu/liblzma.so.5.2.4
+--46375--    object doesn't have a symbol table
+--46375-- Reading syms from /usr/lib/x86_64-linux-gnu/liblz4.so.1.9.2
+--46375--    object doesn't have a symbol table
+--46375-- Reading syms from /usr/lib/x86_64-linux-gnu/libgcrypt.so.20.2.5
+--46375--    object doesn't have a symbol table
+--46375-- Reading syms from /lib/x86_64-linux-gnu/libpthread-2.31.so
+--46375--   Considering /usr/lib/debug/.build-id/7b/4536f41cdaa5888408e82d0836e33dcf436466.debug ..
+--46375--   .. build-id is valid
+--46375-- Reading syms from /lib/x86_64-linux-gnu/libgpg-error.so.0.28.0
+--46375--    object doesn't have a symbol table
+--46375-- REDIR: 0x4933480 (libc.so.6:memmove) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4932780 (libc.so.6:strncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x49337b0 (libc.so.6:strcasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x49320a0 (libc.so.6:strcat) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x49327e0 (libc.so.6:rindex) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4934c50 (libc.so.6:rawmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x494fce0 (libc.so.6:wmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x494f820 (libc.so.6:wcscmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x49335e0 (libc.so.6:mempcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4933410 (libc.so.6:bcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4932710 (libc.so.6:strncmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4932150 (libc.so.6:strcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4933540 (libc.so.6:memset) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x494f7e0 (libc.so.6:wcschr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4932670 (libc.so.6:strnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4932230 (libc.so.6:strcspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4933800 (libc.so.6:strncasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x49321d0 (libc.so.6:strcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4933950 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4950f50 (libc.so.6:wcsnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x494f860 (libc.so.6:wcscpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4932820 (libc.so.6:strpbrk) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4932100 (libc.so.6:index) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4932630 (libc.so.6:strlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x493bbb0 (libc.so.6:memrchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4933850 (libc.so.6:strcasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x49333d0 (libc.so.6:memchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x494f930 (libc.so.6:wcslen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4932ae0 (libc.so.6:strspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4933750 (libc.so.6:stpncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x49336f0 (libc.so.6:stpcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4934c90 (libc.so.6:strchrnul) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x49338a0 (libc.so.6:strncasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x49c0850 (libc.so.6:__memcpy_chk) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x49326b0 (libc.so.6:strncat) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x49332f0 (libc.so.6:strstr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--46375-- REDIR: 0x4a1b500 (libc.so.6:__strrchr_avx2) redirected to 0x483ea10 (rindex)
+--46375-- REDIR: 0x4a1b6d0 (libc.so.6:__strlen_avx2) redirected to 0x483ef40 (strlen)
+--46375-- REDIR: 0x492d0e0 (libc.so.6:malloc) redirected to 0x483b780 (malloc)
+--46375-- REDIR: 0x4a1e6e0 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x48429f0 (memmove)
+--46375-- REDIR: 0x4a16bd0 (libc.so.6:__strcmp_avx2) redirected to 0x483fed0 (strcmp)
+--46375-- REDIR: 0x4932fa0 (libc.so.6:__GI_strstr) redirected to 0x4843ca0 (__strstr_sse2)
+--46375-- REDIR: 0x492d6d0 (libc.so.6:free) redirected to 0x483c9d0 (free)
+--46375-- REDIR: 0x4a17530 (libc.so.6:__memchr_avx2) redirected to 0x4840050 (memchr)
+--46375-- REDIR: 0x4a17800 (libc.so.6:__rawmemchr_avx2) redirected to 0x4843580 (rawmemchr)
+--46375-- REDIR: 0x4a17010 (libc.so.6:__strncmp_avx2) redirected to 0x483f670 (strncmp)
+--46375-- REDIR: 0x4a1b0e0 (libc.so.6:__strchr_avx2) redirected to 0x483ebf0 (index)
+--46375-- REDIR: 0x4a1b310 (libc.so.6:__strchrnul_avx2) redirected to 0x4843540 (strchrnul)
+--46375-- REDIR: 0x4a1e6c0 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4843660 (mempcpy)
+--46375-- REDIR: 0x4a1d900 (libc.so.6:__stpcpy_avx2) redirected to 0x4842300 (stpcpy)
+--46375-- REDIR: 0x492eb10 (libc.so.6:calloc) redirected to 0x483dce0 (calloc)
+--46375-- REDIR: 0x4a1cfa0 (libc.so.6:__strncpy_avx2) redirected to 0x483f230 (strncpy)
+--46375-- REDIR: 0x4a180a0 (libc.so.6:__strcasecmp_avx) redirected to 0x483f830 (strcasecmp)
+--46375-- REDIR: 0x492de80 (libc.so.6:realloc) redirected to 0x483df30 (realloc)
+--46375-- REDIR: 0x4a180b4 (libc.so.6:__strcasecmp_l_avx) redirected to 0x483fab0 (strcasecmp_l)
+--46375-- REDIR: 0x4a1e6d0 (libc.so.6:__memcpy_chk_avx_unaligned_erms) redirected to 0x4843b10 (__memcpy_chk)
+--46375-- REDIR: 0x4a17cc0 (libc.so.6:__memcmp_avx2_movbe) redirected to 0x48421e0 (bcmp)
+--46375-- REDIR: 0x494e3f0 (libc.so.6:__strstr_sse2_unaligned) redirected to 0x4843c20 (strstr)
+--46375-- REDIR: 0x4a16aa0 (libc.so.6:__strspn_sse42) redirected to 0x4843ef0 (strspn)
+==46375== 
+==46375== HEAP SUMMARY:
+==46375==     in use at exit: 264,809 bytes in 22 blocks
+==46375==   total heap usage: 443 allocs, 421 frees, 350,334 bytes allocated
+==46375== 
+==46375== Searching for pointers to 22 not-freed blocks
+==46375== Checked 511,520 bytes
+==46375== 
+==46375== 4 bytes in 1 blocks are still reachable in loss record 1 of 13
+==46375==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==46375==    by 0x493238E: strdup (strdup.c:42)
+==46375==    by 0x11B86A: ??? (in /bin/ps)
+==46375==    by 0x11D204: ??? (in /bin/ps)
+==46375==    by 0x11AE48: ??? (in /bin/ps)
+==46375==    by 0x112CC5: ??? (in /bin/ps)
+==46375==    by 0x48B7082: (below main) (libc-start.c:308)
+==46375== 
+==46375== 4 bytes in 1 blocks are still reachable in loss record 2 of 13
+==46375==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==46375==    by 0x493238E: strdup (strdup.c:42)
+==46375==    by 0x11B86A: ??? (in /bin/ps)
+==46375==    by 0x11CA48: ??? (in /bin/ps)
+==46375==    by 0x11AE48: ??? (in /bin/ps)
+==46375==    by 0x112CC5: ??? (in /bin/ps)
+==46375==    by 0x48B7082: (below main) (libc-start.c:308)
+==46375== 
+==46375== 4 bytes in 1 blocks are still reachable in loss record 3 of 13
+==46375==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==46375==    by 0x493238E: strdup (strdup.c:42)
+==46375==    by 0x11B86A: ??? (in /bin/ps)
+==46375==    by 0x11CB52: ??? (in /bin/ps)
+==46375==    by 0x11AE48: ??? (in /bin/ps)
+==46375==    by 0x112CC5: ??? (in /bin/ps)
+==46375==    by 0x48B7082: (below main) (libc-start.c:308)
+==46375== 
+==46375== 5 bytes in 1 blocks are still reachable in loss record 4 of 13
+==46375==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==46375==    by 0x493238E: strdup (strdup.c:42)
+==46375==    by 0x11B86A: ??? (in /bin/ps)
+==46375==    by 0x11CA29: ??? (in /bin/ps)
+==46375==    by 0x11AE48: ??? (in /bin/ps)
+==46375==    by 0x112CC5: ??? (in /bin/ps)
+==46375==    by 0x48B7082: (below main) (libc-start.c:308)
+==46375== 
+==46375== 8 bytes in 1 blocks are still reachable in loss record 5 of 13
+==46375==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==46375==    by 0x493238E: strdup (strdup.c:42)
+==46375==    by 0x113C12: ??? (in /bin/ps)
+==46375==    by 0x1140FD: ??? (in /bin/ps)
+==46375==    by 0x112CBA: ??? (in /bin/ps)
+==46375==    by 0x48B7082: (below main) (libc-start.c:308)
+==46375== 
+==46375== 48 bytes in 1 blocks are still reachable in loss record 6 of 13
+==46375==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==46375==    by 0x11B7BE: ??? (in /bin/ps)
+==46375==    by 0x11D204: ??? (in /bin/ps)
+==46375==    by 0x11AE48: ??? (in /bin/ps)
+==46375==    by 0x112CC5: ??? (in /bin/ps)
+==46375==    by 0x48B7082: (below main) (libc-start.c:308)
+==46375== 
+==46375== 48 bytes in 1 blocks are still reachable in loss record 7 of 13
+==46375==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==46375==    by 0x11B7BE: ??? (in /bin/ps)
+==46375==    by 0x11CA29: ??? (in /bin/ps)
+==46375==    by 0x11AE48: ??? (in /bin/ps)
+==46375==    by 0x112CC5: ??? (in /bin/ps)
+==46375==    by 0x48B7082: (below main) (libc-start.c:308)
+==46375== 
+==46375== 48 bytes in 1 blocks are still reachable in loss record 8 of 13
+==46375==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==46375==    by 0x11B7BE: ??? (in /bin/ps)
+==46375==    by 0x11CA48: ??? (in /bin/ps)
+==46375==    by 0x11AE48: ??? (in /bin/ps)
+==46375==    by 0x112CC5: ??? (in /bin/ps)
+==46375==    by 0x48B7082: (below main) (libc-start.c:308)
+==46375== 
+==46375== 48 bytes in 1 blocks are still reachable in loss record 9 of 13
+==46375==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==46375==    by 0x11B7BE: ??? (in /bin/ps)
+==46375==    by 0x11CB52: ??? (in /bin/ps)
+==46375==    by 0x11AE48: ??? (in /bin/ps)
+==46375==    by 0x112CC5: ??? (in /bin/ps)
+==46375==    by 0x48B7082: (below main) (libc-start.c:308)
+==46375== 
+==46375== 400 bytes in 10 blocks are still reachable in loss record 10 of 13
+==46375==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==46375==    by 0x486A49F: ??? (in /lib/x86_64-linux-gnu/libprocps.so.8.0.2)
+==46375==    by 0x486A6A5: ??? (in /lib/x86_64-linux-gnu/libprocps.so.8.0.2)
+==46375==    by 0x486AD08: dev_to_tty (in /lib/x86_64-linux-gnu/libprocps.so.8.0.2)
+==46375==    by 0x1185B9: ??? (in /bin/ps)
+==46375==    by 0x1134B7: ??? (in /bin/ps)
+==46375==    by 0x48B7082: (below main) (libc-start.c:308)
+==46375== 
+==46375== 2,048 bytes in 1 blocks are still reachable in loss record 11 of 13
+==46375==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==46375==    by 0x486A53A: ??? (in /lib/x86_64-linux-gnu/libprocps.so.8.0.2)
+==46375==    by 0x486D43D: ??? (in /lib/x86_64-linux-gnu/libprocps.so.8.0.2)
+==46375==    by 0x486DB49: ??? (in /lib/x86_64-linux-gnu/libprocps.so.8.0.2)
+==46375==    by 0x486E888: readproc (in /lib/x86_64-linux-gnu/libprocps.so.8.0.2)
+==46375==    by 0x113373: ??? (in /bin/ps)
+==46375==    by 0x48B7082: (below main) (libc-start.c:308)
+==46375== 
+==46375== 131,072 bytes in 1 blocks are still reachable in loss record 12 of 13
+==46375==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==46375==    by 0x486A4EA: ??? (in /lib/x86_64-linux-gnu/libprocps.so.8.0.2)
+==46375==    by 0x486EFED: openproc (in /lib/x86_64-linux-gnu/libprocps.so.8.0.2)
+==46375==    by 0x1132A4: ??? (in /bin/ps)
+==46375==    by 0x48B7082: (below main) (libc-start.c:308)
+==46375== 
+==46375== 131,072 bytes in 1 blocks are still reachable in loss record 13 of 13
+==46375==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==46375==    by 0x486A4EA: ??? (in /lib/x86_64-linux-gnu/libprocps.so.8.0.2)
+==46375==    by 0x486EFFE: openproc (in /lib/x86_64-linux-gnu/libprocps.so.8.0.2)
+==46375==    by 0x1132A4: ??? (in /bin/ps)
+==46375==    by 0x48B7082: (below main) (libc-start.c:308)
+==46375== 
+==46375== LEAK SUMMARY:
+==46375==    definitely lost: 0 bytes in 0 blocks
+==46375==    indirectly lost: 0 bytes in 0 blocks
+==46375==      possibly lost: 0 bytes in 0 blocks
+==46375==    still reachable: 264,809 bytes in 22 blocks
+==46375==         suppressed: 0 bytes in 0 blocks
+==46375== 
+==46375== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

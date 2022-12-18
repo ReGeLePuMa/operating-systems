@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 /* SPDX-License-Identifier: BSD-3-Clause */
 
+=======
+>>>>>>> noul3
 import std.stdio;
 import core.stdc.stdlib;
 

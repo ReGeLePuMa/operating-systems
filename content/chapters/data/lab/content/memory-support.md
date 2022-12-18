@@ -8,7 +8,11 @@ As a consequence garbage collected programming languages are easier to use and s
 However, this comes with a cost: the garbage collector, in most cases, requires a significant amount of resources to run.
 Therefore, for performance-critical systems, MMM is still the preferred solution.
 
+<<<<<<< HEAD
 A middle-ground between programming languages that have AMM (Java, Python, Swift, D) and those that do not (C, C++) is represented by those languages that do not have built-in AMM but offer the possibility to implement it as a library solution (C++, D).
+=======
+A middle-ground between programming languages that have AMM (Java, Python, Rust, D) and those that do not (C, C++) is represented by those languages that do not have builtin AMM but offer the possibility to implement it as a library solution (C++, D).
+>>>>>>> noul3
 Concretely, these languages offer lightweight library solutions to optimally track down the lifetime of an object.
 This is done by using reference counted objects.
 
@@ -39,7 +43,10 @@ Navigate to the `support/reference-counting` directory.
 Analyze the `operators.d` file.
 A `struct` is defined that also implements 4 special functions: a constructor, a copy constructor, an assignment operator and a destructor.
 Each of these special functions may be called automatically by the compiler:
+<<<<<<< HEAD
 
+=======
+>>>>>>> noul3
 - the constructor is called automatically whenever an object is initialized with a field of a type that corresponds to the constructor parameter type.
 - the copy constructor is called automatically when an object is initialized from an object of the same type.
 - the assignment operator is called automatically when an object is assigned an object of the same type.

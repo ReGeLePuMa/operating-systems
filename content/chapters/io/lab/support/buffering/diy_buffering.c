@@ -64,6 +64,16 @@ static size_t diy_fwrite(void *src, size_t size, size_t nmemb, int fd)
 		 * TODO: write the data first to `buf` and to the file when it
 		 * fills up.
 		 */
+		to_copy=MIN(to_write,BUFSIZE-buf_end);
+		memmove(buf+buf_end,src+src_pos,to_copy);
+		buf_end+=to_copy;
+		if(buf_end==BUFSIZE)
+		{
+			write(fd,buf,BUFSIZE);
+			buf_end=0;
+		}
+		src_pos+=to_copy;
+		to_write-=to_copy;
 	}
 
 	return nmemb;
