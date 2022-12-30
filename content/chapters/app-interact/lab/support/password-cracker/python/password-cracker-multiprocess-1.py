@@ -1,6 +1,7 @@
 import hashlib
 import itertools
 from multiprocessing import Pipe, Process
+import os
 
 password_hash = (
     "59a5abc2a99b95be73c31ea272ab0f2f2fe42fec30367155cb73f6f6cef1f4e6"
@@ -14,7 +15,7 @@ charset = "abcdefghijklmnopqrstuvwxyz"
 
 def worker_proc(pipe):
     first_char = pipe.recv()
-
+    print(f'worker PID:{os.getpid()}')
     for p in itertools.product(charset, repeat=password_len - 1):
         password = first_char + "".join(p)
 

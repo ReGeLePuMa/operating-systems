@@ -10,8 +10,13 @@ Let's investigate the memory areas of a given process.
 We use `pmap` to see the memory layout of a running process.
 The command below shows the memory layour of the current shell process:
 
+<<<<<<< HEAD
 ```console
 student@os:~$ pmap -p $$
+=======
+```
+$ pmap -p $$
+>>>>>>> noul3
 1127:   /bin/bash
 000055fb4d77d000   1040K r-x-- /bin/bash
 000055fb4da80000     16K r---- /bin/bash
@@ -79,8 +84,13 @@ See the different regions:
 Note that this is virtual memory, not actual physical memory used by the process.
 For the process investigated above (with the `1127` pid) we could use the command below to show the total virtual size and physical size (also called _resident set size_):
 
+<<<<<<< HEAD
 ```console
 student@os:~$ ps -o pid,rss,vsz -p $$
+=======
+```
+$ ps -o pid,rss,vsz -p $$
+>>>>>>> noul3
   PID   RSS    VSZ
  1127  1968  24364
 ```
@@ -95,21 +105,36 @@ We investigate other programs.
 1. The `hello.c` program prints out a message and then sleeps.
    Build it:
 
+<<<<<<< HEAD
    ```console
    student@os:~/.../lab/support/memory-areas$ make
+=======
+   ```
+   $ make
+>>>>>>> noul3
    ```
 
    then run it (it will block):
 
+<<<<<<< HEAD
    ```console
    student@os:~/.../lab/support/memory-areas$ ./hello
+=======
+   ```
+   $ ./hello
+>>>>>>> noul3
    Hello, world!
    ```
 
    In another terminal, use the command below to show the memory areas of the process:
 
+<<<<<<< HEAD
    ```console
    student@os:~/.../lab/support/memory-areas$ pmap $(pidof hello)
+=======
+   ```
+   $ pmap $(pidof hello)
+>>>>>>> noul3
    8220:   ./hello
    000055c0bef4b000      8K r-x-- hello
    000055c0bf14c000      4K r---- hello
@@ -134,8 +159,13 @@ We investigate other programs.
 
    The output is similar, but with fewer dynamic libraries than `bash`, since they are not used by the program.
 
+<<<<<<< HEAD
 1. Make a program in another language of your choice that prints `Hello, world!` and sleeps and investigate it with `pmap`.
    Note that in the case of interpreted languages (Python, Lua, Perl, Ruby, PHP, JavaScript etc.) you have to investigate the interpretor process.
+=======
+2. Make a program in another language of your choice that prints `Hello, world!` and sleeps and investigate it with `pmap`.
+   Note that in the case of interpreted languages (Python, Lua, Perl, Ruby, PHP, Javascript etc.) you have to investigate the interpretor process.
+>>>>>>> noul3
 
 #### Quiz
 
@@ -147,14 +177,24 @@ We want to see the difference in memory layout between the statically-linked and
 
 Enter the `support/static-dynamic/` directory and build the statically-linked and dynamically-linked executables `hello-static` and `hello-dynamic`:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/static-dynamic$ make
+=======
+```
+$ make
+>>>>>>> noul3
 ```
 
 Now, by running the two programs and inspecting them with `pmap` on another terminal, we get the output:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/static-dynamic$ pmap $(pidof hello-static)
+=======
+```
+$ pmap $(pidof hello-static)
+>>>>>>> noul3
 9714:   ./hello-static
 0000000000400000    876K r-x-- hello-static
 00000000006db000     24K rw--- hello-static
@@ -166,7 +206,11 @@ student@os:~/.../lab/support/static-dynamic$ pmap $(pidof hello-static)
 ffffffffff600000      4K --x--   [ anon ]
  total             1196K
 
+<<<<<<< HEAD
 student@os:~/.../lab/support/static-dynamic$ pmap $(pidof hello-dynamic)
+=======
+$ pmap $(pidof hello-dynamic)
+>>>>>>> noul3
 9753:   ./hello-dynamic
 00005566e757f000      8K r-x-- hello-dynamic
 00005566e7780000      4K r---- hello-dynamic
@@ -194,19 +238,32 @@ And the `.rodata` section has been coallesced in the `.text` area.
 
 We can see the size of each section in the two executables by using the `size` command:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/static-dynamic$ size hello-static
 text    data     bss     dec     hex filename
 893333   20996    7128  921457   e0f71 hello-static
 
 student@os:~/.../lab/support/static-dynamic$ size hello-dynamic
+=======
+```
+$ size hello-static
+text    data     bss     dec     hex filename
+893333   20996    7128  921457   e0f71 hello-static
+
+$ size hello-dynamic
+>>>>>>> noul3
 text    data     bss     dec     hex filename
 4598     736     824    6158    180e hello-dynamic
 ```
 
 #### Quiz
 
+<<<<<<< HEAD
 Based on the information above, answer [this quiz](../quiz/static-dynamic.md).
+=======
+Based on the information above, answer [this quiz](quiz/static-dynamic.md).
+>>>>>>> noul3
 
 #### Practice
 
@@ -215,14 +272,24 @@ Based on the information above, answer [this quiz](../quiz/static-dynamic.md).
    If not already installed, install the `busybox-static` package on your system.
    On Debian/Ubuntu systems use:
 
+<<<<<<< HEAD
    ```console
    student@os:~$ sudo apt install busybox-static
+=======
+   ```
+   $ sudo apt install busybox-static
+>>>>>>> noul3
    ```
 
    Start a process using:
 
+<<<<<<< HEAD
    ```console
    student@os:~$ busybox sleep 1000
+=======
+   ```
+   $ busybox sleep 1000
+>>>>>>> noul3
    ```
 
    Investigate the process using `pmap` and the executable using `size`.
@@ -232,8 +299,13 @@ Based on the information above, answer [this quiz](../quiz/static-dynamic.md).
 When a new thread is created, a new stack is allocated for a thread.
 The default stack size if `8 MB` / `8192 KB`:
 
+<<<<<<< HEAD
 ```console
 student@os:~$ ulimit -s
+=======
+```
+$ ulimit -s
+>>>>>>> noul3
 8192
 ```
 
@@ -241,14 +313,24 @@ Enter the `support/multithreaded/` directory to observe the update of the memory
 
 Build the `multithreaded` executable:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/multithreaded$ make
+=======
+```
+$ make
+>>>>>>> noul3
 ```
 
 Start the program:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/multithreaded$ ./multithreaded
+=======
+```
+$ ./multithreaded
+>>>>>>> noul3
 Press key to start creating threads ...
 [...]
 ```
@@ -282,18 +364,32 @@ Browse the contents of the `hello.c` file;
 it is an update to the `hello.c` file in the `memory-areas/` directory.
 Build the executable:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/modify-areas$ make
+=======
+```
+$ make
+>>>>>>> noul3
 ```
 
 Use `size` to view the difference between the new executable and the one in the `memory-areas/` directory:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/modify-areas$ size hello
    text    data     bss     dec     hex filename
   13131   17128   33592   63851    f96b hello
 
 student@os:~/.../lab/support/modify-areas$ size ../memory-areas/hello
+=======
+```
+$ size hello
+   text    data     bss     dec     hex filename
+  13131   17128   33592   63851    f96b hello
+
+$ size ../memory-areas/hello
+>>>>>>> noul3
    text    data     bss     dec     hex filename
    4598     736     824    6158    180e ../memory-areas/hello
 ```
@@ -303,8 +399,13 @@ Explain the differences.
 Then use the `pmap` to watch the memory areas of the resulting processes from the two different executables.
 We will see something like this for the new executable:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/modify-areas$ pmap $(pidof hello)
+=======
+```
+$ pmap $(pidof hello)
+>>>>>>> noul3
 18254:   ./hello
 000055beff4d0000     16K r-x-- hello
 000055beff6d3000      4K r---- hello
@@ -369,22 +470,37 @@ Let's enter the `support/alloc_size/` directory.
 Browse the `alloc_size.c` file.
 Build it:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/alloc_size$ make
+=======
+```
+$ make
+>>>>>>> noul3
 ```
 
 Now see the update in the process layout, by running the program in one console:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/alloc_size$ ./alloc_size
+=======
+```
+$ ./alloc_size
+>>>>>>> noul3
 Press key to allocate ...
 [...]
 ```
 
 And investigating it with `pmap` on another console:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/alloc_size$ pmap $(pidof alloc_size)
+=======
+```
+$ pmap $(pidof alloc_size)
+>>>>>>> noul3
 21107:   ./alloc_size
 000055de9d173000      8K r-x-- alloc_size
 000055de9d374000      4K r---- alloc_size
@@ -406,7 +522,11 @@ student@os:~/.../lab/support/alloc_size$ pmap $(pidof alloc_size)
 ffffffffff600000      4K --x--   [ anon ]
  total             4520K
 
+<<<<<<< HEAD
 student@os:~/.../lab/support/alloc_size$ pmap $(pidof alloc_size)
+=======
+$ pmap $(pidof alloc_size)
+>>>>>>> noul3
 21107:   ./alloc_size
 000055de9d173000      8K r-x-- alloc_size
 000055de9d374000      4K r---- alloc_size
@@ -428,7 +548,11 @@ student@os:~/.../lab/support/alloc_size$ pmap $(pidof alloc_size)
 ffffffffff600000      4K --x--   [ anon ]
  total             4840K
 
+<<<<<<< HEAD
 student@os:~/.../lab/support/alloc_size$ pmap $(pidof alloc_size)
+=======
+$ pmap $(pidof alloc_size)
+>>>>>>> noul3
 21107:   ./alloc_size
 000055de9d173000      8K r-x-- alloc_size
 000055de9d374000      4K r---- alloc_size
@@ -457,8 +581,13 @@ Notice the update toe the 4th section, the heap.
 Now, let's see what happens behind the scenes.
 Run the executable under `ltrace` and `strace`:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/alloc_size$ ltrace ./alloc_size
+=======
+```
+$ ltrace ./alloc_size
+>>>>>>> noul3
 malloc(32768)                                                                                                    = 0x55e33f490b10
 printf("New allocation at %p\n", 0x55e33f490b10New allocation at 0x55e33f490b10
 )                                                                 = 33
@@ -466,7 +595,11 @@ printf("New allocation at %p\n", 0x55e33f490b10New allocation at 0x55e33f490b10
 free(0x55e33f490b10)                                                                                             = <void>
 [...]
 
+<<<<<<< HEAD
 student@os:~/.../lab/support/alloc_size$ strace ./alloc_size
+=======
+$ strace ./alloc_size
+>>>>>>> noul3
 [...]
 write(1, "New allocation at 0x55ab98acfaf0"..., 33New allocation at 0x55ab98acfaf0
 ) = 33
@@ -491,15 +624,24 @@ The resulting output above shows us the following:
 Update the `ALLOC_SIZE_KB` macro in the `alloc_size.c` file to `256`.
 Rebuild the program and rerun it under `ltrace` and `strace`:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/alloc_size$ ltrace ./alloc_size
+=======
+```
+$ ltrace ./alloc_size
+>>>>>>> noul3
 [...]
 malloc(262144)                                                                                                   = 0x7f4c016a9010
 [...]
 free(0x7f4c016a9010)                                                                                             = <void>
 [...]
 
+<<<<<<< HEAD
 student@os:~/.../lab/support/alloc_size$ strace ./alloc_size
+=======
+$ strace ./alloc_size
+>>>>>>> noul3
 [...]
 mmap(NULL, 266240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7feee19f2000
 write(1, "New allocation at 0x7feee19f2010"..., 33New allocation at 0x7feee19f2010
@@ -519,7 +661,11 @@ For the new allocation size, notice that the remarks above don't hold:
 * `malloc()` now invokes the `mmap` syscall, while `free()` invokes the `munmap` syscall.
 * Each `malloc()` calls results in a separate `mmap` syscall.
 
+<<<<<<< HEAD
 This is a behavior of the `malloc()` in libc, documented in the [manual page](https://man7.org/linux/man-pages/man3/malloc.3.html#NOTES).
+=======
+This is a behavior of the `malloc()` in libc, documented in the [manual page]().
+>>>>>>> noul3
 A variable `MALLOC_THRESHOLD` holds the size after which `mmap` is used, instead of `brk`.
 This is based on a heuristic of using the heap or some other area in the process address space.
 
@@ -543,7 +689,11 @@ TODO
 The `mmap` syscall is used to allocate memory as _anonymous mapping_, that is reserving memory in the process address space.
 An alternate use is for mapping files in the memory address space.
 Mapping of files is done by the loader for executables and libraries.
+<<<<<<< HEAD
 That is why, in the output of `pmap`, there is a column with a filename.
+=======
+That is why, in the output of `pmap`, there is a column with a file name.
+>>>>>>> noul3
 
 Mapping of a file results in getting a pointer to its contents and then using that pointer.
 This way, reading and writing to a file is an exercise or pointer copying, instead of the use of `read` / `write`-like system calls.
@@ -556,18 +706,29 @@ In the `support/copy/` folder there are two source code files and a script:
 
 Let's generate the input file:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/copy$ ./generate.sh
+=======
+```
+$ ./generate.sh
+>>>>>>> noul3
 ```
 
 and let's build the two executable files:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/copy$ make
+=======
+```
+$ make
+>>>>>>> noul3
 ```
 
 and run them:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../lab/support/copy$ ./mmap_copy
 time passed 22840 microseconds
@@ -585,6 +746,25 @@ student@os:~/.../lab/support/copy$ ./read_write_copy
 time passed 24232 microseconds
 
 student@os:~/.../lab/support/copy$ ./read_write_copy
+=======
+```
+$ ./mmap_copy
+time passed 22840 microseconds
+
+$ ./mmap_copy
+time passed 33942 microseconds
+
+$ ./mmap_copy
+time passed 25213 microseconds
+
+$ ./read_write_copy
+time passed 24824 microseconds
+
+$ ./read_write_copy
+time passed 24232 microseconds
+
+$ ./read_write_copy
+>>>>>>> noul3
 time passed 25131 microseconds
 ```
 

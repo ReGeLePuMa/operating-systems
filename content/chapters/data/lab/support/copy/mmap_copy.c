@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* SPDX-License-Identifier: BSD-3-Clause */
+=======
+#include "utils.h"
+>>>>>>> noul3
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,8 +13,11 @@
 #include <sys/mman.h>
 #include <sys/stat.h>
 
+<<<<<<< HEAD
 #include "utils/utils.h"
 
+=======
+>>>>>>> noul3
 #define SRC_FILENAME	"in.dat"
 #define DST_FILENAME	"out.dat"
 
@@ -45,6 +52,11 @@ int main(void)
 	dst_p = mmap(NULL, statbuf.st_size, PROT_READ | PROT_WRITE, MAP_SHARED, dst_fd, 0);
 	DIE(dst_p == MAP_FAILED, "mmap");
 
+<<<<<<< HEAD
+=======
+	sleep(10);
+
+>>>>>>> noul3
 	/* Do the copying. */
 	clock_gettime(CLOCK_REALTIME, &time_before);
 	memcpy(dst_p, src_p, statbuf.st_size);

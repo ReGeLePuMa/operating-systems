@@ -21,11 +21,19 @@ Enter the `support/memory-leak/` folder.
 It stores two files showing memory leaks:
 
 * one in C++: `memory_leak.cpp`
+<<<<<<< HEAD
 * one in C: `memory_leak_malloc`
 
 Let's build and run the two executables:
 
 ```console
+=======
+* one in C: `memory_leak_malloc.`
+
+Let's build and run the two executables:
+
+```
+>>>>>>> noul3
 student@os:~/.../lab/support/memory-leak$ make
 g++    -c -o memory_leak.o memory_leak.cpp
 cc   memory_leak.o  -lstdc++ -o memory_leak
@@ -35,7 +43,11 @@ cc   memory_leak_malloc.o  -lstdc++ -o memory_leak_malloc
 
 Running them yields similar output:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../lab/support/memory-leak$ ./memory_leak
 Andrei Popescu is 22 years old and likes Linux
 Ioana David is 23 years old and likes macOS
@@ -46,7 +58,11 @@ Ioana David is 23 years old and likes macOS
 
 We investigate the memory leaks of the two programs by using [Valgrind](https://valgrind.org/):
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../lab/support/memory-leak$ valgrind ./memory_leak
 ==22362== Memcheck, a memory error detector
 ==22362== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
@@ -98,12 +114,20 @@ Ioana David is 23 years old and likes macOS
 
 As we are doing allocations that are not freed, this results in memory leaks.
 
+<<<<<<< HEAD
 For `malloc()`-based programs, we can use [`mtrace()` feature](https://man7.org/linux/man-pages/man3/mtrace.3.html) and [`mtrace` command](https://man7.org/linux/man-pages/man1/mtrace.1.html) to verify proper allocations with `malloc()` and deallocations with `free()`.
+=======
+For `malloc()`-based programs, we can use [`mtrace()` feature]() and [`mtrace` command]() to verify proper allocations with `malloc()` and deallocations with `free()`.
+>>>>>>> noul3
 We call `mtrace()` in the program (in `memory_leak_malloc.c`) to enable `malloc()` and `free()` checking.
 
 To use `mtrace()` we define the `MALLOC_TRACE` environment variable:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../lab/support/memory-leak$ MALLOC_TRACE=mem.trace ./memory_leak_malloc
 Andrei Popescu is 22 years old and likes Linux
 Ioana David is 23 years old and likes macOS
@@ -111,7 +135,11 @@ Ioana David is 23 years old and likes macOS
 
 Subsequently we use the `mtrace` tool to show information about the leaked data:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../lab/support/memory-leak$ mtrace ./memory_leak_malloc mem.trace
 
 Memory not freed:
@@ -129,7 +157,11 @@ Valgrind is however more powerful: it works on different types of memory (not on
 
 1. Print the size of the `Student` class and the `struct student` structure to see if it equates to the leak shown by Valgrind.
 
+<<<<<<< HEAD
 1. Solve the memory leaks in both programs.
+=======
+2. Solve the memory leaks in both programs.
+>>>>>>> noul3
    Validate with Valgrind.
 
 #### Quiz
@@ -141,7 +173,11 @@ TODO
 We can use Valgrind to investigate existing programs in the system.
 This tells us whether they possess memory leaks:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../lab/support/memory-leak$ valgrind ls
 ==24669== Memcheck, a memory error detector
 ==24669== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
@@ -241,8 +277,13 @@ As [documented](https://github.com/jemalloc/jemalloc/wiki/Getting-Started) there
 First install `jemalloc` on our system.
 On your typical Ubuntu / Debian-based system, use `apt`:
 
+<<<<<<< HEAD
 ```console
 student@os:~/.../data/lab/content$ sudo apt -y install libjemalloc-dev
+=======
+```
+student@os:~/.../data/lab/content$ sudo apt -y install libjemalloc-dev libjemalloc1
+>>>>>>> noul3
 ```
 
 Note that this installs the distribution package, not the latest one (that may provide more features).
@@ -250,7 +291,11 @@ Note that this installs the distribution package, not the latest one (that may p
 With this in place we can use `jemalloc` against our pre-built executables or system executables (such as `ls`, `ps`).
 We can test it against the executable files from `support/memory-leak/`:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../lab/support/memory-leak$ LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.1 ./memory_leak_malloc
 Andrei Popescu is 22 years old and likes Linux
 Ioana David is 23 years old and likes macOS
@@ -259,7 +304,11 @@ Ioana David is 23 years old and likes macOS
 `jemalloc` can use the `MALLOC_CONF` environment variable for a [diverse set of configurations](https://www.freebsd.org/cgi/man.cgi?query=malloc.conf).
 For example, by using `stats_print:true` we print out information regarding the use of the library functions:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 razvan@yggdrasil:~/.../lab/support/memory-leak$ LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.1 MALLOC_CONF="stats_print:true" ./memory_leak_malloc
 Andrei Popescu is 22 years old and likes Linux
 Ioana David is 23 years old and likes macOS
@@ -289,7 +338,11 @@ mapped:       4194304
 
 `jemalloc` doesn't work against system executables using pre-loading, likely because of security options disabling the use of the library:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../lab/support/memory-leak$ LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.1 MALLOC_CONF="stats_print:true" /bin/ls
 Makefile  memory_leak  memory_leak.cpp  memory_leak_malloc  memory_leak_malloc.c  memory_leak_malloc.o  memory_leak.o
 
@@ -309,7 +362,11 @@ See all three implementations for `malloc()`:
 
 * the one in `lite_malloc.c`
 * the one in `mallocng/malloc.c`
+<<<<<<< HEAD
 * the one in `oldmalloc/malloc`
+=======
+* the one in `oldmalloc/malloc.`
+>>>>>>> noul3
 
 See also [the implementation of `free()`](https://elixir.bootlin.com/musl/v1.2.3/source/src/malloc/mallocng/free.c#L101).
 And [the implementation of `calloc()`](https://elixir.bootlin.com/musl/v1.2.3/source/src/malloc/calloc.c#L33).
@@ -325,7 +382,11 @@ This generally means locating instantiation of classes.
 
 Let's clone the [source code](https://github.com/deluge-torrent/deluge):
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../data/lab/support$ git clone https://github.com/deluge-torrent/deluge
 Cloning into 'deluge'...
 [...]
@@ -339,7 +400,11 @@ CHANGELOG.md  DEPENDS.md  generate_pot.py  LICENSE             minify_web_js.py 
 
 And enter the `deluge/core/` subdirectory:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../lab/support/deluge$ cd deluge/core/
 
 student@os:~/.../deluge/deluge/core$ ls
@@ -350,7 +415,11 @@ authmanager.py   daemon_entry.py  eventmanager.py  __init__.py       preferences
 Most files in the subdirectory have a class defined.
 We can search for instantiations of that class using `grep`:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../deluge/deluge/core$ grep -rn 'Torrent('
 torrentmanager.py:644:        torrent = Torrent(handle, options, state, filename, magne
 
@@ -377,7 +446,11 @@ We do not clone the repository since it's a very large one.
 We find information about allocator used, by accessing the `components/allocator/` in [its source code](https://github.com/servo/servo/tree/master/components/allocator).
 In `Cargo.toml` we see that it requires `jemalloc` for non-Windows implementations and the standard Windows API (called `heapapi`) for Windows:
 
+<<<<<<< HEAD
 ```text
+=======
+```
+>>>>>>> noul3
 [...]
 [lib]
 path = "lib.rs"
@@ -406,7 +479,11 @@ Search for the _alloc_ string.
 
 Let's clone the source code:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../std/experimental/allocator$ git clone https://github.com/dlang/phobos
 [...]
 
@@ -418,7 +495,11 @@ azure-pipelines.yml  changelog  CODEOWNERS  CONTRIBUTING.md  dub.sdl  etc  index
 
 And enter `std/experimental/allocator/` to browse information about the allocator:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../lab/support/phobos$ cd std/experimental/allocator/
 
 student@os:~/.../std/experimental/allocator$ ls
@@ -427,7 +508,11 @@ building_blocks  common.d  gc_allocator.d  mallocator.d  mmap_allocator.d  packa
 
 We then do a search of the `allocate(` string to find instances of allocation calls:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../std/experimental/allocator$ grep -r 'allocate('
 [...]
 ```
@@ -446,7 +531,11 @@ Browse the functions and look for implementations of the `allocate()` function.
 Let's clone [the repository](https://github.com/git/git).
 Note that it is about 200MB large:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../data/lab/support$ git clone https://github.com/git/git
 [...]
 
@@ -455,14 +544,22 @@ student@os:~/.../data/lab/support$ cd git/
 
 We look of uses of `malloc()`:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../lab/support/git$ grep -r 'malloc(' .
 ```
 
 We see there are multiple calls to the `xmalloc()` function which is likely a wrapper on to of `malloc()`.
 We search for the definition of `xmalloc()`:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../lab/support/git$ grep -rn 'xmalloc(' . | grep -v ';'
 ./commit.c:188:                 graft = xmalloc(st_add(sizeof(*graft),
 ./add-interactive.c:157:        list->sorted.items = xmalloc(st_mult(sizeof(*list->sorted.items),
@@ -492,7 +589,11 @@ This is useful for early detection of memory-related issues, although, evidently
 
 We can look for parts of the source code with the largest number of uses of `xmalloc()`:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@os:~/.../lab/support/git$ grep -rc 'xmalloc(' . | grep -v ':0' | sort -n -t ':' -k 20
 [...]
 ./compat/mingw.c:6

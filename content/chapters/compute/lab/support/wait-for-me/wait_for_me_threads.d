@@ -11,7 +11,7 @@ void negateArray(shared(int[]) arr)
 void main()
 {
     import std.stdio : writeln;
-
+    import core.thread.osthread : Thread;
     shared(int[]) arr;
     arr.length = ARR_LEN;
 
@@ -19,6 +19,8 @@ void main()
         arr[i] = i + 1;
 
     // TODO: Call the `negateArray()` function in a separate thread.`
-
+    auto now = new Thread(() { negateArray(arr); }).start();
+    now.join();
+  
     writeln(arr);
 }

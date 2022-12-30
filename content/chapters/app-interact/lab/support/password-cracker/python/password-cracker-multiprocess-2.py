@@ -1,6 +1,7 @@
 import hashlib
 import itertools
 from multiprocessing import Pool
+import os
 
 password_hash = (
     "59a5abc2a99b95be73c31ea272ab0f2f2fe42fec30367155cb73f6f6cef1f4e6"
@@ -15,6 +16,7 @@ POOL_SIZE = 8
 
 
 def worker(first_char):
+    print(f'worker PID:{os.getpid()}')
     for p in itertools.product(charset, repeat=password_len - 1):
         password = first_char + "".join(p)
 

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* SPDX-License-Identifier: BSD-3-Clause */
+=======
+#include "utils.h"
+>>>>>>> noul3
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -6,8 +10,11 @@
 #include <pthread.h>
 #include <sys/types.h>
 
+<<<<<<< HEAD
 #include "utils/utils.h"
 
+=======
+>>>>>>> noul3
 #define __unused __attribute__((unused))
 
 static void wait_for_input(const char *msg)

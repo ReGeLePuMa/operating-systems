@@ -31,7 +31,7 @@ static void do_redirect(int filedes, const char *filename)
 	 * `close()`-ing `filedes` and `open()`-ing the new file "on top" of
 	 * the old file descriptor.
 	 */
-
+	 fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	/**
 	 * TODO 2: Refactor the code below to use `dup2()` instead of `close()`
 	 * and `dup()`.
@@ -45,14 +45,18 @@ static void do_redirect(int filedes, const char *filename)
 	 */
 	rc = close(filedes);
 	DIE(rc < 0, "close");
+	rc=dup(fd);
 
 	wait_for_input("do_redirect() - after closing `filedes`");
+	rc=close(fd);
 
 	/* The first available file descriptor is 1 (`stdout`). */
 	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	DIE(fd < 0, "open");
+	rc = dup2(fd, filedes);
 
 	wait_for_input("do_redirect() - after opening `filename`");
+	rc=close(fd);
 }
 
 int main(void)

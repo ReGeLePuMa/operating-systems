@@ -76,10 +76,18 @@ void main(string[] args)
         }
     }
 
-
+    int status;
     for (size_t i = 0; i < numProcesses; ++i)
     {
-        waitpid(children[i], null, 0);
+        auto ret= waitpid(children[i], &status, 0);
+        if(ret==0)
+        {
+            writeln("Copil bun");
+        }
+        else
+        {
+            writeln("Copil rau");
+        } 
         sumArr += results[i];
     }
 
