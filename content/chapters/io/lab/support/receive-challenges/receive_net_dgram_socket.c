@@ -28,9 +28,17 @@ int main(void)
 	DIE(fd < 0, "socket");
 
 	/* TODO: Bind socket to address. */
+	memset(&addr, 0, sizeof(addr));
+	addr.sin_family = AF_INET;
+	addr.sin_port = htons(port);
+	addr.sin_addr.s_addr = htonl(INADDR_ANY);
 
+	rc = bind(fd, (struct sockaddr *) &addr, sizeof(addr));
+	DIE(rc < 0, "bind");
 
-	/* TODO: Read flag from socket. */
+	/* Read flag from socket. */
+	rc = recvfrom(fd, buffer, BUFSIZ, 0, (struct sockaddr *) &addr, &raddrlen);
+	DIE(rc < 0, "recvfrom");
 
 
 	printf("Flag is: %s\n", buffer);

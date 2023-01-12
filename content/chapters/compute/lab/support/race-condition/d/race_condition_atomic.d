@@ -27,7 +27,7 @@ void decrementVar()
     for (size_t i = 0; i < NUM_ITER; i++)
     {
         // TODO: Use `atomicOP` to implement `var -= 1` atomically.
-
+        atomicOp!"-="(var, 1);
     }
 }
 

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* SPDX-License-Identifier: BSD-3-Clause */
+=======
+#include "utils.h"
+>>>>>>> noul3
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -6,8 +10,11 @@
 #include <sys/types.h>
 #include <fcntl.h>
 
+<<<<<<< HEAD
 #include "utils/utils.h"
 
+=======
+>>>>>>> noul3
 #define SRC_FILENAME	"in.dat"
 #define DST_FILENAME	"out.dat"
 
@@ -16,7 +23,11 @@
 	 ((ta).tv_nsec - (tb).tv_nsec) / 1000)
 
 #ifndef BUFSIZ
+<<<<<<< HEAD
 #define BUFSIZ		8192
+=======
+#define BUFSIZ		10000
+>>>>>>> noul3
 #endif
 
 static unsigned char buffer[BUFSIZ];

@@ -50,7 +50,7 @@ static int parse_line(char *line)
 
 	/* Normal command. */
 	delim = " \t\n";
-	token = strtok_r(line, delim);
+	token = strtok(line, delim);
 
 	if (token == NULL)
 		return ERROR;
@@ -66,7 +66,7 @@ static int parse_line(char *line)
 		}
 
 		args[idx++] = strdup(token);
-		token = strtok_r(NULL, delim);
+		token = strtok(NULL, delim);
 	}
 
 	args[idx++] = NULL;
@@ -78,11 +78,38 @@ static int parse_line(char *line)
  */
 static void simple_cmd(char **args)
 {
-	(void)args;
+	
 	/**
 	 * TODO - Create a process to execute the command.
 	 * Use `execvp` to launch the new process.
 	 */
+	pid_t pid;
+	pid_t wait_ret;
+	int status;
+	pid = fork();
+	switch (pid) 
+	{
+		case -1:
+			/* Error */
+			DIE(1, "fork");
+			break;
+
+		case 0:
+			/* Child process */
+			execvp(args[0], (char *const *) args);
+			DIE(1, "execvp");
+			break;
+
+		default:
+			/* Parent process */
+			wait_ret = waitpid(pid, &status, 0);
+			DIE(wait_ret < 0, "waitpid");
+
+			if (WIFEXITED(status))
+				printf("Child process (pid %d) terminated normally, "
+						"with exit code %d\n",
+						pid, WEXITSTATUS(status));
+	}
 }
 
 int main(void)

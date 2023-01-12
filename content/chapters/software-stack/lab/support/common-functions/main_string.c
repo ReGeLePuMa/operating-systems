@@ -11,8 +11,9 @@ int main(void)
 	strcpy(dest, src);
 
 	write(1, "Destination string is: ", 23);
-	write(1, dest, strlen(dest));
-
+ 	write(1, dest, strlen(dest));
+	strcat(dest,src);
+	write(1,dest,strlen(dest));
 	exit(0);
 	return 0;
 }

@@ -7,11 +7,16 @@ What is the granularity of the size of memory sections?
 ## Question Answers
 
 - 4 bytes
+<<<<<<< HEAD
 
 - 4 MB
 
 + 4 KB
 
+=======
+- 4 MB
++ 4 KB
+>>>>>>> noul3
 - 1 KB
 
 ## Feedback
@@ -28,11 +33,16 @@ How many bytes would we need to use to increase the size of the `.data` section 
 ## Question Answers
 
 - 1 KB
+<<<<<<< HEAD
 
 - 4 KB
 
 - 3232 bytes
 
+=======
+- 4 KB
+- 3232 bytes
+>>>>>>> noul3
 - 3581 bytes
 
 ## Feedback
@@ -40,7 +50,11 @@ How many bytes would we need to use to increase the size of the `.data` section 
 The total size must be `1` byte over the `24 KB` threshold to cause a new page allocation.
 So in order to get that past the current size of `20996`, we need `3581` bytes:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 $ echo "24 * 1024 + 1 - 20996" | bc
 3581
 ```

@@ -7,11 +7,16 @@ What happens if we introduce the code `cp[2] = 't'` in the program located in th
 ## Question Answers
 
 - Compile time error because we are trying to modify a `const` pointer.
+<<<<<<< HEAD
 
 - Compile time error because we are trying to modify a `const` value.
 
 + Segmentation fault at runtime we are trying to modify read-only memory.
 
+=======
+- Compile time error because we are trying to modify a `const` value.
++ Segmentation fault at runtime we are trying to modify read-only memory.
+>>>>>>> noul3
 - Program compiles and runs succesfully.
 
 ## Feedback

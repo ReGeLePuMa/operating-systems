@@ -3,7 +3,11 @@
 As previously stated, from a programmer's perspective, memory is abstracted into variables.
 This hides most of the lower level abstractions.
 Each variable is characterized by an address (or location in memory), type and access rights.
+<<<<<<< HEAD
 Some languages require that the developer spells out these attributes explicitly (**statically typed languages** - notable examples: C\C++, D, Java) whereas others deduce them by analyzing the context (**dynamically typed languages** - notable examples: Python, JavaScript).
+=======
+Some languages require that the developer spells out these attributes explicitly (**statically typed languages** - notable examples: C\C++, D, Java) whereas others deduce them by analyzing the context (**dynamically typed languages** - notable examples: Python, Javascript).
+>>>>>>> noul3
 Nevertheless, the language compiler needs to handle this information and, based on it, generate code that manages memory correctly and efficiently.
 
 ### Memory Access
@@ -46,26 +50,43 @@ Inspect the `mem_access.c` source file.
 
 #### Quiz
 
+<<<<<<< HEAD
 [Quiz](../quiz/memory-access.md)
 
 ### Memory Protection
 
 Memory contents (both code and data) are separated into sections or zones.
+=======
+[Quiz](quiz/memory-access.md)
+
+### Memory Protection
+
+Memory contents (both code an data) is separated into sections or zones.
+>>>>>>> noul3
 This makes it easier to manage.
 More than that, it allows different zones to have different permissions.
 This follows the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) where only required permissions are part of a given section.
 
+<<<<<<< HEAD
 Code is usually placed in a section (`.text`) with read and execute permissions;
 no write permissions.
 Variables are placed in different sections (`.data`, `.bss`, stack, heap) with read and write permissions;
 no execute permissions.
+=======
+Code is usually placed in a section (`.text`) with read and execute permissions; no write permissions.
+Variables are placed in different sections (`.data`, `.bss`, stack, heap) with read and write permissions; no execute permissions.
+>>>>>>> noul3
 
 Let's navigate to the `support/memory-protection/` directory and inspect the `mem_prot.c` source file.
 The file uses different access types for the `data` variable and the `do_nothing` function.
 
 Build it:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@so:~/.../lab/support/memory-protection$ make
 gcc -g -Wall -Wextra -Werror -I../../../../../common/makefile/../utils -I../../../../../common/makefile/../utils/log  -c -o mem_prot.o mem_prot.c
 gcc mem_prot.o ../../../../../common/makefile/../utils/log/log.o  -o mem_prot
@@ -81,7 +102,11 @@ All current actions in the program are valid.
 
 Let's uncomment each commented line in the program and try again:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@so:~/.../lab/support/memory-protection$ ./mem_prot
 reading from .data section
 writing to .data section
@@ -98,7 +123,11 @@ But even for programming languages that don't offer pointers (such as Python) is
 
 In the `str.py` file, we look to modify `str[1]`, but this fails:
 
+<<<<<<< HEAD
 ```console
+=======
+```
+>>>>>>> noul3
 student@so:~/.../lab/support/memory-protection$ ./str.py 
 n, 110, n
 Traceback (most recent call last):
@@ -122,9 +151,14 @@ Go to the `support/memory-protection/` folder and solve the practice items below
 
 ### Memory Allocation Strategy
 
+<<<<<<< HEAD
 Navigate to the `support/memory-alloc/` directory.
 It contains 3 implementations of the same program in different languages: C, Python and D.
 The program creates a list of entries, each entry storing a name and an id.
+=======
+Navigate to the `memory-alloc/` directory. It contains 3 implementations of the same program in different languages:
+C, Python and D. The program creates a list of entries, each entry storing a name and an id.
+>>>>>>> noul3
 The purpose of this exercise is to present the different strategies that programming languages adopt to manage memory.
 
 #### C
@@ -142,21 +176,33 @@ The Python implementation of the program has no notion of memory allocation.
 It simply defines variables and the garbage collector takes care of allocating and deallocating memory.
 Notice how the destructor is called automatically at some point when the garbage collector deems that the list is not used anymore.
 Garbage collection lifts the burden of memory management from the user, however, it may be unsuitable for certain scenarios.
+<<<<<<< HEAD
 For example, real-time applications that need to take action immediately once a certain event occurs cannot use a garbage collector (GC).
 That is because the GC usually stops the application to free dead objects.
+=======
+For example, real-time applications that need to take action immediately once a certain event occurs cannot use a garbage collector (GC). That is because the GC usually stops the application to free dead objects.
+>>>>>>> noul3
 
 #### D
 
 The previous 2 examples have showcased extreme situations: fully manual vs. fully automatic memory management.
 In D, both worlds are combined: variables may be allocated manually on the stack/heap or allocated via the garbage collector (for brevity, `malloc`-based allocation is not presented in this example).
+<<<<<<< HEAD
 Arrays that are allocated on the stack behave the same as in C, whereas array allocated with the garbage collector mimic Python lists.
 Classes are also garbage collected.
+=======
+Arrays that are allocated on the stack behave the same as in C, whereas array allocated with the garbage collector mimic Python lists. Classes are also garbage collected.
+>>>>>>> noul3
 
 ### Memory Vulnerabilities
 
 The purpose of this exercise is to provide examples on how memory corruption may occur and what are the safety guards implemented by different programming languages.
 
+<<<<<<< HEAD
 Navigate to the `support/memory-vuln/` directory.
+=======
+Navigate to the `memory-vuln/` directory.
+>>>>>>> noul3
 It features 3 files, each showcasing what happens in case of actions that may lead to memory corruption.
 
 #### C
@@ -173,8 +219,12 @@ The third example exhibits a manifestation of the previous design flaw where the
 
 Although today it seems obvious that such behavior should not be accepted, we should take into account that the context in which the C language was created was entirely different than today.
 At that time the resource constraints - DRAM memory was around a few KBs, operating systems were in their infancy, branch predictors did not exist etc. - were overwhelming.
+<<<<<<< HEAD
 Moreover, security was not a concern because the internet basically did not exist.
 As a consequence, the language was not developed with memory safety in mind.
+=======
+Moreover, security was not a concern because the internet basically did not exist. As a consequence, the language was not developed with memory safety in mind.
+>>>>>>> noul3
 
 #### Python
 
@@ -206,6 +256,7 @@ This is to allow writing system code which by its nature is unsafe.
 
 For this practice item you will need to identify the programming mistake that makes it possible to corrupt memory.
 
+<<<<<<< HEAD
 Navigate to the `support/memory-corruption` folder.
 Inspect the source file `segfault.c`.
 
@@ -214,9 +265,21 @@ Inspect the source file `segfault.c`.
    What happens?
 1. Debug the program and find the line that causes the segfault.
    **Note**: Although using `printf()` calls is a viable option, we strongly suggest you use GDB.
+=======
+Navigate to the `memory-corruption` folder.
+Inspect the source file `segfault.c`.
+
+1. What does the program do? (this could be a quiz in the final form)
+1. Compile and run it. What happens?
+1. Debug the program and find the line that causes the segfault. (Note: although using `printf` calls is a viable option, we strongly suggest you use GDB)
+>>>>>>> noul3
 1. Fix the program.
 1. Analyze the corresponding Python and D implementation.
 
 What is the expected result in each case?
 Why?
 Run the programs and see what happens.
+<<<<<<< HEAD
+=======
+
+>>>>>>> noul3

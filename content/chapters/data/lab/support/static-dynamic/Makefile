@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 .PHONY: all clean
 
+=======
+>>>>>>> noul3
 all: hello-dynamic hello-static
 
 include ../../../../../common/makefile/linux.mk

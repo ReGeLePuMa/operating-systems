@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 # SPDX-License-Identifier: BSD-3-Clause
 
 from threading import Thread
+=======
+from threading import Thread, Lock
+>>>>>>> noul5
 
 NUM_ITER = 10_000_000
 var = 0
@@ -8,15 +12,19 @@ var = 0
 
 def increment_var():
     global var
+    
     for _ in range(NUM_ITER):
+        Lock().acquire()
         var += 1
-
+        Lock().release()
 
 def decrement_var():
     global var
+    
     for _ in range(NUM_ITER):
+        Lock().acquire()
         var -= 1
-
+        Lock().release()
 
 def main():
     t1 = Thread(

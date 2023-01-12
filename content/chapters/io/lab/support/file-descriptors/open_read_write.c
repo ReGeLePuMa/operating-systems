@@ -69,7 +69,8 @@ static int open_file_for_writing(const char *file_name)
 	 * TODO 1: Open the file for writing. Remember to use `DIE()` to check
 	 * for errors.
 	 */
-
+	fd= open(file_name, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	DIE(fd==-1,"open");
 	printf("Opened file descriptor is for writing: %d\n", fd);
 
 	return fd;
@@ -85,7 +86,16 @@ static void write_to_file(char *buff, int fd, int bytes_to_write)
 	 * ALWAYS use `write()` in a loop because it might not read all the
 	 * required bytes.
 	 */
+	while(total_written<bytes_to_write)
+	{
+		bytes_written=write(fd,buff+total_written,bytes_to_write-total_written);
+		DIE(bytes_written< 0, "write");
 
+		if (!bytes_written)
+			break;
+
+		total_written+=bytes_written;
+	}
 	printf("Wrote %d bytes to file descriptor %d\n", total_written,
 		fd);
 }
@@ -101,14 +111,22 @@ int main(void)
 	read_from_file(buff, fd_read, sizeof(buff));
 
 	fd_write = open_file_for_writing(WRITE_FILE_NAME);
-	write_to_file(message, fd_write, sizeof(message));
+	write_to_file(message, fd_write, strlen(message));
 
 	/**
 	 * TODO 3: Write to `READ_FILE_NAME` and then read the newly written
 	 * data. Use the functions defined above.
 	 */
-
+	int fd_write2= open_file_for_writing(READ_FILE_NAME);
+	char message2[]="Sunt in fata pe avarii.\n";
+	int fd_read2=open_file_for_reading(READ_FILE_NAME);
+	char buff2[BUFSIZ] = { 0 };
+	write_to_file(message2, fd_write2, strlen(message2));
+	read_from_file(buff2,fd_read2,sizeof(buff2));
 	/* TODO 4: `close()` the file `open()`-ed descriptors. */
-
+	close(fd_read2);
+	close(fd_write2);
+	close(fd_read);
+	close(fd_write);
 	return 0;
 }

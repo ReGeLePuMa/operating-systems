@@ -34,7 +34,7 @@ decrement_var:
 	mov rcx, NUM_ITER
 loop_decrement:
 	; TODO: Use `lock` to perform the following instruction atomically.
-	dec dword [var]
+	lock dec dword [var]
 	loop loop_decrement
 
 	leave

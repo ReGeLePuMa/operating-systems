@@ -43,6 +43,7 @@
 #include <string.h>
 #include <assert.h>
 #include <stdint.h>
+#include <pthread.h>
 #include "clist.h"
 
 typedef struct
@@ -54,13 +55,17 @@ typedef struct
   void *items;        /* Pointer to the list */
 } CList_priv_;  
 
+pthread_mutex_t lock;
+
 int CList_Realloc_(CList *l, int n)
 {
+  pthread_mutex_lock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;
   if (n < p->count)
   {
     fprintf(stderr, "CList: ERROR! Can not realloc to '%i' size - count is '%i'\n", n, p->count);
     assert(n >= p->count);
+    pthread_mutex_unlock(&lock);
     return 0;
   }
 
@@ -71,75 +76,92 @@ int CList_Realloc_(CList *l, int n)
   if (ptr == NULL)
   {
     fprintf(stderr, "CList: ERROR! Can not reallocate memory!\n");
+    pthread_mutex_unlock(&lock);
     return 0;
   }
   p->items = ptr;
   p->alloc_size = n;
+  pthread_mutex_unlock(&lock);
   return 1;
 }
 
 void *CList_Add_(CList *l, void *o)
 {
+  pthread_mutex_lock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;
   if (p->count == p->alloc_size && 
         CList_Realloc_(l, p->alloc_size * 2) == 0)
-    return NULL;
+        {
+          pthread_mutex_unlock(&lock);
+          return NULL;
+        }
   
   char *data = (char*) p->items;
   data = data + p->count * p->item_size;
   memcpy(data, o, p->item_size);
   p->count++;
+  pthread_mutex_unlock(&lock);
   return data;
 }
 
 void *CList_Insert_(CList *l, void *o, int n)
 {
+  pthread_mutex_lock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;
   if (n < 0 || n > p->count)
   {
     fprintf(stderr, "CList: ERROR! Insert position outside range - %d; n - %d.\n", 
                         p->count, n);
     assert(n >= 0 && n <= p->count);
+    pthread_mutex_unlock(&lock);
     return NULL;
   }
 
   if (p->count == p->alloc_size && 
         CList_Realloc_(l, p->alloc_size * 2) == 0)
-    return NULL;
-
+        { 
+          pthread_mutex_unlock(&lock);
+          return NULL;
+        }
   size_t step = p->item_size;
   char *data = (char*) p->items + n * step;
   memmove(data + step, data, (p->count - n) * step);
   memcpy(data, o, step);
   p->count++;
+  pthread_mutex_unlock(&lock);
   return data;
 }
 
 void *CList_Replace_(CList *l, void *o, int n)
 {
+  pthread_mutex_lock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;
   if (n < 0 || n >= p->count)
   {
     fprintf(stderr, "CList: ERROR! Replace position outside range - %d; n - %d.\n", 
                         p->count, n);
     assert(n >= 0 && n < p->count);
+    pthread_mutex_unlock(&lock);
     return NULL;
   }
 
   char *data = (char*) p->items;
   data = data + n * p->item_size;
   memcpy(data, o, p->item_size);
+  pthread_mutex_unlock(&lock);
   return data;
 }
 
 void CList_Remove_(CList *l, int n)
 {
+  pthread_mutex_lock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;
   if (n < 0 || n >= p->count)
   {
     fprintf(stderr, "CList: ERROR! Remove position outside range - %d; n - %d.\n",
                         p->count, n);
     assert(n >= 0 && n < p->count);
+    pthread_mutex_unlock(&lock);
     return;
   }
 
@@ -150,26 +172,31 @@ void CList_Remove_(CList *l, int n)
 
   if (p->alloc_size > 3 * p->count && p->alloc_size >= 4) /* Dont hold much memory */
     CList_Realloc_(l, p->alloc_size / 2);
+  pthread_mutex_unlock(&lock);
 }
 
 void *CList_At_(CList *l, int n)
 {
+  pthread_mutex_lock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;
   if (n < 0 || n >= p->count)
   {
     fprintf(stderr, "CList: ERROR! Get position outside range - %d; n - %d.\n", 
                       p->count, n);
     assert(n >= 0 && n < p->count);
+    pthread_mutex_unlock(&lock);
     return NULL;
   }
 
   char *data = (char*) p->items;
   data = data + n * p->item_size;
+  pthread_mutex_unlock(&lock);
   return data;
 }
 
 void *CList_firstMatch_(CList *l, const void *o, size_t shift, size_t size, int string)
 {
+  pthread_mutex_lock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;    
   char *data = (char*) p->items;
   size_t step = p->item_size;
@@ -180,6 +207,7 @@ void *CList_firstMatch_(CList *l, const void *o, size_t shift, size_t size, int 
     fprintf(stderr, "CList: ERROR! Wrong ranges for firstMatch - "
                 "shift '%zu', size '%zu', item_size '%zu'\n", shift, size, p->item_size);
     assert(shift + size <= p->item_size);
+    pthread_mutex_unlock(&lock);
     return NULL;    
   }
 
@@ -197,6 +225,7 @@ void *CList_firstMatch_(CList *l, const void *o, size_t shift, size_t size, int 
       if (strncmp(data + i, o, size) == 0)
       {
         p->lastSearchPos = index;  
+        pthread_mutex_unlock(&lock);
         return (data + i - shift);
       }
     }
@@ -208,16 +237,18 @@ void *CList_firstMatch_(CList *l, const void *o, size_t shift, size_t size, int 
       if (memcmp(data + i, o, size) == 0)
       {
         p->lastSearchPos = index;
+        pthread_mutex_unlock(&lock);
         return (data + i - shift);
       }
     }
   }
-
+  pthread_mutex_unlock(&lock);
   return NULL;
 }
 
 void *CList_lastMatch_(struct CList *l, const void *o, size_t shift, size_t size, int string)
 {
+  pthread_mutex_unlock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;    
   char *data = (char*) p->items;
   size_t step = p->item_size;
@@ -228,6 +259,7 @@ void *CList_lastMatch_(struct CList *l, const void *o, size_t shift, size_t size
     fprintf(stderr, "CList: ERROR! Wrong ranges for lastMatch - "
                 "shift '%zu', size '%zu', item_size '%zu'\n", shift, size, p->item_size);
      assert(shift + size <= p->item_size);
+    pthread_mutex_unlock(&lock);
     return NULL;
   }
 
@@ -243,6 +275,7 @@ void *CList_lastMatch_(struct CList *l, const void *o, size_t shift, size_t size
       if (strncmp(data + i, o, size) == 0)
       {
         p->lastSearchPos = index;
+        pthread_mutex_unlock(&lock);
         return (data + i - shift);
       }
     }
@@ -254,22 +287,26 @@ void *CList_lastMatch_(struct CList *l, const void *o, size_t shift, size_t size
       if (memcmp(data + i, o, size) == 0)
       {
         p->lastSearchPos = index;
+        pthread_mutex_unlock(&lock);
         return (data + i - shift);
       }
     }
   }
-
+  pthread_mutex_unlock(&lock);
   return NULL;  
 }
 
 int CList_index_(CList *l)
 {
+  pthread_mutex_lock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;
+  pthread_mutex_unlock(&lock);
   return p->lastSearchPos;
 }
 
 int CList_swap_(CList *l, int a, int b)
 {
+  pthread_mutex_lock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;
 
   if (a < 0 || a >= p->count || b < 0 || b >= p->count)
@@ -277,62 +314,80 @@ int CList_swap_(CList *l, int a, int b)
     fprintf(stderr, "CList: ERROR! Swap position outside range - %i, %i; count - %d.\n", 
                       a, b, p->count);
     assert(a >= 0 && a < p->count && b >= 0 && b < p->count);
+    pthread_mutex_unlock(&lock);
     return 0;
   }
 
-  if (a == b) return 1; /* ? Good ? :D */
-
+  if (a == b) 
+  {
+    pthread_mutex_unlock(&lock);
+    return 1; /* ? Good ? :D */
+  }
   char *data = (char*) p->items;
   size_t step = p->item_size;
 
   if (p->count == p->alloc_size && 
-        CList_Realloc_(l, p->alloc_size + 1) == 0)
-    return 0;
-
+        CList_Realloc_(l, p->alloc_size + 1) == 0) 
+        {
+          pthread_mutex_unlock(&lock) ;
+          return 0;
+        }
   memcpy(data + p->count * step, data + a * step, step);
   memcpy(data + a * step, data + b * step, step);
   memcpy(data + b * step, data + p->count * step, step);
+  pthread_mutex_unlock(&lock);
   return 1;
 }
 
 int CList_Count_(CList *l)
 {
+  pthread_mutex_lock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;
+  pthread_mutex_unlock(&lock);
   return p->count;
 }
 
 int CList_AllocSize_(CList *l)
 {
+  pthread_mutex_lock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;
+  pthread_mutex_unlock(&lock);
   return p->alloc_size;
 }
 
 size_t CList_ItemSize_(CList *l)
 {
+  pthread_mutex_lock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;
+  pthread_mutex_unlock(&lock);
   return p->item_size;
 }
 
 void CList_Clear_(CList *l)
 {
+  pthread_mutex_lock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;
   free(p->items);
   p->items = NULL;
   p->alloc_size = 0;
   p->count = 0;
+  pthread_mutex_unlock(&lock);
 }
 
 void CList_Free_(CList *l)
 {
+  pthread_mutex_lock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;
   free(p->items);
   free(p);
   free(l);
   l = NULL;
+  pthread_mutex_unlock(&lock);
 }
 
 void CList_print_(CList *l, size_t shift, int n, const char *type)
 {
+  pthread_mutex_lock(&lock);
   CList_priv_ *p = (CList_priv_*) l->priv;
 
   if (shift >= p->item_size)
@@ -340,6 +395,7 @@ void CList_print_(CList *l, size_t shift, int n, const char *type)
     fprintf(stderr, "CList: ERROR! Wrong shift value for list print - "
                 "shift '%zu', item_size '%zu'\n", shift, p->item_size);
      assert(shift < p->item_size);
+     pthread_mutex_unlock(&lock);
     return;
   }
 
@@ -362,6 +418,7 @@ void CList_print_(CList *l, size_t shift, int n, const char *type)
     if (tp == -1)
     {  
       fprintf(stderr, "CList: Can not print - not supported type - %s\n\n", type);
+      pthread_mutex_unlock(&lock);
       return;
     }  
 
@@ -382,22 +439,25 @@ void CList_print_(CList *l, size_t shift, int n, const char *type)
         case 6: printf("%zu  ", *(size_t*) data); break;
         case 7: printf("%f  ", *(double*) data); break;
         case 8: printf("%s\n", data); break;
-        default: return;
+        default: pthread_mutex_unlock(&lock); return;
       }  
 
       data += step;
     }
     printf("\n\n");
   }
+  pthread_mutex_unlock(&lock);
 }
 
 CList *CList_init(size_t objSize)
 {
+  pthread_mutex_lock(&lock);
   CList *lst = malloc(sizeof(CList));
   CList_priv_ *p = malloc(sizeof(CList_priv_));
   if (!lst || !p)
   {
     fprintf(stderr, "CList: ERROR! Can not allocate CList!\n");
+    pthread_mutex_unlock(&lock);
     return NULL;
   }
   p->count = 0;
@@ -422,6 +482,7 @@ CList *CList_init(size_t objSize)
   lst->clear = &CList_Clear_;
   lst->free = &CList_Free_;
   lst->priv = p;
+  pthread_mutex_unlock(&lock);
   return lst;
 }
 

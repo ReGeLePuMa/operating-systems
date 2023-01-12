@@ -19,11 +19,16 @@ void main()
 ## Question Answers
 
 + constructor calls = 0, copy constructor calls = 3, assignment operator calls = 1, destructor calls = 3
+<<<<<<< HEAD
 
 - constructor calls = 1, copy constructor calls = 2, assignment operator calls = 1, destructor calls = 2
 
 - constructor calls = 0, copy constructor calls = 2, assignment operator calls = 1, destructor calls = 2
 
+=======
+- constructor calls = 1, copy constructor calls = 2, assignment operator calls = 1, destructor calls = 2
+- constructor calls = 0, copy constructor calls = 2, assignment operator calls = 1, destructor calls = 2
+>>>>>>> noul3
 - constructor calls = 0, copy constructor calls = 3, assignment operator calls = 1, destructor calls = 1
 
 ## Feedback
@@ -32,3 +37,7 @@ There are no constructor calls because there is no variable that is no object co
 There are 3 copy constructor calls: for passing `o1`, for passing `o2` and for returning `o2`.
 There is 1 assignment operator call for `o2 = o1`.
 There are 3 destructor calls, because each constructed object needs to be destroyed.
+<<<<<<< HEAD
+=======
+
+>>>>>>> noul3

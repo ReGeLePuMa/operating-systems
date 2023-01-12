@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 // SPDX-License-Identifier: BSD-3-Clause
+=======
+<<<<<<< HEAD
+/* SPDX-License-Identifier: BSD-3-Clause */
+>>>>>>> noul5
 
+=======
+>>>>>>> noul3
 import core.stdc.stdlib : malloc, free;
 import std.stdio : writeln, printf;
 
@@ -40,7 +47,27 @@ struct RefCountedIntArray
     version(none)
     this(ref RefCountedIntArray src)
     {
+<<<<<<< HEAD
         // TODO - fill in the fields and correctly update the ref count
+=======
+        printf("Creating ref counted array (instance: %d) for: ", instance_generator);
+        writeln(a);
+
+        // allocate memory for array and refcount
+        ptr = cast(int*)malloc(int.sizeof * a.length);
+        refcount = cast(int*)malloc(int.sizeof);
+
+        // initialize ref counted array
+        foreach(i, elem; src.prt)
+            ptr[i] = elem;
+
+        // initialize size and ref count
+        size = src.ptr.length;
+        *refcount = 1;
+
+        instance_no = instance_generator;
+        instance_generator++;
+>>>>>>> noul3
 
     }
 
@@ -48,7 +75,14 @@ struct RefCountedIntArray
     version(none)
     void opAssign(ref RefCountedIntArray src)
     {
+<<<<<<< HEAD
         // TODO
+=======
+        size=src.size;
+        refcount=src.refcount;
+        foreach(i, elem;src.prt)
+            ptr[i]=elem;
+>>>>>>> noul3
     }
 
     void printArray(ref RefCountedIntArray src)
@@ -115,6 +149,11 @@ void test2()
 void main()
 {
     RefCountedIntArray arr = RefCountedIntArray([1, 2, 6]);
+<<<<<<< HEAD
     //test1();
     //test2();
+=======
+    test1();
+    test2();
+>>>>>>> noul3
 }
